@@ -1,0 +1,104 @@
+	/* 320px (iPhone) */
+@media screen and (max-width:400px) {
+    .hero {
+        font-size: 11px;
+    }
+
+    .hero .inner{
+        padding-top: 0px !important;
+    }
+
+	.closeModal{
+		font-size: 25px;
+	}
+}
+@media screen and (max-width:760px) {
+    .hero{
+        font-size: 13px;
+         background-image:url('../img/iphone-bg.jpg');
+        -webkit-background-position:  -100px 0;
+        -moz-background-position: -100px 0;
+        -ms-background-position:  -100px 0;
+        -o-background-position:   -100px 0;
+        background-position:  -100px 0;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after{
+        background: #111;
+    }
+
+    .hero .brand-name{
+        background: rgba(0,0,0,.6);
+        padding: 15px;
+    }
+
+    .hero .brand-name span{
+        color: #ffffff;
+    }
+
+    .hero .inner{
+        padding-top: 130px;
+    }
+    #portfolioSlider ul{
+        padding-left: 0;
+    }
+
+}
+/* 480px (WVGA - Low End Windows Phone) */
+@media screen and (max-width:480px) {
+	.wrapper { background: #f3f5f8; height: 640px; }
+	.iphone { display: none; }
+	.fluid-white { display: none; }
+	.wp2, .wp4, .wp5, .light-box { margin-bottom: 30px; }
+	.legals { text-align: center; margin: 0; padding: 0; }
+	.credit { text-align: center; }
+	.designs #servicesSlider{
+		margin-top: 0px;}
+	.responsive-services{
+		height: 450px;
+	}
+	.responsive-services p{
+		font-size: 13px;
+	}
+	.swag {
+		font-size: 10px;
+	}
+
+	.swag h1{
+		padding:1em 1em;
+	}
+
+	.modal-body{
+		padding: 15px !important;
+	}
+
+}
+/* xGA iPad */
+@media screen and (max-width:1024px) {
+	.wp3 { background-position: 50px 0; }
+	.swag { background-attachment: scroll; }
+	.subscribe { background-attachment: scroll; }
+}
+@media screen and (max-width:991px) {
+	.responsive-background{
+		display: none;
+	}
+
+	#responsive{
+		height: 350px;
+	}
+
+}
+/* 1200px (Small Desktop, Netbook) */
+@media screen and (max-width:1280px) {
+	.wp3 { background-position: 50px 0; }
+}
+/* Bootstrap 990px Breakpoint to 480px */
+@media screen and (min-width:480px) and (max-width:991px) {
+	.iphone { display: none; }
+	.fluid-white { display: none; }
+	.wrapper { background: #f3f5f8; height: 540px; }
+	.wp2, .wp4, .wp5, .light-box { margin-bottom: 30px; }
+	.legals { text-align: center; margin: 0; padding: 0; }
+	.credit { text-align: center; }
+}
