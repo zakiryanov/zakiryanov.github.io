@@ -1,0 +1,134 @@
+.tourism{
+	background-color: #f2fafc;
+}
+
+.tourism .input-container{
+	position: absolute;
+	top: 440px;
+	width: 100%;
+	left: 0;
+}
+
+.tourism .section-1 .main-bg{
+	background-image: url('../assets/img/Tourism_bg.jpg');
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.tourism .section-1{
+	padding: 50px 140px;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+	height: 465px;
+	position: relative;
+}
+
+.tourism h1{
+	font-size: 48px;
+	color: #fff;
+	line-height: 1.4;	
+	z-index: 1;
+}
+
+.tourism .section-2{
+	padding: 70px;
+	text-align: center;
+}
+.tourism .section-2 p{
+	color:rgb(142, 142, 144);
+	font-size: 14px;
+}
+
+.tourism .section-2 p span{
+	color: #555;
+}
+
+.tourism .section-2 .cards{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 50px;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.tourism .section-2 .card{
+	width: 32%;
+	margin-bottom: 20px;
+	cursor: pointer;
+		transition:.5s 
+
+}
+
+.tourism .section-2 .card.active{
+	width: 65%;
+}
+
+.tourism .section-2 .card.active  .card-inner{
+	background-color: #31363C;
+}
+
+.tourism .section-2 .card.active  .card-inner h4{
+	color: #fff;
+}
+
+.tourism .section-2 .card:hover .card-inner{
+	background-color: #31363C;
+}
+
+.tourism .section-2 .card:hover .card-inner h4{
+	color: #fff;
+}
+
+.tourism .section-2 .card .bg-img{
+	height: 230px;
+	border-radius: 5px 5px 0 0
+}
+
+.tourism .section-2 .card .img-container{
+	overflow: hidden;
+	width: 100%;
+	height: 250px;
+}
+
+.tourism .section-2 .card .img-container img{
+	width: 100%;
+	height: 100%	
+}
+
+.tourism .section-2 .card-inner{
+	padding: 20px;
+	padding-bottom: 5px;
+	background-color: #fff;
+	border-radius: 0 0 	5px 5px ;
+	text-align: left;
+	height: 200px;
+
+}
+
+.tourism .section-2 .card-inner h4{
+	color: #333;
+	font-size: 22px;
+}
+
+.tourism .section-2 .card-inner p{
+	color: #b3afaf;
+	line-height: 1.7;
+	margin:15px 0 40px;
+}
+
+.tourism .section-2 .card-inner span{
+	color: #318EF6
+}
+.tourism .section-2 .card-inner img{
+	width: 45px;
+	height: 45px;
+	vertical-align: middle;
+	margin-left: -15px;
+}

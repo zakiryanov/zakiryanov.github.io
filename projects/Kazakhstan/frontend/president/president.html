@@ -1,0 +1,54 @@
+<div id="anchor" class="president">
+	<section class="section-1 flex">
+		<div id="main-bg" class="bg-img main-bg"></div>
+		<div class="section-inner">
+			<h1>{{vm.currentText.section_1.title}}</h1>
+		</div>
+	</section>
+
+	<section class="section-2">
+		<h3>{{vm.currentText.section_2.title}}</h3>
+		<p>{{vm.currentText.section_2.text}}</p>
+	</section>
+
+	<section class="section-3 flex">
+		<div class="descr">
+			<h3>{{vm.currentText.section_3.title}}</h3>
+			<p ng-repeat="paragraph in vm.currentText.section_3.text">{{paragraph}}</p>
+			<button ng-click="vm.openLink('http://personal.akorda.kz/ru/category/filmy-i-kartiny/dokumentalnyi-film-s-nazarbaevym-o-glavnom')" class="button blue">{{vm.currentText.section_3.watch}}</button> 
+		</div>
+		<div class="bg-img"></div>
+	</section>
+
+	<section class="section-4">
+		<h3>{{vm.currentText.section_4.title_first}} <b>{{vm.currentText.section_4.title_second}}</b></h3>
+		<div class="orange-line"></div>
+
+		<p class="text">{{vm.currentText.section_4.text}}</p>
+		<div class="slider">
+			<div class="quote-container">
+				<div class="quote-div">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.</p>
+				</div>
+				<div class="bg-img"></div>
+
+			</div>
+			<div class="quote-container">
+				<div class="quote-div">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.</p>
+				</div>
+				<div class="bg-img"></div>
+
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<script>
+	$(document).ready(function(){
+		$('.slider').slick({
+			dots:true
+		});
+	});
+</script>

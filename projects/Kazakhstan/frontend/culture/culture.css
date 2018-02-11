@@ -1,0 +1,107 @@
+.culture{
+	line-height: 1.7;
+	background-color: #F2FAFC;
+
+}
+
+.culture .section-1{
+	position: relative;
+	padding: 50px 140px;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+	height: 465px;
+}
+
+.culture .section-1 .main-bg{
+	background-image: url('../assets/img/Culture_bg.jpg');
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.culture .section-1 .section-inner{
+	position: relative;
+	z-index: 1;
+}
+
+.culture .section-1 h1{
+	font-size: 48px;
+	color: #fff;
+	line-height: 1.4;
+	font-family: 'Avenir';
+}
+
+.culture .section-2{
+	background-color: #31363C;
+	color: #fff;
+	padding: 50px 140px;
+}
+
+.culture .section-2 h3{
+	color: #787B82;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	font-size: 38px;
+	font-weight: lighter;
+	font-family: 'Avenir';
+	line-height: 1;
+}
+
+.culture .section-3 .border-bottom{
+	width: 80%;
+	margin: 0 auto;
+	height: 2px;
+	background-color: #ddd
+}
+
+.culture .section-3 .img-descr{
+	padding: 100px 130px;
+}
+
+.culture .section-3 .img-descr .img{
+	height: 500px;
+}
+
+.culture .section-3 .index .number{
+	width:17px;
+	height:17px;
+	border-radius: 100px;
+	background-color: #F5A623;
+	color: #fff;
+	font-size: 12px;
+	margin-right: 15px;
+}
+
+.culture .section-3 .index .text{
+	text-transform: uppercase;
+	color: #bfbfbf;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	word-spacing: 5px
+		font-family: 'Avenir';
+}
+
+.culture .section-3 .title-text{
+	padding-left: 35px;
+	width:400px;
+}
+
+.culture .section-3 .title-text h4{
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+.culture .section-3 .title-text p{
+	color: #787B82;
+	margin-top: 20px;
+	font: 14px;
+}
+
+.culture .section-3 .title-text img{
+	width: 35px;
+	height: 35px;
+	margin-top: 20px;
+}

@@ -1,0 +1,32 @@
+<div id="anchor" class="tourism">
+		<section class="section-1 flex">
+					<div id="main-bg" class="bg-img main-bg"></div>
+
+			<h1>{{vm.currentText.section_1.title}}</h1>
+			<form class="input-container flex jc-c" ng-submit="vm.submitQuery()">
+				<input type="text" ng-model="vm.query" class="input" placeholder="{{vm.currentText.section_1.search}}">
+			</form>
+		</section>
+		<section class="section-2">
+			<p><span>{{vm.currentText.section_2.popularSearchTitle}}</span>{{vm.currentText.section_2.popularSearchText}}</p>
+			<div  class="cards flex jc-sb">
+				<div  
+				ng-click="vm.makeCardActive($index)" 
+				ng-repeat="card in vm.cards track by $index"
+				class="card"
+				ng-class="{'active':$index==vm.currentActiveCard}">
+					<div set-background-img src="{{card.src}}" class="bg-img">
+					</div>
+					<div class="card-inner flex flex-column jc-sb">
+						<h4>{{card.title}}</h4>
+						<p ng-hide="$index==vm.currentActiveCard">{{card.text | limitTo:60}} ... </p>
+						<p ng-show="$index==vm.currentActiveCard">{{card.text}} </p>
+						<div class="flex jc-sb ai-c">
+							<span><img src="../frontend/assets/img/map.png" alt="">{{card.city}}</span>
+							<a class="read-more" ng-click="vm.readMore(card.title)" >{{vm.currentText.readMore}}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+</div>

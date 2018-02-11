@@ -1,0 +1,220 @@
+{
+	"eng":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"Tourism | The most popular destinations in Kazakhstan",
+			"search":"Search in the Kazakhstan"
+		},
+		"section_2":{
+			"popularSearchTitle":"The most popular search keywords: ",
+			"popularSearchText":" medeo, mountains, forest, almaty",
+			"cards":[
+				{
+					"title":"Big Almaty Lake",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.he most popular destinations in Kazakhstan  popular destinationshe most popular destinations in Kazakhstan.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/bao.png"
+				},
+				{
+					"title":"Barkhan in Almaty city",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/barkhan.png"
+				},
+				{
+					"title":"Borovoe «Zhumbak tas»",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Astana",
+					"src":"../frontend/assets/img/borovoe.png"
+				},
+				{
+					"title":"Charyn CANYON",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/charyn.png"
+				},
+				{
+					"title":"«MEDEO» ice rink",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/medeo.png"
+				},
+				{
+					"title":"«Shymbulak» resort",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/shym.png"
+				},
+				{
+					"title":"Pavlodar city",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Pavlodar",
+					"src":"../frontend/assets/img/pavlodar.png"
+				},
+				{
+					"title":"Caspian sea resort",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Aktau",
+					"src":"../frontend/assets/img/caspi.png"
+				},
+				{
+					"title":"Katon - Karagay",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"East Kazakhstan",
+					"src":"../frontend/assets/img/katon.jpg"
+				},
+				{
+					"title":"Golf club «Nurtau»",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/golf.jpg"
+				},
+				{
+					"title":"«Arystan bab» mausoleum",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"South Kazakhstan",
+					"src":"../frontend/assets/img/arystan_bab.jpg"
+				},
+				{
+					"title":"«Khoja Ahmed Yasawi» mausoleum",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Turkestan",
+					"src":"../frontend/assets/img/khoja_yasawi_mausoleum.jpg"
+				},
+				{
+					"title":"«Aisha Bibi» mausoleum",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Pavlodar",
+					"src":"../frontend/assets/img/aishabibi.jpg"
+				},
+				{
+					"title":"«Beket-Ata»",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Mangistau",
+					"src":"../frontend/assets/img/beketata.jpg"
+				},
+				{
+					"title":"Lake Alakol",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/alakol14.jpg"
+				},
+				{
+					"title":"Lake Balkhash",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"South Kazakhstan",
+					"src":"../frontend/assets/img/balkhash.jpg"
+				}
+			]
+		}
+	},
+	"kaz":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"Tourism | The most popular destinations in Kazakhstan",
+			"search":"Search in the Kazakhstan"
+		},
+		"section_2":{
+			"popularSearchTitle":"The most popular search keywords: ",
+			"popularSearchText":" medeo, mountains, forest, almaty",
+			"cards":[
+				{
+					"title":"Big Almaty Lake",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.he most popular destinations in Kazakhstan  popular destinationshe most popular destinations in Kazakhstan.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/bao.png"
+				},
+				{
+					"title":"Barkhan in Almaty city",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/barkhan.png"
+				},
+				{
+					"title":"Borovoe «Zhumbak tas»",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Astana",
+					"src":"../frontend/assets/img/borovoe.png"
+				},
+				{
+					"title":"Charyn CANYON",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/charyn.png"
+				},
+				{
+					"title":"«MEDEO» ice rink",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/medeo.png"
+				},
+				{
+					"title":"«Shymbulak» resort",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/shym.png"
+				},
+				{
+					"title":"Pavlodar city",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Pavlodar",
+					"src":"../frontend/assets/img/pavlodar.png"
+				},
+				{
+					"title":"Caspian sea resort",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Aktau",
+					"src":"../frontend/assets/img/caspi.png"
+				},
+				{
+					"title":"Katon - Karagay",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"East Kazakhstan",
+					"src":"../frontend/assets/img/katon.jpg"
+				},
+				{
+					"title":"Golf club «Nurtau»",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/golf.jpg"
+				},
+				{
+					"title":"«Arystan bab» mausoleum",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"South Kazakhstan",
+					"src":"../frontend/assets/img/arystan_bab.jpg"
+				},
+				{
+					"title":"«Khoja Ahmed Yasawi» mausoleum",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Turkestan",
+					"src":"../frontend/assets/img/khoja_yasawi_mausoleum.jpg"
+				},
+				{
+					"title":"«Aisha Bibi» mausoleum",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Pavlodar",
+					"src":"../frontend/assets/img/aishabibi.jpg"
+				},
+				{
+					"title":"«Beket-Ata»",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Mangistau",
+					"src":"../frontend/assets/img/beketata.jpg"
+				},
+				{
+					"title":"Lake Alakol",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"Almaty",
+					"src":"../frontend/assets/img/alakol14.jpg"
+				},
+				{
+					"title":"Lake Balkhash",
+					"text":"The most popular destinations in Kazakhstan  popular destinations.",
+					"city":"South Kazakhstan",
+					"src":"../frontend/assets/img/balkhash.jpg"
+				}
+			]
+		}
+	}
+}

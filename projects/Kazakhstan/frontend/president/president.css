@@ -1,0 +1,148 @@
+.president{
+	line-height: 1.7;
+	position: relative;
+}
+
+.president .section-1{
+	position: relative;
+	padding: 50px 140px;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+	height: 465px;
+}
+
+.president .section-1 .main-bg{
+	background-image: url('../assets/img/President.jpg');
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.president .section-1 .section-inner{
+	position: relative;
+	z-index: 1;
+}
+
+.president .section-1 h1{
+	font-size: 44px;
+	color: #fff;
+	font-weight: lighter;
+	line-height: 1.4;
+	font-family: 'Avenir';
+	margin-bottom: 30px;
+}
+
+.president .section-2{
+	background-color: #fff;
+	padding: 100px;
+}
+
+.president .section-2 h3{
+	color: #111;
+	font-weight: bold;
+	font-size: 22px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.president .section-2 p{
+	color: #999;
+	line-height: 1.6;
+	font-size: 18px;
+}
+
+
+.president .section-3{
+	background-color: #31363C;
+}
+
+.president .section-3 .descr{
+	padding: 70px 100px;
+	width: 62%;
+}
+
+.president .section-3 .bg-img{
+	width: 38%;
+	background-image: url('../assets/img/president_2.png');
+	background-position: 0 center
+}
+
+.president .section-3 h3{
+	color: #fff;
+	font-size: 20px;
+}
+
+.president .section-3 p{
+	color: #aeaeae;
+	margin-top: 20px;
+}
+
+.president .section-3 button{
+	margin-top: 40px;
+}
+
+.president .section-4{
+	padding:80px 100px;
+	background-color: #fff;
+	text-align: center;
+}
+
+.president .section-4 h3{
+	color: #111;
+	text-transform: uppercase;
+	font-size: 28px;
+}
+
+.president .section-4 h3 b{
+	font-weight: bold;
+}
+
+.president .section-4 p.text{
+	color: #999;
+	width: 70%;
+	margin: 0 auto;
+	line-height: 1.4;
+	margin-top: 20px;
+	font-size: 18px;
+	margin-bottom: 50px;
+
+}
+
+.president .section-4 .orange-line{
+	width: 170px;
+	margin: 0 auto;
+	height: 2px;
+	background-color:#F5A623;
+	margin-top: 0px;
+}
+
+.president .section-4 .quote-div{
+	width: 60%;
+	margin: 0 auto;
+	padding: 30px;
+	border:1px solid #999;
+	border-radius: 5px;
+	background-image: url('../assets/img/quotes.png');
+	background-size: 28px 28px;
+	background-repeat: no-repeat;
+	background-position: 15px 15px;
+	position: relative;	
+}
+
+.president .section-4 .quote-div p{
+		color: #999;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.president .section-4 .quote-container .bg-img{
+		background-image: url('../assets/img/quote_avatar.png');
+		width:60px;
+		height:60px;
+		margin: 0 auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+}

@@ -1,0 +1,68 @@
+{
+	"eng":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"About Kazakhstan | Introduction | History | Challenges | Successes"
+		},
+		"section_2":{
+			"title":"introduction",
+			"text":"The Republic of Kazakhstan is situated at the heart of Eurasia and is the worlds 9th largest country. When Kazakhstan became Independent in the unstable days of December 1991, few people thought the country would achieve as much as it did in Its flrst 20 years. Instead of disintegrating, Kazakhstan's economy became one of the fastest growing in the world, and the country has built a robust political system of presidential and parliamentary democracy with its media and NGos enjoying a growing voice and role in shaping the society.",
+			"watch":"watch the video"
+		},
+		"section_3":{
+			"title":"history",
+			"text":[
+				"Kazakhstan is located in the centre of the Eurasian continent and it's the biggest landlocked country in the world. The Republic of Kazakhstan Is a unitary state with a presidential form of government, which galned independence on December 16, 1991.",
+				" As an independent state, Kazakhstan Inherited both posltlve and negative legacies from the former Soviet Union. On the upside, Kazakhstan was a relatively industrialized economy with developed infrastructure, high levels of literacy, skilled and educated labour force.",
+				"The downside factors included a lack of traditions In democratic governance, no experience in ng under a market economy, significant risks of domestic confrontations along ethnic, religious or ideological lines, terrible environmental problems brought about by the Soviet military programmes and careless management of natural resources."
+			]
+		},
+		"section_4":{
+			"title":"challenges",
+			"text":"Today Kazakhstan focuses all efforts at Joining the world's 50 most competitive countries. In this regard Kazakhstan works strenuously at enhancing potential of local Industry and exceeding opportunities for small business, improving life conditions of vulnerable groups of society, developing health service and educational system, and providing opportunities for realization for all people, despite gender, race, and religion accessories. At the same time the states concerns about ecology and conditionals of environment, That's why another challenge Kazakhstan has faced lately is the issue of the transition for 'green economy' and conservation of natural resources and biodiversity."
+			},
+		"section_5":{
+			"title":"successes",
+			"text":[
+				"In a short historical term from the moment of gaining independence in 1991 GDP per capita has increased by 16 times from 700 to 12 000 US dollars, which is a phenomenal result even in comparison with swiftly developing southeast countries so-called 'tigers'.",
+				"Today, a multi-party system and more than 5,000 non-governmental organizations function in the country, reflecting political plurality and to social stability. People from more than 130 ethnic groups and 40 different religious denominations live peacefully with each other ir Kazakhstan, and none are discriminated against or abused.",
+				"Kazakhstan is a member of the United Nations, Organization for Security and Cooperation in Europe, Euro-Atlantic Partnership Council and the Organisation of lslamic Cooperation is an active participant in the North Atlantic Treaty Organisation Partnership for Peace program.",
+				"Kazakhstan's best known contribution to international security has been its voluntary renunciation of the world's fourth largest nuclear arsenal inherited from the former Soviet Union.",
+				"The country, whose people had experienced the full horror of nuclear tests, shut down the world's second largest nuclear test site on August 29 the global of decision taken by President Nazarbayev, the United Nations General Assembly in December 2009 declared August 29 an International Day against Nuclear Tests."
+			]
+		}
+	},
+	"kaz":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"About Kazakhstan | Introduction | History | Challenges | Successes"
+		},
+		"section_2":{
+			"title":"introduction",
+			"text":"The Republic of Kazakhstan is situated at the heart of Eurasia and is the worlds 9th largest country. When Kazakhstan became Independent in the unstable days of December 1991, few people thought the country would achieve as much as it did in Its flrst 20 years. Instead of disintegrating, Kazakhstan's economy became one of the fastest growing in the world, and the country has built a robust political system of presidential and parliamentary democracy with its media and NGos enjoying a growing voice and role in shaping the society.",
+			"watch":"watch the video"
+		},
+		"section_3":{
+			"title":"history",
+			"text":[
+				"Kazakhstan is located in the centre of the Eurasian continent and it's the biggest landlocked country in the world. The Republic of Kazakhstan Is a unitary state with a presidential form of government, which galned independence on December 16, 1991.",
+				" As an independent state, Kazakhstan Inherited both posltlve and negative legacies from the former Soviet Union. On the upside, Kazakhstan was a relatively industrialized economy with developed infrastructure, high levels of literacy, skilled and educated labour force.",
+				"The downside factors included a lack of traditions In democratic governance, no experience in ng under a market economy, significant risks of domestic confrontations along ethnic, religious or ideological lines, terrible environmental problems brought about by the Soviet military programmes and careless management of natural resources."
+			]
+		},
+		"section_4":{
+			"title":"challenges",
+			"text":"Today Kazakhstan focuses all efforts at Joining the world's 50 most competitive countries. In this regard Kazakhstan works strenuously at enhancing potential of local Industry and exceeding opportunities for small business, improving life conditions of vulnerable groups of society, developing health service and educational system, and providing opportunities for realization for all people, despite gender, race, and religion accessories. At the same time the states concerns about ecology and conditionals of environment, That's why another challenge Kazakhstan has faced lately is the issue of the transition for 'green economy' and conservation of natural resources and biodiversity."
+			},
+		"section_5":{
+			"title":"successes",
+			"text":[
+				"In a short historical term from the moment of gaining independence in 1991 GDP per capita has increased by 16 times from 700 to 12 000 US dollars, which is a phenomenal result even in comparison with swiftly developing southeast countries so-called 'tigers'.",
+				"Today, a multi-party system and more than 5,000 non-governmental organizations function in the country, reflecting political plurality and to social stability. People from more than 130 ethnic groups and 40 different religious denominations live peacefully with each other ir Kazakhstan, and none are discriminated against or abused.",
+				"Kazakhstan is a member of the United Nations, Organization for Security and Cooperation in Europe, Euro-Atlantic Partnership Council and the Organisation of lslamic Cooperation is an active participant in the North Atlantic Treaty Organisation Partnership for Peace program.",
+				"Kazakhstan's best known contribution to international security has been its voluntary renunciation of the world's fourth largest nuclear arsenal inherited from the former Soviet Union.",
+				"The country, whose people had experienced the full horror of nuclear tests, shut down the world's second largest nuclear test site on August 29 the global of decision taken by President Nazarbayev, the United Nations General Assembly in December 2009 declared August 29 an International Day against Nuclear Tests."
+			]
+		}
+	}
+}

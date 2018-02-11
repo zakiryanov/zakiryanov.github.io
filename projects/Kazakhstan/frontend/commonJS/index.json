@@ -1,0 +1,22 @@
+{
+	"eng":{
+		"menu":{
+			"home":"Home",
+			"about":"About country",
+			"culture":"Culture & traditions",
+			"tourism":"Tourism",
+			"president":"Leader of Nation",
+			"timeline":"Timeline"
+		}
+	},
+	"kaz":{
+		"menu":{
+			"home":"Бастапқы бет",
+			"about":"Қазақстан туралы",
+			"culture":"Культура & традиции",
+			"tourism":"Туризм",
+			"president":"Президент",
+			"timeline":"Уақыт сызығы"
+		}
+	}
+}

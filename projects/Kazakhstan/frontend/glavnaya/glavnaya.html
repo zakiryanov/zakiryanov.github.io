@@ -1,0 +1,128 @@
+<div id="anchor" class="glavnaya" >
+	<section class="section-1">
+		<div class="main-background bg-img" id="main-bg"></div>
+		<div  class="section-inner">
+			<div class="line-2  flex-column">
+				<img src="../frontend/assets/img/baiterek.png" alt="" class="baiterek">
+				<h1 class="wow fadeInUp">{{vm.currentText.section_1.kaz}}</h1>
+				<h2 class="wow fadeInUp" data-wow-delay="0.3s">{{vm.currentText.section_1.welcome}}</h2>
+				<button ng-click="vm.isShowVideo=!vm.isShowVideo" data-wow-delay="0.6s" class="wow fadeInUp button blue">{{vm.currentText.section_1.watchVideo}}</button>
+			</div>
+			<form data-wow-duration=".8s" data-wow-offset="100"  class="wow zoomIn input-container flex jc-c" ng-submit="vm.submitQuery()">
+				<input type="text" ng-model="vm.query" class="input" placeholder="{{vm.currentText.section_1.search}}">
+			</form>
+		</div>
+	</section>
+	<div>
+		<section class="section-2">
+			<p><span>{{vm.currentText.section_2.popularSearchTitle}}</span>{{vm.currentText.section_2.popularSearchText}}</p>
+			<div class="cards flex flex-center">
+				<div data-wow-offset="250" ng-repeat="(label, sectNumber) in vm.scrollCards" ng-click="vm.goToSection(sectNumber)" ng-class="{'blue':sectNumber==vm.selectedSection,'wow zoomIn':true}" data-wow-delay="{{$index*0.15}}s" class="card">
+					<div class="inner flex-column">
+						<img ng-src="../frontend/assets/img/{{sectNumber==vm.selectedSection?(label+'_selected'):label}}.png" alt="news">
+						<h4>{{vm.currentText.section_2[label+"Title"]}}</h4>
+						<p>{{vm.currentText.section_2[label+"Text"]}}</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-3" id="section-3">
+			<h3 class="title">{{vm.currentText.section_3.title}}</h3>
+			<div class="cards">
+				<div class="bg-text">
+					<p>news</p>
+				</div>
+				 <slick data-wow-offset="250" id="newsSlider" class="wow fadeInUp" init-onload="true" slides-to-show='2'  ng-if="vm.initSlider">
+					<div ng-click="vm.openLink(card.link)" ng-repeat="card in vm.currentText.section_3.cards"  class="card">
+						<div set-background-img src="{{card.src}}" class="bg-img"></div>
+						<div class="description">
+							<h4 class="title">{{card.descriptionTitle}}</h4>
+							<span class="text">{{card.descriptionText}}</span>
+							<a class="read-more">{{vm.currentText.readMore}}</a>
+						</div>
+					</div>		
+				</slick>
+			</div>
+		</section>
+		<section class="section-4" id="section-4">
+			<div  class="clouds bg-img"> 
+				<img src="../frontend/assets/img/clouds_background.png" alt="clouds">
+			</div>
+			<div data-wow-duration="1.5s" class="wow fadeInRight section-inner flex jc-sb ai-c">
+				<img src="../frontend/assets/img/map_siluet.png" alt="kz map">
+				<div class="description">
+					<h4 class="title">{{vm.currentText.section_4.descriptionTitle.first}}</h4>
+					<p class="text">{{vm.currentText.section_4.descriptionText.first}}</p>
+					<h4 class="title">{{vm.currentText.section_4.descriptionTitle.second}}</h4>
+					<p class="text">{{vm.currentText.section_4.descriptionText.second}}</p>
+				</div>
+			</div>
+			<button ui-sref="about" class="button">{{vm.currentText.readMore}}</button>
+		</section>
+		<section class="section-5" id="section-5">
+			<h3 class="title">{{vm.currentText.section_5.title}}</h3>
+			<div class="bg-text">
+				<p>leader</p>
+			</div>
+			<div data-wow-duration="1s"  class="wow fadeInUp section-inner flex jc-sa">
+
+				<div class="description">
+					<i>{{vm.currentText.section_5.quote}}</i>
+					<p>{{vm.currentText.section_5.quoteBy}}</p>
+					<button ui-sref="president" class="button blue">{{vm.currentText.readMore}}</button>
+				</div>
+				<img src="../frontend/assets/img/nurik.png" alt="kz map">
+			</div>
+		</section>
+		<section class="section-6 bg-img" id="section-6">
+			<h3 class="title">{{vm.currentText.section_6.title}}</h3>
+			<p class="text">{{vm.currentText.section_6.text}}</p>
+			<div class="section-innner flex ai-c jc-sb">
+				<div  data-wow-duration="1s" class="wow slideInLeft card">
+					<h4>{{vm.currentText.section_6.card.title}}</h4>
+					<p>
+						{{vm.currentText.section_6.card.text}}
+					</p>
+					<div class="corner"></div>
+				</div>
+				<div  data-wow-duration="1s" class="wow slideInRight bg-img"></div>
+			</div>
+		</section>
+		<section class="section-7" id="section-7">
+			<h3 class="title">{{vm.currentText.section_7.title}}</h3>
+			<p class="text">{{vm.currentText.section_7.text}}</p>
+			<div style="margin:0 auto;" class="slider" id="container">
+				<ul>
+					<li>
+						<img src="../frontend/assets/img/expo/expo3.jpg" alt="" />
+					</li>
+					<li>
+						<img src="../frontend/assets/img/expo/expo5.jpg" alt="" />
+					</li>
+					<li>
+						<img src="../frontend/assets/img/expo/expo1.jpg" alt="" />
+					</li>
+					<li>
+						<img src="../frontend/assets/img/expo/expo4.jpg" alt="" />
+					</li>
+					<li>
+						<img src="../frontend/assets/img/expo/expo2.jpg" alt="" />
+					</li>
+					<img src="../frontend/assets/img/Arrow-left.png" class="left">
+					<img src="../frontend/assets/img/Arrow-right.png" class="right">
+				</ul>
+			</div>
+		</section>
+	</div>
+
+	<div ng-click="vm.isShowVideo=false"  ng-if="vm.isShowVideo" class="bg-black flex flex-center">
+		<div ng-click="$event.stopPropagation()" data-wow-duration=".5s"  class="fadeInDown wow modal-content">
+			<div class="close-container flex">
+				<span ng-click="vm.isShowVideo=false" class="close">&times;</span>
+			</div>
+			<iframe width="920" height="550"
+			src="https://www.youtube.com/embed/jx5TZbkUgBs?autoplay=0&showinfo=0&controls=0">
+		</iframe> 
+	</div>
+</div>
+</div>

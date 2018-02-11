@@ -1,0 +1,32 @@
+<div id="anchor" class="culture">
+		<section class="section-1 flex">
+			<div id="main-bg" class="bg-img main-bg"></div>
+			<div class="section-inner">
+				<h1>{{vm.currentText.section_1.title}}</h1>
+			</div>
+		</section>
+		<section class="section-2">
+			<h3>{{vm.currentText.section_2.title}}</h3>
+			<p>{{vm.currentText.section_2.text}}</p>
+		</section>
+		<section class="section-3">
+			<div ng-repeat="sectIndex in vm.sects">
+				<div  class="img-descr flex jc-sa ai-c" ng-class="{'flex-reverse':sectIndex%2==0}" >
+					<img class="img" ng-src="{{vm.currentText.section_3[sectIndex].src}}" alt="">
+					<div class="descr">
+						<div class="index flex ai-c">
+							<span class="number flex flex-center">{{sectIndex}}</span>
+							<span class="text">{{vm.currentText.section_3.cultureElements}}</span>
+						</div>
+						<div class="title-text">
+							<h4>{{vm.currentText.section_3[sectIndex].title}}</h4>
+							<p>{{vm.currentText.section_3[sectIndex].text}}</p>
+							<a  target="_blank" href="https://www.advantour.com/kazakhstan/culture.htm"><img src="../frontend/assets/img/Arrow Right.png" alt="arrow"></a>
+						</div>
+					</div>
+				</div>
+				<div class="border-bottom"></div>
+			</div>
+		</section>
+	</div>
+</div>

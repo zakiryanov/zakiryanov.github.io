@@ -1,0 +1,134 @@
+{
+	"eng":{
+		"read":"read more",
+		"footer":{
+			"home":"Home",
+			"about":"About Kazakhstan",
+			"contacts":"Contact us"
+		},
+		"dates":[
+			{
+				"range":"1465-1847",
+				"title":"Kazakh Khanate",
+				"src":"../frontend/assets/img/krugi/kaz_hanstvo.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/cE6ze3_gZNc"
+			},
+			{
+				"range":"1991-1996",
+				"title":"Independence",
+				"src":"../frontend/assets/img/krugi/indep.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/WThfZxXqRI4"
+			},
+			{
+				"range":"1997-2002",
+				"title":"New Capital",
+				"src":"../frontend/assets/img/krugi/newcapital.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"../frontend/assets/img/akmola.jpg"
+			},
+			{
+				"range":"2003-2008",
+				"title":"NAURYZ",
+				"src":"../frontend/assets/img/krugi/nauryz.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/6TgWEu_3-Sc"
+			},
+			{
+				"range":"2009-2014",
+				"title":"Aziada 2011",
+				"src":"../frontend/assets/img/krugi/aziada.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/uxYc9kAde0E"
+			},
+			{
+				"range":"2015-2017",
+				"title":"EXPO 2017",
+				"src":"../frontend/assets/img/krugi/expo.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/pA087w8z3Xg"
+			},
+			{
+				"range":"2018",
+				"title":"2018",
+				"src":"../frontend/assets/img/krugi/2018.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"../frontend/assets/img/akmola.jpg"
+			}
+		]
+	},
+	"kaz":{
+		"read":"Оқу",
+		"footer":{
+			"home":"Бастапқы бет",
+			"about":"Қазақстан туралы",
+			"contacts":"Контакты"
+		},
+		"dates":[
+			{
+				"range":"1465-1847",
+				"title":"Kazakh Khanate",
+				"src":"../frontend/assets/img/krugi/kaz_hanstvo.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/cE6ze3_gZNc"
+			},
+			{
+				"range":"1991-1996",
+				"title":"Independence",
+				"src":"../frontend/assets/img/krugi/indep.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/WThfZxXqRI4"
+			},
+			{
+				"range":"1997-2002",
+				"title":"New Capital",
+				"src":"../frontend/assets/img/krugi/newcapital.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"../frontend/assets/img/akmola.jpg"
+			},
+			{
+				"range":"2003-2008",
+				"title":"NAURYZ",
+				"src":"../frontend/assets/img/krugi/nauryz.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/6TgWEu_3-Sc"
+			},
+			{
+				"range":"2009-2014",
+				"title":"Aziada 2011",
+				"src":"../frontend/assets/img/krugi/aziada.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/uxYc9kAde0E"
+			},
+			{
+				"range":"2015-2017",
+				"title":"EXPO 2017",
+				"src":"../frontend/assets/img/krugi/expo.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"https://www.youtube.com/embed/pA087w8z3Xg"
+			},
+			{
+				"range":"2018",
+				"title":"2018",
+				"src":"../frontend/assets/img/krugi/2018.png",
+				"text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt, blanditiis repudiandae? Autem ut, dolores culpa id sunt quidem eos alias magni? Quos repellat impedit sunt recusandae omnis, ullam necessitatibus!",
+				"quote":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat necessitatibus placeat et veniam accusantium porro quaerat praesentium, hic blanditiis nam temporibus magnam eius quisquam. Autem non deserunt itaque dolore soluta?",
+				"left_bg":"../frontend/assets/img/akmola.jpg"
+			}
+		]
+	}
+}

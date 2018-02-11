@@ -1,0 +1,119 @@
+.about{
+	line-height: 1.7;
+	position: relative;
+}
+
+.about .modal-content .close{
+	margin-top: -12px;
+}
+
+.about .section-1{
+	position: relative;
+	padding: 50px 140px;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+	height: 465px;
+}
+
+.about .section-1 .main-bg{
+	background-image: url('../assets/img/about_bg.jpg');
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.about .section-1 .section-inner{
+	position: relative;
+	z-index: 1;
+}
+
+.about .section-1 h1{
+	font-size: 48px;
+	color: #fff;
+	line-height: 1.4;
+	font-family: 'Avenir';
+	margin-bottom: 30px;
+}
+
+.about .section-1 .undp img{
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+.about .section-1 .undp span{
+	color: #3172E0;
+	text-transform: uppercase;
+	margin-left: 15px;
+}
+
+.about .section-1 .undp a{
+	color: #fff
+}
+
+.about .section-2,
+.about .section-4{
+	padding: 100px;
+}
+
+.about .section-2 img{
+	width: 400px;
+}
+
+.about .section-2 .descr{
+	width: 50%;
+}
+
+.about .descr h3{
+	color: #ddd;
+	font-size: 48px;
+	font-family: 'Avenir';
+	text-transform: uppercase;
+}
+
+.about .descr p{
+	color: #7F7F7F;
+	line-height: 1.5;
+	margin-top: 25px;
+}
+
+.about .section-2 .button{
+	border:2px solid #7F7F7F;
+	margin-top: 25px;
+	background-color: transparent;
+	color: #7F7F7F;
+}
+
+.about .section-3{
+	background-color: #F2FAFC;
+	padding: 0;
+}
+
+.about .section-3 .descr{
+	padding: 100px;
+	width: 62%;
+}
+
+.about .section-3 .bg-img{
+	width: 38%;
+	background-image: url('../assets/img/history.png');
+	background-position: 0 center
+}
+
+.about .section-4{
+	text-align: center;
+}
+
+.about .section-4 img{
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+.about .section-3:last-child .bg-img{
+	background-image: url('../assets/img/successes.png');
+}

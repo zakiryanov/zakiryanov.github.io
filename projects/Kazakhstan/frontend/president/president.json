@@ -1,0 +1,60 @@
+{
+	"eng":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"Nazarbayev Nursultan Abishuly | President | «Leader of the Nation»"
+		},
+		"section_2":{
+			"title":"Current Kazakhstan President is Nursultan Abish-uly Nazarbayev.",
+			"text":"Elections in 2005 returned Mr.Nazarbayev for a further seven-year tem with over 90% of the votes. The opposition protested that the ballot had been rigged and OSCE observers declared it to have been seriosly flawed."
+		},
+		"section_3":{
+			"watch":"watch the documentary film",
+			"title":"Kazakhstan President facts",
+			"text":[
+				"Kazakhstan is located in the centre of the Eurasian continent and it's the biggest landlocked country in the world. The Republic of Kazakhstan Is a unitary state with a presidential form of government, which galned independence on December 16, 1991.",
+				" As an independent state, Kazakhstan Inherited both posltlve and negative legacies from the former Soviet Union. On the upside, Kazakhstan was a relatively industrialized economy with developed infrastructure, high levels of literacy, skilled and educated labour force.",
+				"The downside factors included a lack of traditions In democratic governance, no experience in ng under a market economy, significant risks of domestic confrontations along ethnic, religious or ideological lines, terrible environmental problems brought about by the Soviet military programmes and careless management of natural resources."
+			]
+		},
+		"section_4":{
+			"title_first":"president",
+			"title_second":"quotes",
+			"text":"Today Kazakhstan focuses all efforts at Joining the world's 50 most competitive countries. In this regard Kazakhstan works strenuously at enhancing potential of local Industry .",
+			"quotes":[
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident."
+			]
+			}
+	},
+	"kaz":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"Nazarbayev Nursultan Abishuly | President | «Leader of the Nation»"
+		},
+		"section_2":{
+			"title":"Current Kazakhstan President is Nursultan Abish-uly Nazarbayev.",
+			"text":"Elections in 2005 returned Mr.Nazarbayev for a further seven-year tem with over 90% of the votes. The opposition protested that the ballot had been rigged and OSCE observers declared it to have been seriosly flawed."
+		},
+		"section_3":{
+			"watch":"watch the documentary film",
+			"title":"Kazakhstan President facts",
+			"text":[
+				"Kazakhstan is located in the centre of the Eurasian continent and it's the biggest landlocked country in the world. The Republic of Kazakhstan Is a unitary state with a presidential form of government, which galned independence on December 16, 1991.",
+				" As an independent state, Kazakhstan Inherited both posltlve and negative legacies from the former Soviet Union. On the upside, Kazakhstan was a relatively industrialized economy with developed infrastructure, high levels of literacy, skilled and educated labour force.",
+				"The downside factors included a lack of traditions In democratic governance, no experience in ng under a market economy, significant risks of domestic confrontations along ethnic, religious or ideological lines, terrible environmental problems brought about by the Soviet military programmes and careless management of natural resources."
+			]
+		},
+		"section_4":{
+			"title_first":"president",
+			"title_second":"quotes",
+			"text":"Today Kazakhstan focuses all efforts at Joining the world's 50 most competitive countries. In this regard Kazakhstan works strenuously at enhancing potential of local Industry .",
+			"quotes":[
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident.",
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor praesentium, nesciunt officiis error architecto nulla repellendus, delectus. Maxime aperiam iusto veniam recusandae harum aliquid amet, cumque veritatis ipsa provident."
+			]
+			}
+	}
+}

@@ -1,0 +1,41 @@
+<div class="timeline" id="anchor">
+	<div id="main-bg" class="main-content bg-img flex flex-center">
+		<div class="center-container">
+			<div class="circle-container">
+			<div set-background-img src="{{date.src}}" ng-show="false"></div>
+				<div set-background-img src="{{date.src}}"  ng-repeat="date in vm.currentText.dates"  ng-class='[vm.circleClass,date.range=="2018"?"izgoi":""]' ng-if="vm.currentCircle == $index" class="circle flex flex-column jc-sa ai-c bg-img">
+					<p >{{date.range}}</p>
+					<h4 ng-click="vm.showTimelineInfo()">{{date.title}}</h4>
+					<span  ng-click="vm.showTimelineInfo()">{{vm.currentText.read}}</span>
+				</div>
+			</div>
+			<div class="slider-container">
+				<rzslider
+				rz-slider-model="vm.slider.currentValue"
+				rz-slider-options="vm.slider.options"></rzslider>	
+			</div>
+		</div>	
+		<div class="footer">
+			<span ui-sref="glavnaya" >{{vm.currentText.footer.home}}</span>
+			<span ui-sref="about">{{vm.currentText.footer.about}}</span>
+			<span>{{vm.currentText.footer.contacts}}</span>
+		</div>
+	</div>
+
+	<div ng-init="date = vm.currentText.dates[vm.currentCircle]" ng-if="vm.isShowModal" class="bg-black flex jc-c">
+
+		<div data-wow-duration=".5s"  class="modal-content flex">
+			<div ng-if="date.isImg" set-background-img src="{{date.left_bg}}" class="img-video bg-img">
+			</div>
+			<div ng-show="!date.isImg" class="img-video bg-img">
+				<iframe ng-src="{{vm.getVideoUrl(date.left_bg)}}">
+			</iframe> 
+		</div>
+		<div class="text">
+			<span>{{date.range}}</span>
+			<h3>{{date.title}}</h3>
+			<p>{{date.text}}</p>
+			<blockquote>{{date.quote}}</blockquote>
+		</div>
+	</div>
+</div>

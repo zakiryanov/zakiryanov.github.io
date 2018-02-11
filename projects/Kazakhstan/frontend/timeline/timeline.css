@@ -1,0 +1,237 @@
+.timeline{
+	height: 100vh;
+	background: linear-gradient(to bottom,#eef7fb,#c4def0);
+	overflow: hidden;
+}
+
+.normalize{
+	min-width: 0
+}
+
+.timeline span{
+	outline: none
+}
+
+.timeline .main-content{
+	padding: 150px 0;
+	background-image: url('../assets/img/moving-clouds.png');
+	background-repeat: repeat-y;
+	width: 100%;
+	height: 100vh;
+}
+
+.timeline .main-content .center-container{
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.timeline .main-content .center-container .circle-container{
+	z-index: 1;
+	width: 480px;
+	height: 480px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.timeline .main-content .center-container .circle{
+	width: 100%;
+	height: 100%;
+	color: #3a87d9;
+	border-radius: 100%;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 1;
+	position: absolute;
+	padding-bottom: 40%;
+}
+
+.timeline .main-content .center-container .circle h4{
+	font-weight: bold;
+	font-size: 42px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	margin: 20px 0;
+}
+
+.timeline .main-content .center-container .izgoi{
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 1%;
+}
+
+.timeline .main-content .center-container .izgoi h4{
+	font-size: 65px
+}
+
+.timeline .main-content .center-container .izgoi p,
+.timeline .main-content .center-container .izgoi span{
+	display: none;
+}
+
+
+.timeline .main-content .center-container .circle p
+{
+		margin-top: 30px;
+		letter-spacing: 2px;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.timeline .main-content .center-container .circle span{
+	padding:17px 30px;
+	cursor: pointer;
+	border-radius: 100px;
+	letter-spacing: 2px;
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #f5a625;
+	font-size: 14px;
+}
+
+.timeline .circle.ng-enter,
+.timeline .circle.ng-leave{
+	transition: .8s;
+}
+
+.timeline .circle.scroll-up.ng-leave{
+	transform: scale(1);
+	opacity: 1
+}
+.timeline .circle.scroll-up.ng-leave-active{
+	transform: scale(5);
+	opacity: 0
+}
+.timeline .circle.scroll-up.ng-leave-active span{
+	transform: scale(0);
+}
+.timeline .circle.scroll-up.ng-enter{
+	transform: scale(0);
+	opacity: 0
+}
+.timeline .circle.scroll-up.ng-enter-active{
+	transform: scale(1);
+	opacity: 1
+}
+
+.timeline .circle.scroll-down.ng-leave{
+	transform: scale(1);
+	opacity: 1
+}
+
+.timeline .circle.scroll-down.ng-leave-active{
+	transform: scale(0);
+	opacity: 0
+}
+.timeline .circle.scroll-down.ng-enter{
+	transform: scale(5);
+	opacity: 0
+}
+.timeline .circle.scroll-down.ng-enter-active{
+	transform: scale(1);
+	opacity: 1
+}
+
+.timeline .main-content .slider-container{
+	position: absolute ;
+	right: 200px;
+	top: 10%;
+	height: 80%;
+}
+
+.timeline .main-content .rzslider .rz-pointer:after{
+	background: #fff !important
+}
+
+.timeline .footer{
+	text-align: center;
+	width: 100%;
+	bottom: 30px;
+	position: absolute;
+}
+
+.timeline .footer span{
+	margin-left: 50px;
+	font-weight: bold;
+	color: #888;	
+	cursor: pointer;
+	font-size: 18px;
+	transition: .4s
+}
+
+.timeline .footer span:hover{
+	color: #222;
+}
+
+.timeline .bg-black{
+	z-index: 99;
+}
+
+.timeline .modal-content{
+	background-color: #fff;
+	width: 100%;
+	height:100% ;	
+	position: relative;
+}
+
+.timeline .modal-content .close{
+	color: #555;
+	margin-right: 15px;
+}
+
+.timeline .modal-content .img-video{
+	width: 50%;
+	height: 100%;
+	background-size: cover;
+}
+
+.timeline .modal-content .img-video iframe{
+	width: 100%;
+	height: 100%;
+	border-radius: 0
+}
+
+.timeline .modal-content .text{
+	width: 50%;
+	padding:150px 70px 0;
+}
+
+.timeline .modal-content .text span{
+	color: #e0e0e0;
+	font-size: 18px;
+}
+
+.timeline .modal-content .text h3{
+	color: #111;
+	font-size: 30px;
+	margin:25px 0 15px;
+}
+
+.timeline .modal-content .text p{
+	color: #797979;
+	line-height: 1.3;
+}
+
+.timeline .modal-content .text blockquote{
+	color: #6c9cca;
+	line-height: 1.4;
+	margin-top: 20px;
+	padding-left: 20px;
+	border-left: 2px solid #6c9cca;
+}
+
+.timeline .bg-black.ng-enter .modal-content{
+	animation: fadeInDown .7s;
+	-webkit-animation: fadeInDown 0.7s;
+}
+
+.timeline .bg-black.ng-enter{
+	animation: fadeIn .7s;
+	-webkit-animation: fadeIn 0.7s;
+}
+
+.timeline .bg-black.ng-leave{
+	animation: fadeOut .3s;
+	-webkit-animation: fadeOut 0.3s;
+}

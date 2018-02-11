@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru" data-livestyle-extension="available">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <title>Kazakhstan.kz</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!--------------------- CSS ------------- -->
+  <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../bower_components/angularjs-slider/dist/rzslider.min.css">
+  <link rel="stylesheet" href="../bower_components/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="../bower_components/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="commonCss/index.css">
+  <link rel="stylesheet" href="glavnaya/glavnaya.css">
+  <link rel="stylesheet" href="tourism/tourism.css">
+  <link rel="stylesheet" href="culture/culture.css">
+  <link rel="stylesheet" href="about/about.css">
+  <link rel="stylesheet" href="president/president.css">
+  <link rel="stylesheet" href="timeline/timeline.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body  ng-app="myApp" ng-controller="rootCtrl as vm"  ng-cloak>
+<div class="loader-bg flex flex-center">
+  <div class="loader"></div>
+</div>
+  <header ng-class="{'black':vm.isTimelineActive}" >
+    <div class="header-inner flex jc-sb flex-center">
+      <div class="langs flex jc-sb ai-c">
+        <ul class="breadcrumb">
+          <li ng-class="{'active':vm.currentLang==name}" ng-click="vm.changeLang(name)" ng-repeat="(name,label) in vm.langs" >{{label}} 
+            <img src="../frontend/assets/img/{{name}}.png" alt="{{name}}">
+          </li>
+        </ul>
+        <p ng-if="vm.isTimelineActive" >{{vm.currentLang=='kaz'?'Қазақстан':'Country Timeline'}}</p>
+      </div>
+      <div ng-show="!vm.openTimelineInfo" ng-click="vm.isShowMenu=true"  class="burger-menu">
+        <div class="burger"></div> 
+      </div>
+          <span ng-click="vm.closeTimelineInfo()" class="close" ng-show="vm.openTimelineInfo">&times;</span>
+    
+    </div>
+
+
+    
+    <div ng-click="vm.isShowMenu=false"  ng-if="vm.isShowMenu" class="bg-black bg-black-menu flex jc-fe">
+      <div ng-click="$event.stopPropagation()" class="menu">
+        <div class="flex jc-fe">
+          <span ng-click="vm.isShowMenu=false" class="close">&times;</span>
+        </div>
+        <ul>
+          <li><a ng-click="vm.changeState('glavnaya')" >{{vm.currentText.menu.home}}</a></li>
+          <li><a ng-click="vm.changeState('about')">{{vm.currentText.menu.about}}</a></li>
+          <li><a ng-click="vm.changeState('culture')">{{vm.currentText.menu.culture}}</a></li>
+          <li><a ng-click="vm.changeState('tourism')">{{vm.currentText.menu.tourism}}</a></li>
+          <li><a ng-click="vm.changeState('president')">{{vm.currentText.menu.president}}</a></li>
+          <li><a ng-click="vm.hideFooter();vm.changeState('timeline')">{{vm.currentText.menu.timeline}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="main_view" ui-view>
+  </div>
+
+  
+  <footer ng-hide="vm.isTimelineActive">
+    <div class="footer-big flex jc-c">
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>company</h4>
+        <ul>
+          <li>About</li>
+          <li>Culture and traditions</li>
+          <li>Tourism</li>
+          <li>Leader of the Nation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-small">&copy;{{vm.currentYear}} All rights reserved.</div>
+  </footer>
+  <script src="../bower_components/wow/dist/wow.min.js"></script>
+
+  <script src="../bower_components/jquery-1.11.3.min/index.js"></script>
+  <script src="../bower_components/slick-carousel/slick/slick.min.js"></script>
+  <script src="../bower_components/carousel/js/Carousel.js"></script>
+
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="../bower_components/ngstorage/ngStorage.min.js"></script>
+  <script src="../bower_components/angular-scroll/angular-scroll.min.js"></script>
+  <script src="../bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+  <script src="../bower_components/angular-slick/angular-slick.min.js"></script>
+  <!--- --------------- MAIN SCRIPTS -->
+  <script src="commonJS/index.module.js"></script>
+  <script src="commonJS/index.route.js"></script>
+  <script src="commonJS/index.js"></script>
+  <!-- ----------------COMPONENTS  -->
+  <script src="components/authService.js"></script>
+  <script src="components/setBackgroundImg.js"></script>
+  <script src="components/vmService.js "></script>
+  <!----------------- -CONTROLLERS -->
+  <script src="glavnaya/glavnaya.js"></script>
+  <script src="tourism/tourism.js"></script>
+  <script src="culture/culture.js"></script>
+  <script src="about/about.js"></script>
+  <script src="president/president.js"></script>
+  <script src="timeline/timeline.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Carousel.js 3D Rotator Examples</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <style>
+    body { background-color:#222; color:#fff;}
+    h1 { margin:150px auto 30px auto; text-align:center;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden
+    }
+
+    .clearfix {
+        *+height: 1%;
+    }
+
+    .container {
+        height: 300px;
+        margin:30px auto;
+    }
+
+    .container ul {}
+
+    .container ul li {
+        /* transition: width .5s, height .5s, top .5s, left .5s;
+            -webkit-transition: width .5s, height .5s, top .5s, left .5s;
+            */
+            border:1px solid #fff;
+    }
+
+    .container ul li img {}
+
+    .left,
+    .right {
+        cursor: pointer;
+    }
+    </style>
+    <script src="js/Carousel.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.container').carousel({
+            num: 5,
+            maxWidth: 450,
+            maxHeight: 300,
+            distance: 50,
+            scale: 0.6,
+            animationTime: 1000,
+            showTime: 4000
+        });
+        $('#container2').carousel({
+            num: 5,
+            maxWidth: 200,
+            maxHeight: 100,
+            showTime: 5000
+        });
+
+        $('#container3').carousel({
+            num: 5,
+            maxWidth: 300,
+            maxHeight: 250,
+            distance: 30,
+            autoPlay: false
+        });
+    });
+    </script>
+</head>
+
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/rotator/Simplest-3D-Image-Carousel-Plugin-For-jQuery-Carousel-js.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1>jQuery Carousel.js 3D Rotator Examples</h1>
+    <div class="container" id="container">
+        <ul>
+            <li>
+                <img src="https://unsplash.it/400/250?image=974" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=973" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=972" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=971" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=970" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=964" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=954" alt="" />
+            </li>
+            <img src="img/left.png" class="left">
+            <img src="img/right.png" class="right">
+        </ul>
+    </div>
+    <div class="container" id="container2">
+        <ul>
+            <li>
+                <img src="https://unsplash.it/400/250?image=974" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=973" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=972" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=971" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=970" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=964" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/400/250?image=954" alt="" />
+            </li>
+            <img src="img/left.png" class="left">
+            <img src="img/right.png" class="right">
+        </ul>
+    </div>
+    <div class="container" id="container3">
+        <ul>
+            <li>
+                <img src="https://unsplash.it/252/152?image=974" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/252/152?image=973" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/252/152?image=972" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/252/152?image=971" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/252/152?image=970" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/252/152?image=964" alt="" />
+            </li>
+            <li>
+                <img src="https://unsplash.it/252/152?image=954" alt="" />
+            </li>
+            <img src="img/left.png" class="left">
+            <img src="img/right.png" class="right">
+        </ul>
+    </div>
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

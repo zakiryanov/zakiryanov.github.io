@@ -1,0 +1,88 @@
+{
+	"eng":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"Culture of Kazakhstan | Kazakh culture and national traditions"
+		},
+		"section_2":{
+			"title":"introduction",
+			"text":"The Kazakhs are an extremely hospitable people. If you come to a Kazakh home unexpected you will be received as if you had been invited. Since early childhood principles of respect of guests and older people as well as peacefulness and tolerance are instilled in every Kazakh and these are the national features of Kazakh culture and traditions. This is why Kazakhstan didn't have any significant national or religious conflicts in its history. Traditionally every guest is offered dishes of national Kazakh cuisine at the dastarkhan (the low table) in a yurt."
+		},
+		"section_3":{
+			"cultureElements":"culture elements",
+			"1":{
+				"title":"Yurts",
+				"text":"The yurt is one of the most sensible movable house. It is a comfortable and practical home, ideally suited to the local conditions and way of life one of the greatest inventions of Eurasian nomads. It is easily taken apart (it is said that a Kazakh woman can do it in half an hour) and carried on horses and camels. The consists of three main elements: an extensible yurt trellis base (the kerege), a dome made of poles (the uyk) and a round top (the shanyrak).",
+				"link":"",
+				"src":"../frontend/assets/img/yurt.png"
+			},
+			"2":{
+				"title":"Handicrafts",
+				"text":"Handicrafts harnesses, felt mats (tekemets), articles made of wood, bone and metal are lavishly decorated. Headdresses, dresses, bags and saddle-cloths are beautifully embroidered. They use traditional designs and carvings to make and decorate the wooden cups, large bowls and ladles used to serve for kumis (fermented mare's milk) The horns of mountain rams and goats are used to decorate beds and caskets, Leather is used to make quivers, belts, harnesses and flasks (torsyks) for water and kumis Kazakh artisans are also very skillful jewelers Steppe zergers (jewelers favor white silver Traditional Kazakh bell-shaped earrings, original bracelets (blezics) or the traditional bracelet linked to three rings by fine chains will certainly attract you.",
+				"link":"",
+				"src":"../frontend/assets/img/goldman.png"
+			},
+			"3":{
+				"title":"The Kazakh national dress",
+				"text":"The Kazakh national dress varies by regions. Men wear chapans, a kind of dressing gown with a belt, made of velvet and richly embroidered. They cover their heads with a soft skullcap (tobetai), a tall felt cap (kalpak) or a fox-fur hat with earflaps (malakai). The women's national costume consists of a white cotton or colored silk dress, a velvet waistcoat with embroidery and a cap or a silk scarf. Elderly women wear a hood made of white cloth with a hole for the f (the kimeshek) es wear a tall pointed, richly decorated hat, topped h feathers (saukele).",
+				"link":"",
+				"src":"../frontend/assets/img/clothes.png"
+			},
+			"4":{
+				"title":"Music and musical instruments",
+				"text":"The Kazakhs love the art of words and their akyns (poets), who improvise at public competitions (aitys) accompanied by national stringed musical instruments: the dombra or the kobyz.",
+				"link":"",
+				"src":"../frontend/assets/img/instrument.png"
+			},
+			"5":{
+				"title":"National games",
+				"text":"National games: these are usually performed on horse- back and are an opportunity to witness the Kazakh's outstanding riding skills. Kazaksha kures (Kazakh wrestling), baiga (horse racing over 25, 50 or 100 km), kokpar (a sort of polo game played with a dead goat). kyz kuu (catch the girl) and alty bakan (six-pole swing).",
+				"link":"",
+				"src":"../frontend/assets/img/games.png"
+			}
+		}
+	},
+	"kaz":{
+		"readMore":"Read more",
+		"section_1":{
+			"title":"Culture of Kazakhstan | Kazakh culture and national traditions"
+		},
+		"section_2":{
+			"title":"introduction",
+			"text":"The Kazakhs are an extremely hospitable people. If you come to a Kazakh home unexpected you will be received as if you had been invited. Since early childhood principles of respect of guests and older people as well as peacefulness and tolerance are instilled in every Kazakh and these are the national features of Kazakh culture and traditions. This is why Kazakhstan didn't have any significant national or religious conflicts in its history. Traditionally every guest is offered dishes of national Kazakh cuisine at the dastarkhan (the low table) in a yurt."
+		},
+		"section_3":{
+			"cultureElements":"culture elements",
+			"1":{
+				"title":"Yurts",
+				"text":"The yurt is one of the most sensible movable house. It is a comfortable and practical home, ideally suited to the local conditions and way of life one of the greatest inventions of Eurasian nomads. It is easily taken apart (it is said that a Kazakh woman can do it in half an hour) and carried on horses and camels. The consists of three main elements: an extensible yurt trellis base (the kerege), a dome made of poles (the uyk) and a round top (the shanyrak).",
+				"link":"",
+				"src":"../frontend/assets/img/yurt.png"
+			},
+			"2":{
+				"title":"Handicrafts",
+				"text":"Handicrafts harnesses, felt mats (tekemets), articles made of wood, bone and metal are lavishly decorated. Headdresses, dresses, bags and saddle-cloths are beautifully embroidered. They use traditional designs and carvings to make and decorate the wooden cups, large bowls and ladles used to serve for kumis (fermented mare's milk) The horns of mountain rams and goats are used to decorate beds and caskets, Leather is used to make quivers, belts, harnesses and flasks (torsyks) for water and kumis Kazakh artisans are also very skillful jewelers Steppe zergers (jewelers favor white silver Traditional Kazakh bell-shaped earrings, original bracelets (blezics) or the traditional bracelet linked to three rings by fine chains will certainly attract you.",
+				"link":"",
+				"src":"../frontend/assets/img/goldman.png"
+			},
+			"3":{
+				"title":"The Kazakh national dress",
+				"text":"The Kazakh national dress varies by regions. Men wear chapans, a kind of dressing gown with a belt, made of velvet and richly embroidered. They cover their heads with a soft skullcap (tobetai), a tall felt cap (kalpak) or a fox-fur hat with earflaps (malakai). The women's national costume consists of a white cotton or colored silk dress, a velvet waistcoat with embroidery and a cap or a silk scarf. Elderly women wear a hood made of white cloth with a hole for the f (the kimeshek) es wear a tall pointed, richly decorated hat, topped h feathers (saukele).",
+				"link":"",
+				"src":"../frontend/assets/img/clothes.png"
+			},
+			"4":{
+				"title":"Music and musical instruments",
+				"text":"The Kazakhs love the art of words and their akyns (poets), who improvise at public competitions (aitys) accompanied by national stringed musical instruments: the dombra or the kobyz.",
+				"link":"",
+				"src":"../frontend/assets/img/instrument.png"
+			},
+			"5":{
+				"title":"National games",
+				"text":"National games: these are usually performed on horse- back and are an opportunity to witness the Kazakh's outstanding riding skills. Kazaksha kures (Kazakh wrestling), baiga (horse racing over 25, 50 or 100 km), kokpar (a sort of polo game played with a dead goat). kyz kuu (catch the girl) and alty bakan (six-pole swing).",
+				"link":"",
+				"src":"../frontend/assets/img/games.png"
+			}
+		}
+	}
+}
