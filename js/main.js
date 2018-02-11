@@ -193,23 +193,20 @@
       if(name=="" || number=="") {
          error.text("Заполните пожалуйста все поля");
          return;
-       }
-        error.text("Отправка ...");
-        var data = {name:name,number:number,currentProduct:currentProduct};
-         error.text("Спасибо "+name.charAt(0).toUpperCase()+name.substr(1).toLocaleLowerCase()+", ожидайте звонка,я обязательно вам презвоню !").show();
+      }
+      error.text("Отправка ...");
+      var data = {name:name,number:number,currentProduct:currentProduct};
 
-           $.ajax({
-               type: 'POST',
-               url: 'http://198.199.124.150:80/endpoint',
-               data: data,
-               success: function(data) {
-               },
-               error: function(xhr, status, error) {
-               }
-           });
-
-           return false;
-
+      emailjs.send("gmail","template_1pVkLrKH",data)
+      .then(
+        function(response) {
+          error.text("Спасибо "+name.charAt(0).toUpperCase()+name.substr(1).toLocaleLowerCase()+", ожидайте звонка,я обязательно вам презвоню !").show();
+          return false;
+        }, 
+        function(error) {
+          console.log("FAILED", error);
+        }
+      );
     });
 
   $(".zakazat").click(function () {
