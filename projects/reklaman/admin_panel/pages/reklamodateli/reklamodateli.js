@@ -8,12 +8,13 @@ angular.module('admin_panel').controller('reklamodateliCtrl',function($localStor
 	vm.searchText = "";
 	vm.payment_id = $stateParams.id;
 
+
 	getCompanies();
 
 	function getCompanies(){
 		reklamodatelService.getCompanies({from:vm.beginIndex,limit:vm.limit,search:vm.searchText},function(data){
 			if(vm.beginIndex==0) vm.companies = [];
-			vm.companies = vm.companies.concat(data.data);
+			vm.companies = vm.companies.concat(data.companies);
 			vm.amount = data.amount;
 		})
 	}
@@ -25,9 +26,9 @@ angular.module('admin_panel').controller('reklamodateliCtrl',function($localStor
 		})
 	}
 
-	reklamodatelService.getTotalAmount(function(data) {
-		vm.total_amount = data;
-	})
+
+		vm.total_amount = 243;
+
 
 	reklamodatelService.getBannersOnModerationCount(function(data) {
 		vm.bannersOnModeration = data.data;

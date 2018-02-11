@@ -4,10 +4,10 @@
     <img class="logo" src="assets/images/logo.png" alt="reklaman">
     <div class="right-div flex">
       <a ui-sref="tickets({which:'company'})" >Впоросы рекламодателей</a>
-      <span ui-sref="tickets({which:'company'})" class="counter"> {{vm.companyQuestionsCounter}}
+      <span ui-sref="tickets({which:'company'})" class="counter"> 36
       </span>
       <a ui-sref="tickets({which:'user'})">Впоросы Пользователей</a>
-      <span ui-sref="tickets({which:'user'})" class="counter">{{vm.userQuestionsCounter}}</span>
+      <span ui-sref="tickets({which:'user'})" class="counter">54</span>
       <div set-background-img src="{{vm.admin.photo}}" class="user-photo"></div>
       <span class="user-name">{{vm.admin.name}}</span>
       <div ng-click="vm.authorizeAsAdmin()" class="logout">

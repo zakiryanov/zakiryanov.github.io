@@ -1,0 +1,100 @@
+<div class="ap_banners_on_moderation  white-div">
+	<div class="line-1 flex">
+		<div class="title-div">
+			<img src="assets/images/smartphone-gray.png" class="title-icon">
+			<h2 class="title-text">баннеры на модерацию</h2>
+		</div>
+	</div>
+	<div class="line-2 flex">
+		<div>
+			<button ng-click="vm.stop()" ng-class="{'btn-blue':vm.isButtonsActive>0}" class="btn-gray"><i class="fa fa-pause"></i> Остановить</button>
+			<button ng-click="vm.delete()" ng-class="{'btn-blue':vm.isButtonsActive>0}" class="btn-gray"><i class="fa fa-trash-o"></i> Удалить</button>
+			<button ng-click="vm.copy()" ng-class="{'btn-blue':vm.isButtonsActive>0}" class="btn-gray"><i class="fa fa-files-o"></i> Копировать</button>
+		</div>
+		<input type="text" placeholder="Поиск" ng-model="vm.searchText" ng-change="vm.search()" class="input input-search">
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th  ><input ng-model="vm.allSelected" ng-class="{'active':vm.allSelected}" class="checkbox-custom" type="checkbox"><label ng-click="vm.selectAll(!vm.allSelected)" ></label></th>
+				<th>Объявление</th>
+				<th>Рекламодатель</th>
+				<th>Стоимость</th>
+				<th>Расход</th>
+				<th>Показы</th>
+				<th>Сохранено</th>
+				<th>Переходы</th>
+				<th>Действия</th>
+			</tr>			
+		</thead>
+		<tbody>
+			<tr ng-repeat="banner in vm.banners | filter:search">
+				<td ng-click="vm.check(banner)">
+					<input  ng-class="{'active':banner.checked}" ng-model="banner.checked" class="checkbox-custom" type="checkbox">
+					<label  ></label>
+				</td>
+				<td >					
+					<div class="flex">
+						<div class="photo" set-background-img src="{{banner.photo}}"></div>
+						<div class="banner-info flex-column">
+							<p class="green bolder name">{{banner.name}}</p>
+							<p class="description bold">
+								{{banner.gender.name}},{{banner.age_from}}-{{banner.age_to}} лет,
+								<span ng-repeat="city in banner.cities | limitTo:3">{{city.name}}
+									<span ng-if="$index+1<banner.cities.length">, </span>									
+								</span>
+								<span ng-if="banner.cities.length>3">и еще {{banner.cities.length-3}} города(-ов)</span>
+							</p>
+							<p class="people">{{banner.appropriate_users}} человек</p>
+							<a target="_blank" href="{{banner.link}}" class="link green">{{banner.link}}</a>
+						</div>
+					</div>
+				</td>
+				<td class="company_name" >
+					{{banner.company.name}}
+				</td>
+				<td>{{banner.cost}} <i class="fa fa-rub"></i></td>
+				<td>{{banner.consumption}} <i class="fa fa-rub"></i></td>
+				<td>{{banner.displays}}</td>
+				<td>{{banner.saved}}</td>
+				<td>{{banner.transition}}</td>
+				<td class="operations">
+					<div ui-sref="banner_update({id:banner.id})" class="btn-gray">
+						<i class="fa fa-paint-brush"></i>
+						<span class="my-tooltip">Редактировать</span>
+					</div>	
+					<div  ui-sref="reklamodatel_banners({id:banner.company.id})" class="btn-gray mobile">
+						<i class="fa fa-mobile"></i>
+						<span class="my-tooltip">Баннеры</span>
+					</div>	
+					<div ng-click="vm.changeAcceptingStatus(banner,true)" class="btn-gray">
+						<i class="fa fa-check"></i>
+						<span class="my-tooltip">Подтвердить</span>
+					</div>	
+					<div ng-click="vm.changeAcceptingStatus(banner,false)" class="btn-gray">
+						<i class="fa fa-times"></i>
+						<span class="my-tooltip">Отклонить</span>
+					</div>					
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div class="pagination flex">
+		<div class="limit dropdown">
+			<span>Отрбражать: </span>
+			<button bs-dropdown class="btn-gray">{{vm.limit}}</button>
+			<ul class="dropdown-menu" role="menu">
+				<li ng-hide="vm.limit==25" ng-click='vm.changeLimit(25)'>25</li>
+				<li ng-hide="vm.limit==50" ng-click='vm.changeLimit(50)'>50</li>
+				<li ng-hide="vm.limit==100" ng-click='vm.changeLimit(100)'>100</li>
+			</ul>
+		</div>
+		<div ng-click="vm.getNewData()" class="show-more btn-gray">
+			<span><<</span>  <span >Показать еще</span> <span>>></span>
+		</div>
+		<div >
+			Показано {{vm.banners.length}} из {{vm.amount}} объявлений
+		</div>
+	</div>	
+</div>

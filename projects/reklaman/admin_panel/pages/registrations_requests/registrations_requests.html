@@ -19,13 +19,18 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="request in vm.requests">
-				<td class="company_name">{{request.FIO}}</td>
-				<td>{{request.CompanyName }}<span>
-				<td class="mail">{{request.Email}}</td>	
-				<td>{{request.Phone}}</td>
-				<td class="comment">{{request.Comment}}</td>
-				<td>{{request.created | date:'yyyy-MM-dd HH:mm'}}</td>
+				<td class="company_name">{{request.company_name}}</td>
+				<td>{{request.name }}<span>
+				<td class="mail">{{request.email}}</td>	
+				<td>{{request.phone}}</td>
+				<td class="comment">{{request.comment}}</td>
+				<td>{{request.created_at | date:'yyyy-MM-dd HH:mm'}}</td>
 				<td class="operations">
+					<div ng-click="vm.read(request)" class="btn-gray">
+						<i class="fa fa-check"></i>
+						<span class="my-tooltip reverse">Отметить как прочитано</span>
+
+					</div>
 					<div ng-click="vm.delete(request)" class="btn-gray">
 						<i class="fa fa-times"></i>
 						<span class="my-tooltip">Отклонить</span>

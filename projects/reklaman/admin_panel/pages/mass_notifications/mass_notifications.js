@@ -15,7 +15,7 @@ angular.module('admin_panel').controller('massNotificationsCtrl',function($state
 	function getNotifications(){
 		ticketService.getNotifications({from:vm.beginIndex,limit:vm.limit,search:vm.searchText,which:vm.which},function(data){
 			if(vm.beginIndex==0) vm.questions = [];
-			vm.questions = vm.questions.concat(data.data);
+			vm.questions = vm.questions.concat(data.questions);
 			vm.amount = data.amount
 		});
 	}
@@ -29,7 +29,7 @@ angular.module('admin_panel').controller('massNotificationsCtrl',function($state
 
 	vm.getNewData = function(){
 		if(vm.questions.length>=vm.amount) return;
-		vm.beginIndex = vm.questions.length;
+		vm.beginIndex = vm.questions.length+1;
 		getNotifications();
 	}
 	

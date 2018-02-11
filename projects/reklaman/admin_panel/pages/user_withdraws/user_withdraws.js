@@ -1,4 +1,4 @@
-angular.module('admin_panel').controller('userWithdrawsCtrl',function(myService,userService,$stateParams,Notification) {
+angular.module('admin_panel').controller('userWithdrawsCtrl',function(userService,$stateParams) {
 	
 	var vm = this;
 
@@ -10,54 +10,54 @@ angular.module('admin_panel').controller('userWithdrawsCtrl',function(myService,
 	vm.filters = {};
 	vm.allSelected = false;
 	vm.searchText = "";
-	vm.user_id = $stateParams.id?$stateParams.id:'';
+	vm.user_id = $stateParams.id;
+	var timeout;
+
 	getWithdraws();
 
 	userService.getWithdrawsStatuses(function(data){
 		vm.withdrawsStatuses = data;
 	})
-
-		
-	
 	
 	function getWithdraws(){
-		userService.getWithdraws({filters:vm.filters,from:vm.beginIndex,limit:vm.limit,search:vm.searchText},vm.user_id,function (data){
+		if(vm.user_id){
+			userService.getUserWithdraws({filters:vm.filters,from:vm.beginIndex,limit:vm.limit,search:vm.searchText},function(data){
 				if(vm.beginIndex==0) vm.withdraws = [];
-				vm.withdraws = vm.withdraws.concat(data.data);
+				vm.withdraws = vm.withdraws.concat(data.withdraws);
 				vm.amount = data.amount;
-		});	
+			});	
+		}else{
+			userService.getWithdraws({filters:vm.filters,from:vm.beginIndex,limit:vm.limit,search:vm.searchText},function(data){
+				if(vm.beginIndex==0) vm.withdraws = [];
+				vm.withdraws = vm.withdraws.concat(data.withdraws);
+				vm.amount = data.amount;
+			});	
+		}		
 	}
 
 	vm.selectAll = function(){
-			vm.allSelected=!vm.allSelected;
+		if(vm.allSelected){
+			vm.allSelected=false;
 			for(var i=0;i<vm.withdraws.length;i++){
-				vm.withdraws[i].checked = vm.allSelected;
-			}	
+				vm.withdraws[i].checked = false;
+			}
+		}else{
+			vm.allSelected=true;
+			for(var i=0;i<vm.withdraws.length;i++){
+				vm.withdraws[i].checked = true;
+			}
+		} 
 	}
 
 	vm.changeStatus  = function(withdraw,which){
-		var i ;
-		if(which=='accept') i = 1;
-		else i =2;
-		withdraw.status = vm.withdrawsStatuses[i].id;
-		withdraw.statusName = vm.withdrawsStatuses[i].statusName;
-		withdraw.statusText = vm.withdrawsStatuses[i].name;
-		userService.changeWithdrawStatus(which,withdraw._id);
+		if(which=='accept') withdraw.status = {id:2,name:"Завершено"};
+		else withdraw.status ={id:3,name:"Отклонено"};
+		userService.changeWithdraw(withdraw);
 	}
 
 	vm.changeStatuses = function(which){
-		withdrawsId = [];
 		vm.withdraws.forEach(function(i){
-			if(i.checked) withdrawsId.push(i._id);			
-		});
-		if(withdrawsId.length==0) Notification.primary('Выберите выводы средств для подтверждения!')
-		else userService.changeWithdrawsStatus(which,withdrawsId);
-	}
-
-	vm.getWithdrawInfo = function(id){
-		vm.showModal = true;
-		userService.getWithdrawInfo(id,function(data){
-			console.log('data',data);
+			if(i.checked) vm.changeStatus(i,which);			
 		});
 	}
 
@@ -72,12 +72,17 @@ angular.module('admin_panel').controller('userWithdrawsCtrl',function(myService,
 	}
 
 	vm.search = function(){
-		myService.search(vm.filter)
+		if (timeout) {  
+			clearTimeout(timeout);
+		}
+		timeout = setTimeout(function() {
+			vm.filter();
+		}, 200);
 	}	
 
 	vm.getNewData = function(){
 		if(vm.withdraws.length>=vm.amount) return;
-		vm.beginIndex=vm.withdraws.length;				
+		vm.beginIndex=vm.withdraws.length+1;				
 		getWithdraws();
 	}
 	

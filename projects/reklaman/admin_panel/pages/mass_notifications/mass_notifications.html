@@ -16,10 +16,10 @@
 				</thead>
 				<tbody>
 				<tr ng-repeat="question in vm.questions">
-					<td>{{question.title}}</td>
-					<td>{{question.text}}</td>
-					<td>{{question.sent | date:'yyyy-MM-dd HH:mm'}}</td>
-					<td >{{question.users.length}}</td>
+					<td>{{question.theme}}</td>
+					<td>{{question.message}}</td>
+					<td>{{question.sended_at}}</td>
+					<td >{{question.recieved_count}}</td>
 					<td>{{question.filters}}</td>
 				</tr>					
 				</tbody>

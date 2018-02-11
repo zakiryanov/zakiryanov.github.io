@@ -1,0 +1,232 @@
+<div class="ap_banner_update  white-div">
+	<div class="line-1">
+		<div class="title-div">
+			<img src="assets/images/settings-gray.png" class="title-icon">
+			<h2 class="title-text">создание баннера</h2>
+		</div>
+	</div>
+	<div class="flex">
+		<div class="left-side">			
+			<div class="banner">
+				<h3 class="green bolder">Баннер</h3>
+				<div class="name label-input">
+					<label >Название баннера</label>
+					<div>
+						<input ng-model="vm.banner.name" type="text" class="input">
+						<p>*Например: «Мой первый баннер»</p>
+					</div>				
+				</div>
+				<div class="photo label-input">
+					<label >Загрузите файл</label>
+					<div>
+						<div class="flex input-green">
+							<div ng-click="vm.showModal=true" class="input input-select">
+								<div class="flex text-arrow">
+									<p>Выберите файл</p>
+									<img src="assets/images/angle-bottom.png" alt="">
+								</div>
+								<input type="file"  img-cropper-fileread image="vm.cropper.sourceImage" />	
+							</div>
+							<span class="green">~ <i>{{4.5}}Mb</i></span>
+						</div>
+
+					</div>				
+				</div>
+				<div class="link label-input">
+					<label >Ссылка</label>
+					<input ng-model="vm.banner.link" type="text" class="input">		
+				</div>
+				<div class="cost label-input">
+					<label >Стоимость показа (руб)</label>
+					<input ng-model="vm.banner.cost" min="0" type="number" class="input">		
+				</div>
+			</div>	
+			
+			<div class="audience">
+				<h3 class="green bolder">Аудитория</h3>
+				<div class="label-input country">
+					<label  for="">Страна</label>
+
+					<div class="dropdown">		
+						<!-- просто ад -->
+						<button ng-click="vm.showCountries=!vm.showCountries" ng-class="{'with-close':vm.showCountries}" class="input">
+							{{vm.selectedCountryCount||
+							'Все' | ending}}
+						</button>
+						<ul class="dropdown-menu"  ng-show="vm.showCountries" >
+							<li  ng-click="vm.selectAlls()">
+								<label>Все</label>
+							</li>	
+							<li  ng-repeat="country in vm.countries">
+								<input  class="checkbox-custom" ng-class="{'active':country.checked}"  type="checkbox">
+								<label ng-click="vm.addCountry(country)" >{{country.name}}</label>
+								<ul ng-show="country.checked">
+									<li ng-repeat="region in country.regions">
+										<input class="checkbox-custom" ng-class="{'active':region.checked}" type="checkbox">
+										<label ng-click="vm.addCountry(region)" >{{region.name}}</label>
+										<ul ng-show="region.checked">
+											<li ng-repeat="city in region.cities" >
+												<input class="checkbox-custom" ng-class="{'active':city.checked}" type="checkbox">
+												<label ng-click="vm.addCountry(city)" >{{city.name}}</label>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- просто ад -->
+					</div>
+				</div>
+
+				<div class="flex">
+					<label>{{vm.gender.label}}</label>
+					<div ng-repeat="gender in vm.gender.options" ng-click="vm.changeInfo('gender',gender,true)" class="label-input">
+						<input ng-class='{"active":vm.banner.gender.id==gender.id}'  name="gender" type="radio" class="radio-custom">
+						<label >{{gender.name}}</label>
+					</div>	
+				</div>
+				<div class="age label-input">
+					<label>Возраст</label>
+					<input type="number" ng-model="vm.banner.age_from" ng-change="vm.changeInfo('age_from',vm.banner.age_from,true)" placeholder="0" min="0" class="input">
+					<span class="divider-line">-</span>
+					<input type="number" ng-model="vm.banner.age_to" ng-change="vm.changeInfo('age_to',vm.banner.age_to,true)" placeholder="100"  min="0" class="input">
+				</div>
+				<div class="label-input dispalay-limit">
+					<label>Общий лимит показов(кол-во) </label>
+					<div>
+						<input type="number"  ng-model="vm.banner.dispalays_limit_all" placeholder="3021"  min="0" class="input">
+						<span>раз(а)</span>
+					</div>		
+				</div>				
+				<div class="label-input dispalay-limit">
+					<label>Лимит показов одному пользователю </label>
+					<div>
+						<input  ng-model="vm.banner.dispalays_limit_one" type="number" placeholder="3021"  min="0" class="input">
+						<span>раз(а)</span>
+					</div>				
+				</div>				
+			</div>
+		</div>
+		<div class="right-side">
+			<div class="area-gray">
+				<div ng-if="vm.banner.photo" id="background-img"  class="background-img">
+					<img ng-src="{{vm.banner.photo}}" alt="">
+				</div>
+				<div class="background flex-column">
+					<div ng-if="!vm.banner.photo">
+						<p>Размер изображения</p>
+						<p class="bold">не более 5 Mb</p>
+					</div>
+					<div ng-if="!vm.banner.photo">
+
+						<p>Рекомендуемая пропорция</p>
+						<p>325 x 500 px</p>
+					</div>		
+				</div>						
+			</div>
+			<div class="area-green flex-column">
+				<div>
+					<p>Аудитория:</p>
+					<p class="bolder">{{vm.audienceCount}} человек</p>
+				</div>
+				<div>
+					<p>Цена за показ</p>
+					<p class="bolder">{{vm.banner.cost}} рублей</p>
+				</div>		
+
+			</div>
+		</div>
+	</div>
+	<div class="displays">
+		<h3 class="bolder green">Расписание показов</h3>
+		<div class="label-input date">
+			<label>Даты трансляции баннера</label>
+			<div class="flex">
+				<datepicker   date-week-start-day="1" datepicker-mobile="true"  date-format="dd-MM-yyyy">
+					<input placeholder="13-07-2017"  ng-model="vm.banner.display_from" type="text" class="input">
+				</datepicker>
+				<span class="divider-line">-</span>
+				<datepicker    date-week-start-day="1" datepicker-mobile="true"  date-format="dd-MM-yyyy">
+					<input placeholder="13-08-2017" ng-model="vm.banner.display_to"  type="text" class="input">
+				</datepicker>
+			</div>
+		</div>
+		<div class="time-picker flex">
+			<div class="targeting">
+				<p>Временной таргетинг</p>
+				<div class="label-input">
+					<label>Время:</label>
+					<div class="dropdown">		
+						<button class="input flex" bs-dropdown>{{vm.banner.timeTargetCity.name||'Без города'}} <img src="assets/images/angle-bottom.png" alt=""></button>
+						<ul  class="dropdown-menu" role="menu">
+							<li ng-click="vm.banner.timeTargetCity=city" ng-repeat="city in vm.cities">{{city.name}}</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="days">
+				<div ng-repeat="day in vm.banner.display_days" class="label-input flex">
+					<label>{{day.name}}</label>
+					<div>
+						<input class=" input input-small"   name="time2" bs-timepicker data-time-format="HH:mm" data-length="1" data-minute-step="1" placeholder="--:--" data-arrow-behavior="picker" type="text" class="" ng-model="day.from">
+						<span class="divider-line">-</span>
+						<input class=" input input-small"  name="time2" bs-timepicker data-time-format="HH:mm" data-length="1" data-minute-step="1" placeholder="--:--" data-arrow-behavior="picker" type="text" class="" ng-model="day.to">
+						<input ng-class="{'active':day.checked}" type="checkbox" class="radio-custom">
+						<label ng-click="day.checked=!day.checked"></label>
+					</div>						
+				</div>
+			</div>
+			<div class="buttons flex-column">
+				<button ng-click="vm.setDayChecked(true)" class="btn-green">
+					<i class="fa fa-check"></i>
+					Выбрать все
+				</button>
+				<button ng-click="vm.setDayChecked(false)" class="btn-blue">
+					<i class="fa fa-trash"></i>
+					Очистить все
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="buttons-bottom">
+
+		<button ng-click="vm.sendToModeration()" class="btn-green">
+			<span>+</span>
+			Сохранить и отправить на модерацию
+		</button>
+		<button ng-click="vm.saveAsDraft()" class="btn-gray">
+			<span>+</span>
+			Сохранить как черновик
+		</button>
+	</div>
+
+	<div ng-show="vm.showModal"  class="my-modal flex">
+		<div  class="my-modal-content white-div">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/settings-gray.png" class="title-icon">
+					<h2 class="title-text bold">Редактирование фото</h2>
+				</div>
+				<button ng-click="vm.showModal=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="flex my-modal-body">
+				<div >
+					<canvas crop-area-bounds="vm.bounds" width="300" height="300" id="canvas" image-cropper image="vm.cropper.sourceImage" cropped-image="vm.banner.photo" crop-width="325" crop-height="500" keep-aspect="true" touch-radius="30" ></canvas>
+				</div>
+				<img width="200" height="300" ng-src="{{vm.banner.photo}}" alt="">
+			</div>			
+			<div class="my-modal-footer flex">
+				<button ng-click="vm.showModal=false" class="btn-green">
+					Сохранить
+				</button>
+			</div>				
+		</div>
+	</div>
+
+</div>
+
+
+
+
+

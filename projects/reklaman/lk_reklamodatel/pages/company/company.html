@@ -30,20 +30,20 @@
 							<span ng-if="banner.name.length>50">...</span>
 							</td>
 							<td class="status-image" >
-								<div ng-if="banner.statusName=='disabled'">
+								<div ng-if="banner.status.id!=2">
 									<img class="img-default" src="assets/images/pause-green.png" alt="">
 									<img class="img-hover" src="assets/images/pause-white.png" alt="">
 									<span class="my-tooltip right">не активный</span>
 								</div>
-								<div ng-if="banner.statusName=='active'">
+								<div ng-if="banner.status.id==2">
 									<img class="img-default" src="assets/images/play-green.png" alt="">
 									<img class="img-hover" src="assets/images/play-white.png" alt="">
 									<span class="my-tooltip right">активный</span>
 								</div>
 
 							</td>
-							<td>{{vm.statistics.bannerShowCnt[banner._id] || 0}}</td>
-							<td>{{vm.statistics.bannerTransfer[banner._id]||0}} <i class="fa fa-rub"></i></td>
+							<td>{{banner.displays}}</td>
+							<td>{{banner.consumption}} <i class="fa fa-rub"></i></td>
 						</tr>
 
 					</tbody>
@@ -68,7 +68,7 @@
 						</div>
 						<img ui-sref="my_balance" class="arrow-right" src="assets/images/right-arrow-green.png" alt="">
 					</div>
-					<p><span class="bolder">{{vm.company.accountAmount}} </span> рублей</p>
+					<p><span class="bolder">{{vm.company.balance}} </span> рублей</p>
 					<button ui-sref="my_balance" class="btn-green">+ Пополнить баланс</button>
 				</div>
 				<div class="video white-div">
@@ -91,9 +91,9 @@
 					<table>
 						<tbody>
 							<tr ng-repeat="ticket in vm.tickets">
-								<td>{{ticket.updated | date:'dd.MM.yy'}}</td>
-								<td ng-class="{'green':ticket.status.id==3,'blue':ticket.status.id==1}">{{ticket.statusText}}</td>
-								<td>{{ticket.text | limitTo:50}}
+								<td>{{ticket.last_message.created_at | date:'dd.MM.yy'}}</td>
+								<td ng-class="{'green':ticket.status.id==3,'blue':ticket.status.id==1}">{{ticket.status.name}}</td>
+								<td>{{ticket.last_message.text | limitTo:50}}
 									<span ng-if="ticket.last_message.text.length>50">...</span>
 								</td>
 								<td class="operations">
@@ -107,7 +107,7 @@
 										<span class="my-tooltip">Завершить тикет</span>
 
 									</div>		
-									<div ui-sref="lk_ticket({id:ticket._id})" class="btn-gray">
+									<div class="btn-gray">
 										<i class="fa fa-arrow-right"></i>
 										<span class="my-tooltip">Перейти в тикет</span>
 									</div>	
@@ -122,7 +122,9 @@
 						Задать вопрос
 					</button>
 				</div>
+
 			</div>
+
 		</div>
 	</div>
 	

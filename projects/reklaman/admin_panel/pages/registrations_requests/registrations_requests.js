@@ -12,26 +12,30 @@ angular.module('admin_panel').controller('registrationsRequestsCtrl',function(re
 	
 	function getRequests(){
 		reklamodatelService.getRequests({from:vm.beginIndex,limit:vm.limit},function(data){
-			vm.requests =vm.beginIndex==0?data.data:vm.requests.concat(data.data);
+			vm.requests =vm.requests.length==0?data.requests:vm.requests.concat(data.requests);
 			vm.amount = data.amount;
 		});	
 	}
 
 	vm.delete = function(request){
 		vm.requests.splice(vm.requests.indexOf(request),1);
-		reklamodatelService.declineRequest(request);
-		vm.amount--;
+		reklamodatelService.deleteFromRequests(request,false);
 	}
 
 	vm.add = function(request) {
 		vm.requests.splice(vm.requests.indexOf(request),1);
-		reklamodatelService.acceptRequest(request);
-		vm.amount--;
+		reklamodatelService.deleteFromRequests(request,true);
+
+	}
+
+	vm.read = function (request) {
+		vm.requests.splice(vm.requests.indexOf(request),1);
+		reklamodatelService.makeRead(request);
 	}
 
 	vm.getNewData = function(){
 		if(vm.requests.length>=vm.amount) return;
-		vm.beginIndex=vm.requests.length;				
+		vm.beginIndex+=vm.requests.length+1;				
 		getRequests();
 	}
 	

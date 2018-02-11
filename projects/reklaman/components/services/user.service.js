@@ -1,55 +1,30 @@
-angular.module('app').factory("userService", function($http, Notification,countriesService) {
+angular.module('app').factory("userService", function($http) {
     var service = {};
 
+        // FROM AND LIMIT CAN BE NULL. THAT MEANS GET ALL DATA (FROM BEGIN TO END) 
+
+
     service.saveUser = function(newUser,cb){
-        delete newUser.country;
-        delete newUser.region;
-        if(!newUser.city){
-            Notification.error('Невозможно сохранить пользователя без города');
-            return
-        }
-        newUser.city = newUser.city._id;
-        window.history.back();
-    	$http.put('/api/admin/user/save/'+newUser._id,newUser)
+    	//method - (put)
+    	//api - /api/user
+    	//data - {user:newUser}
+    	$http.put('/api/user', {user:newUser})
 			.success(function(data){
-                Notification.success('Пользователь сохранен')
 				})
 			.error(function(err){
 				console.log(err);
 			})
     }
+		
   
     service.getUsers = function(data,cb){
-        var query = "";
-        var filtersCopy = angular.copy(data.filters);
-        for(var key in filtersCopy){
-            if(angular.isObject(filtersCopy[key]) && key!='amount' && !angular.isArray(filtersCopy[key])){
-                filtersCopy[key] = filtersCopy[key].value;                       
-            }
-        }
-        if(filtersCopy.hasOwnProperty('enable')) {
-            if(filtersCopy.enable!==null)
-            query = "?enable="+filtersCopy.enable;
-            delete filtersCopy.enable
-        }
-        if(filtersCopy.countries.length>0) filtersCopy.city = countriesService.getCitiesIds(filtersCopy.countries);
-        data.filters = filtersCopy;
-        $http.post('/api/admin/user/getUsers'+query,data)
+        //method - (post)
+        //api - '/api/users
+        //data - {filters:{zones:{countries:[],regions:[],cities:[]},age_from:number,age_to:number,balance_from:number,balance_to:number,gender:{},status:{},user_status:{}},from:number,limit:number}
+        // limit and from optional,means get all data
+        $http.get('jsons/users.json')
             .success(function(data){
                     cb(data);
-                })
-            .error(function(err){
-                console.log(err);
-            })
-    }  
-
-    service.getAudience = function(filters,cb){
-        filters.ageFrom = filters.minAge;
-        filters.ageTo = filters.maxAge;
-        if(filters.countries.length>0) filters.city = countriesService.getCitiesIds(filters.countries);
-        $http.post('/api/admin/user/getUsers',{filters:filters,search:'',from:0,limit:100})
-            .success(function(data){
-                    cb(data.amount);
                 })
             .error(function(err){
                 console.log(err);
@@ -57,36 +32,24 @@ angular.module('app').factory("userService", function($http, Notification,countr
     }
 
     service.getCounters = function(cb){
-    	$http.get('/api/admin/user/getCount')
-			.success(function(total_amount){
-               $http.get('/api/admin/user/getCount?enable=true')
-                   .success(function(enable_amount){
-                        $http.get('/api/userWithdraw/admin/count')
-                           .success(function(withdraw_amount){
-                                cb({enable_amount:enable_amount,total_amount:total_amount,withdraw_amount:withdraw_amount});
-                             })
-                          .error(function(err){
-                            console.log(err);
-                        })
-                    })
-                   .error(function(err){
-                    console.log(err);
-                    })
+    	//method - (get)
+    	//api - '/api/user/counters
+    	$http.get('jsons/user_counters.json')
+			.success(function(data){
+					cb(data);
 				})
 			.error(function(err){
 				console.log(err);
 			})
     }
-    
    
     service.getUser = function(id,cb){
-        $http.get('/api/admin/user/getUser/'+id)
+        //method - (get)
+        //api - '/api/user/:id
+        //parameter - id
+        $http.get('jsons/user.json')
             .success(function(data){
-                if(data.result==0) {
-                    Notification.error('Такого пользователя не существует');
-                    window.history.back();
-                }
-                else cb(data.data);
+                    cb(data);
                 })
             .error(function(err){
                 console.log(err);
@@ -94,6 +57,8 @@ angular.module('app').factory("userService", function($http, Notification,countr
     }
    
     service.getWithdrawsStatuses = function(cb){
+        //method - (get)
+        //api - '/api/withdrawsStatuses
         $http.get('jsons/withdraw_status.json')
             .success(function(data){
                     cb(data);
@@ -103,11 +68,11 @@ angular.module('app').factory("userService", function($http, Notification,countr
             })
     }
 
-    service.getWithdraws = function(data,userId,cb){
-        var status = data.filters.status?data.filters.status.id:'';
-        var start = data.filters.start?new Date(data.filters.start).getTime():'';
-        var end = data.filters.end?new Date(data.filters.end).getTime():'';
-        $http.post('/api/userWithdraw/admin/'+userId+'?status='+status+'&start='+start+'&end='+end,data)
+    service.getWithdraws = function(data,cb){
+        //method - (post)
+        //api - '/api/withdraws
+        //data -  {filters:filters,from:number,limit:number,search:string}
+        $http.get('jsons/withdraws.json')
             .success(function(data){
                     cb(data);
                 })
@@ -116,29 +81,24 @@ angular.module('app').factory("userService", function($http, Notification,countr
             })
     }
 
-    service.getWithdrawInfo = function(id,cb){
-        $http.get('/api/userWithdraw/admin/get/'+id)
+    service.getUserWithdraws = function(data,cb){
+        //method - (post)
+        //api - '/api/withdraws/:id
+        //data -  {filters:filters,from:number,limit:number,search:string}
+        $http.get('jsons/user_withdraws.json')
             .success(function(data){
-                    cb(data.data);
+                    cb(data);
                 })
             .error(function(err){
                 console.log(err);
             })
     }
 
-    service.changeWithdrawsStatus = function(which,arr){
-        which = which=='accept'?'SendMoney':'Cancel';
-        $http.post('/api/userWithdraw/admin/bulk'+which,{withdraws:arr})
-            .success(function(data){
-                })
-            .error(function(err){
-                console.log(err);
-            })
-    }
-
-    service.changeWithdrawStatus = function(which,withdraw_id){
-        which = which=='accept'?'finish/':'cancel/';
-        $http.post('/api/userWithdraw/admin/'+which+withdraw_id)
+    service.changeWithdraw = function(withdraw){
+        //method - (put)
+        //api - '/api/withdraws
+        //data -  {withdraw:obj}
+        $http.post('/api/withdraws')
             .success(function(data){
                 })
             .error(function(err){
@@ -147,29 +107,12 @@ angular.module('app').factory("userService", function($http, Notification,countr
     }
 
     service.getQuestions = function(data,cb){
-        $http.post('/api/admin/userTicket',data)
-            .success(function(data){
-                cb(data);
-                })
-            .error(function(err){
-                console.log(err);
-            })
-    }
-
-    service.getQuestionsCounter = function(cb){
-        $http.get('/api/admin/userTicket/newTicketsCnt')
-            .success(function(data){
-                cb(data.count);
-                })
-            .error(function(err){
-                console.log(err);
-            })
-    }
-
-    service.recheckResult = function(id){
-    	$http.post('/api/userWithdraw/admin/recheckResult/'+id)
+    	//method - (post)
+    	//api - '/api/user/questions
+        //data -   {from:number,limit:number,search:string}
+    	$http.get('jsons/user_questions.json')
 			.success(function(data){
-                console.log('data',data);
+                cb(data);
 				})
 			.error(function(err){
 				console.log(err);

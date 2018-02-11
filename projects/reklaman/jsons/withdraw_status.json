@@ -1,8 +1,9 @@
 [
-{"id":0,"name":"Новый","statusName":"new"},
-{"id":1,"name":"Завершено","statusName":"completed"},
-{"id":2,"name":"Отклонено","statusName":"canceled"},
-{"id":3,"name":"Деньги отправлены","statusName":"moneySent"},
-{"id":4,"name":"Деньги не удалось отправить","statusName":"moneyNotSent"},
-{"id":5,"name":"Необходимо перепроверить","statusName":"needAutoRecheck"}
+{"id":1,"name":"Новый"},
+{"id":2,"name":"Завершено"},
+{"id":3,"name":"Отклонено"},
+{"id":4,"name":"Ожидание"},
+{"id":5,"name":"Деньги отправлены"},
+{"id":6,"name":"Деньги не удалось отправить"},
+{"id":7,"name":"Необходимо перепроверить"}
 ]

@@ -20,10 +20,10 @@ angular.module('lk_reklamodatel').controller('lkTicketCtrl',function($localStora
 
 	vm.createMessage = function() {
 		if(vm.messageText=="") return;	
-		var message = {from:vm.company,to:vm.admin.id,text:vm.messageText,created_at:Date.now()};
+		var message = {from:vm.company.id,to:vm.admin.id,text:vm.messageText};
+		message.from.role = vm.company.status.name;
+		message.created_at = Date.now();
 		vm.ticket.messages.unshift(message);
-		var copy = angular.copy(message);
-		copy.from = vm.company.id;
 		vm.messageText = "";
 		ticketService.createMessage(vm.ticket.id,message);
 	}

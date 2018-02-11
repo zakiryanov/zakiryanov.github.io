@@ -1,4 +1,4 @@
-angular.module('admin_panel').controller('settingsCtrl',function($scope,apiDoc, myService,countriesService,settingsService) {
+angular.module('admin_panel').controller('settingsCtrl',function(myService,countriesService,settingsService) {
 	
 	var vm = this;
 	
@@ -12,28 +12,24 @@ angular.module('admin_panel').controller('settingsCtrl',function($scope,apiDoc, 
 	vm.currentRoute = {};
 	vm.activeButton  = "";
 	vm.searchModal = "";
-	vm.searchModalCities="";
 	vm.searchText = "";
-	vm.editingSetting = {};
-
-	apiDoc.init($scope);
 
 	settingsService.getRoutes(function(data){
 		vm.routes = data;
 		vm.currentRoute = data[0];
 	})
 
-	getVkCountries();
+	getCountries();
 	getSettings();
 
-	countriesService.getAllCountries(function(data){
-		vm.managing_countries = data.data;		
+	countriesService.getManagingZones(function(data){
+		vm.managing_countries = data;		
 	});
 
-	function getVkCountries(){
-		countriesService.getVkCountries(function(data){
+	function getCountries(){
+		countriesService.getCountries({from:vm.modal_beginIndex,limit:vm.modal_limit,search:vm.searchModal},function(data){
 			if(vm.modal_beginIndex==0) vm.countries = [];
-			vm.countries = vm.countries.concat(data.data);		
+			vm.countries = vm.countries.concat(data);		
 		});
 	}
 	
@@ -41,8 +37,15 @@ angular.module('admin_panel').controller('settingsCtrl',function($scope,apiDoc, 
 	function getSettings(){
 		settingsService.getSettings({from:vm.beginIndex,limit:vm.limit,search:vm.searchText},function(data){
 			if(vm.beginIndex==0) vm.settings = [];
-			vm.settings = vm.settings.concat(data.data);					
+			vm.settings = vm.settings.concat(data.settings);					
 			vm.amount = data.amount;
+		});
+	}
+
+	vm.searchCountry = function() {
+		myService.search(function() {
+			vm.modal_beginIndex=0;
+			getCountries();
 		});
 	}
 
@@ -53,121 +56,95 @@ angular.module('admin_panel').controller('settingsCtrl',function($scope,apiDoc, 
 		});
 	}
 
-	function openChildList(zone){
-		if(!zone.exist) return false;
-		zone.checked=!zone.checked;
-		if(!zone.checked) return false;
-		zone.childrenLoading = true;
-		return true
-	}
-
-	vm.getRegionsByVkCountry = function(country) {
-		if(!openChildList(country)) return
-		countriesService.getRegionsByVkCountry(country.vk_id,function(regions){
-			country.regions = regions;
-			country.childrenLoading = false;
-		})
-	}
-
-	vm.getVkCities = function(region,country_vk_id){
-		openChildList(region)
-		countriesService.getVkCities(region.vk_id,country_vk_id,function(cities){
-			region.cities = cities;
-			region.childrenLoading = false;
-		})
-	}
-
 	vm.showUpdatingModal = function(setting){
 		vm.showSettingsModal = true;
-		vm.editingSetting = angular.copy(setting);
+		vm.currentSetting = setting;
 	}
 
 	vm.updateSetting = function(){
+		settingsService.updateSetting(vm.currentSetting);
 		vm.showSettingsModal=false;
-		settingsService.updateSetting(vm.editingSetting,function(){
-				vm.settings.forEach(function(setting,i){
-					if(setting._id == vm.editingSetting._id) vm.settings[i] = vm.editingSetting
-				})
-		});
 	}
+
 
 	vm.changeZoneStatus = function(which){
 		vm.activeButton = which;
 		vm.managing_countries.forEach(function(zone){
-			zone.enable = which=='block'?false:true;
+			zone.status = (which=='block') ? {id:1,name:"Заблокирована"} : {id:2,name:"Разблокирована"};
 		});
-		countriesService.changeStatus(which=='block'?false:true);
+		countriesService.changeStatus(which);
 	}
 
-	vm.addCountryToManaging = function(country){
-		countriesService.addToManaging(country,'country',function(newCountry) {
-			country.exist = true;
-			vm.managing_countries.push(newCountry);
-		});		
-	}
-
-	vm.addRegionToManaging = function(region,country_vk_id){
-		vm.managing_countries.forEach(function(country,i) {
-			if(country.vk_id==country_vk_id){		
-				region.country = country._id;
-				countriesService.addToManaging(region,'region',function(newRegion) {
-					region.exist = true;
-					vm.managing_countries[i].regions.push(newRegion);
-				});
-			}
-		})
-	}
-
-	vm.addCityToManaging = function(city,region_vk_id,country_vk_id){
-		vm.managing_countries.forEach(function(country){
-			if(country.vk_id == country_vk_id){
-				city.country = country._id;
-				country.regions.forEach(function(region){
-					if(region.vk_id == region_vk_id){
-						city.region = region._id;
-					}
-				})
-			}
-		})
-		countriesService.addToManaging(city,'city',function(newCity) {
-			city.exist = true;
-		});
-	}
-
-	vm.removeFromManaging = function(zone,which,country_vk_id){
+	vm.addToManaging = function(zone,which,country_id){
 		switch(which){
 			case 'country':
-			zone.regions = [];
-			zone.exist = false;
-			vm.managing_countries.forEach(function(country,i) {
-				if(country.vk_id==zone.vk_id) vm.managing_countries.splice(i,1);
-			})
-			break;
+				var copy = angular.copy(zone);
+				copy.regions = 0;	
+				vm.managing_countries.push(zone);
+				break;
 			case 'region':
-			zone.cities = [];
-			vm.managing_countries.forEach(function(country,i) {
-				if(country.vk_id==country_vk_id) {	
-					country.regions.forEach(function(region,i){
-						if(region.vk_id==zone.vk_id) country.regions.splice(i,1);
-					})
-				}
-			})
-			break;						
+				vm.managing_countries.forEach(function(country) {
+					if(country.id==country_id){
+						country.regions.push(zone);
+						return;
+					} 
+				})
+				break;						
 		}
-		zone.exist = false;
-		zone.checked = false;
-		countriesService.removeFromManaging(zone.vk_id,which);
+		zone.isManaging = true;
+		countriesService.addToManaging(zone.id,which);
 	}
 
-	vm.changeRoute = function(route){
-		$scope.selectedRequest=route;
-		$scope.changeRoute($scope);
+	vm.removeFromManaging = function(zone,which,country_id){
+		switch(which){
+			case 'country':
+				vm.managing_countries.forEach(function(country,i) {
+					if(country.id==zone.id) {
+						if(country.regions){
+							country.regions.forEach(function(region) {
+								region.isManaging=false;
+			    				countriesService.removeFromManaging(region.id,'region');
+			    				if(region.cities){
+			    					region.cities.forEach(function(city,i) {
+			    						city.isManaging=false;
+			    						countriesService.removeFromManaging(city.id,'city');
+			    					})
+			    				}
+							})
+						}						
+						vm.managing_countries.splice(i,1);
+						return;
+					}
+				})
+				break;
+			case 'region':
+				vm.managing_countries.forEach(function(country) {
+					if(country.id==country_id){
+						country.regions.splice(country.regions.indexOf(zone),1);
+						return;
+					} 
+				})
+				break;						
+		}
+		zone.isManaging=false;
+		countriesService.removeFromManaging(zone.id,which);
+	}
+	
+	
+	vm.sendRequest = function(){
+		settingsService.sendCustomRequest(vm.currentRoute,function(data){
+			vm.data = data;	
+		});
 	}
 
+	vm.getNewDataModal = function(){
+		vm.modal_beginIndex = vm.countries.length+1;
+		getCountries();
+	}
 
 	vm.getNewData = function(){
 		if(vm.settings.length>=vm.amount) return;
-		vm.beginIndex=vm.settings.length;
+		vm.beginIndex=vm.settings.length+1;
 		getSettings();
 	}
 	

@@ -6,12 +6,12 @@
 		</div>
 
 		<a ui-sref="user_withdraws" class="btn-blue">
-		 <img src="assets/images/wallet.png" alt="smartphone"> Вывод средств ({{vm.withdraw_amount}})
+		 <img src="assets/images/wallet.png" alt="smartphone"> Вывод средств ({{vm.withdraws}})
 		</a>	
 	
 	</div>
 	<div class="line-2">
-		<p>Всего пользователей - <span class="bolder">{{vm.enable_amount}}</span> ({{vm.total_amount}})</p>	
+		<p>Всего пользователей - <span class="bolder">{{vm.total_amount}}</span> ({{vm.amount}})</p>	
 	</div>
 	<div class="line-3">
 		<a ng-click="vm.isVisible=!vm.isVisible" ng-class="{'btn-green':!vm.isVisible,'btn-blue':vm.isVisible}" href="">
@@ -26,7 +26,7 @@
 					
 					<button class="input" bs-dropdown>{{vm.filters[listName].name||'Без фильтра'}}</button>
 					<ul  class="dropdown-menu" role="menu">
-						<li ng-click="vm.addToFilter(listName,{value:null})">Без фильтра</li>
+						<li ng-click="vm.addToFilter(listName,{})">Без фильтра</li>
 						<li ng-repeat="option in listVal.options"  ng-click="vm.addToFilter(listName,option)">{{option.name}}</li>
 					</ul>
 				</div>
@@ -39,21 +39,21 @@
 					{{vm.selectedCountryCount||
 					'Все' | ending}}
 					</button>
-					<ul class="dropdown-menu"  ng-show="vm.showCountries">
+					<ul class="dropdown-menu"  ng-show="vm.showCountries" >
 						<li  ng-click="vm.selectAllZones()">
 							<label>Все</label>
 						</li>	
-						<li  ng-repeat="country in vm.countries">
+						<li  ng-repeat="country in vm.countries" ng-init="country.checked=false">
 							<input  class="checkbox-custom" ng-class="{'active':country.checked}"  type="checkbox">
 							<label ng-click="vm.addCountry(country)" >{{country.name}}</label>
 							<ul ng-show="country.checked">
-								<li ng-repeat="region in country.regions">
+								<li ng-repeat="region in country.regions" ng-init="region.checked=false">
 									<input class="checkbox-custom" ng-class="{'active':region.checked}" type="checkbox">
 									<label ng-click="vm.addCountry(region)" >{{region.name}}</label>
 									<ul ng-show="region.checked">
-										<li ng-repeat="city in region.cities">
+										<li ng-repeat="city in region.cities" ng-init="city.checked=false">
 											<input class="checkbox-custom" ng-class="{'active':city.checked}" type="checkbox">
-											<label ng-click="vm.addCountry(city)" >{{city.fullName}}</label>
+											<label ng-click="vm.addCountry(city)" >{{city.name}}</label>
 										</li>
 									</ul>
 								</li>
@@ -67,18 +67,18 @@
 		<div class="flex row-2">
 			<div class="item">
 				<label  for="">Возраст</label>
-				<input ng-model="vm.filters.ageFrom"  type="number" placeholder="0" max="100" min="0" class="input">
+				<input ng-model="vm.filters.age_from"  type="number" placeholder="0" max="100" min="0" class="input">
 				
 				<span>-</span>
-				<input ng-model="vm.filters.ageTo" type="number" placeholder="100" max="100" min="0" class="input">
+				<input ng-model="vm.filters.age_to" type="number" placeholder="100" max="100" min="0" class="input">
 				
 			</div>
 			<div class="item">	
 				<label  for="">Сумма на счету</label>
-				<input ng-model="vm.filters.amount.$gte" type="number" placeholder="0"  min="0" class="input">
+				<input ng-model="vm.filters.balance_from" type="number" placeholder="0"  min="0" class="input">
 				
 				<span>-</span>
-				<input ng-model="vm.filters.amount.$lte" type="number" placeholder="100" min="0" class="input">
+				<input ng-model="vm.filters.balance_to" type="number" placeholder="100" min="0" class="input">
 				
 			</div>
 			<div class="item">
@@ -103,6 +103,7 @@
 		<tr>
 			<th>Пользователь</th>
 			<th>Телефон</th>
+
 			<th>Email</th>
 			<th>Город</th>
 			<th>Статус</th>
@@ -119,25 +120,23 @@
 		</tr>			
 		</thead>
 		<tbody>
-			<tr ng-repeat="user in vm.users track by $index">
+			<tr ng-repeat="user in vm.users">
 				<td  class="with-photo flex">
-					<div set-background-img='user' src="{{user.avatar}}" class="user-photo"></div>
-					<span>{{user.firstName+" "+user.lastName |limitTo:20}} 
-						<span ng-if="user.firstName.length+user.lastName.length>20">...</span>	
+					<div set-background-img src="{{user.photo}}" class="user-photo"></div>
+					<span>{{user.name |limitTo:20}} 
+						<span ng-if="user.name.length>20">...</span>	
 					</span>
 				</td>
 				<td>{{user.phone}}</td>
-				<td class="email">{{user.email |limitTo:40}}
-					<span ng-if="user.email.length>40">...</span>
+				<td>{{user.email |limitTo:20}}
+					<span ng-if="user.email.length>20">...</span>
 				</td>
-				<td>{{user.city.fullName|limitTo:20}}<span ng-if="user.city.fullName.length>20">...</span></td>
-				<td>{{user.statusName}}</td>
-				<td>{{user.reg_date | date:'yyyy-MM-dd'}}</td>
-				<td >{{user.amount}}</td>
+				<td>{{user.city.name|limitTo:20}}<span ng-if="user.city.name.length>20">...</span></td>
+				<td>{{user.status.name}}</td>
+				<td>{{user.registrated_at | date:'yyyy-MM-dd'}}</td>
+				<td >{{user.balance}}</td>
 				<td>
-				<span  class="line" >{{user.frendsCnt1}}</span>
-				<span  class="line" >{{user.frendsCnt2}}</span>
-				<span  class="line" >{{user.frendsCnt3}}</span>
+				<span ng-repeat="line in user.lines" class="line" >{{line.amount}}</span>
 				</td>
 				<td class="operations">
 					<div ui-sref="user_update({id:user.id})" class="btn-gray">
@@ -149,7 +148,7 @@
 						<span class="my-tooltip">Платежи</span>
 
 					</div>
-					<div ui-sref="ticket({id:user._id,which:'user',isTicketId:false})"  class="btn-gray">
+					<div ui-sref="ticket({id:user.id})"  class="btn-gray">
 						<i class="fa fa-comments-o"></i>
 						<span class="my-tooltip reverse">Обратная связь</span>
 

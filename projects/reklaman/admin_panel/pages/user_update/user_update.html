@@ -6,15 +6,15 @@
 		</div>
 	</div>
 	<div class="line-2 flex">
-		<div set-background-img='user' src="{{vm.user.avatar}}" class="main-photo"></div>	
+		<div set-background-img src="{{vm.user.photo}}" class="main-photo"></div>	
 			<div class="flex-column">
 				<div class="label-input">
 					<label for="name">Имя</label>
-					<input ng-model="vm.user.firstName" id="name" type="text" class="input">
+					<input ng-model="vm.user.name" id="name" type="text" class="input">
 				</div>
 				<div class="label-input">
 					<label for="name">Фамилия</label>
-					<input ng-model="vm.user.lastName" id="surname" type="text" class="input">
+					<input ng-model="vm.user.surname" id="surname" type="text" class="input">
 				</div>
 			</div>
 	</div>
@@ -55,9 +55,9 @@
 		<div class="label-input">
 			<label for="city">Город</label>
 			<div class="dropdown">		
-					<button class="input" bs-dropdown>{{vm.user.city.fullName}}</button>
+					<button class="input" bs-dropdown>{{vm.user.city.name}}</button>
 					<ul  class="dropdown-menu" role="menu">
-						<li ng-click="vm.changeUserInfo('city',city)" ng-repeat="city in vm.user.region.cities">{{city.fullName}}</li>
+						<li ng-click="vm.changeUserInfo('city',city)" ng-repeat="city in vm.user.region.cities">{{city.name}}</li>
 					</ul>
 				</div>
 		</div>
@@ -67,24 +67,24 @@
 		<div class="label-input">
 			<label for="status">Статус</label>
 			<div class="dropdown">	
-					<button class="input" bs-dropdown>{{vm.user.status=='user'?'Пользователь':'Партнер'}}</button>
+					<button class="input" bs-dropdown>{{vm.user.status.name}}</button>
 					<ul  class="dropdown-menu" role="menu">
-						<li ng-click="vm.changeUserInfo('status',option.value)" ng-repeat="option in vm.lists.status.options">{{option.name}}</li>
+						<li ng-click="vm.changeUserInfo('status',option)" ng-repeat="option in vm.lists.status.options">{{option.name}}</li>
 					</ul>
 				</div>
 		</div>
 		<div class="label-input">
 			<label for="region">Дата рождения</label>
-			<datepicker  date-week-start-day="1" datepicker-mobile="true"  date-format="dd.MM.yyyy">
-				<input  ng-model="vm.user.dateOfBirth" type="text" class="input">
+			<datepicker  date-week-start-day="1" datepicker-mobile="true"  date-format="dd MMMM yyyy">
+				<input  ng-model="vm.user.birth_date" type="text" class="input">
 			</datepicker>
 		</div>
 		<div class="label-input">
 			<label for="region">Пол</label>
 			<div class="dropdown">		
-					<button class="input" bs-dropdown>{{vm.user.gender=='male'?'Мужской':(vm.user.gender=='female'?'Женский':'Любой')}}</button>
+					<button class="input" bs-dropdown>{{vm.user.gender.name}}</button>
 					<ul  class="dropdown-menu" role="menu">
-						<li ng-click="vm.changeUserInfo('gender',option.value)" ng-repeat="option in vm.lists.gender.options">{{option.name}}</li>
+						<li ng-click="vm.changeUserInfo('gender',option)" ng-repeat="option in vm.lists.gender.options">{{option.name}}</li>
 					</ul>
 				</div>
 		</div>
@@ -93,14 +93,14 @@
 	<div class="line-6  flex">
 		<div class="label-input">
 			<label for="referal">Реферал</label>
-			<input id="referal" disabled ng-model="vm.user.referalId.email" type="text" class="input">
+			<input id="referal" ng-model="vm.user.referal.email" type="text" class="input">
 		</div>
 		<div class="label-input">
 			<label for="user_status">Статус пользователя</label>
 			<div class="dropdown">		
-					<button class="input" bs-dropdown>{{vm.user.enable?'Активен':'Заблокирован'}}</button>
+					<button class="input" bs-dropdown>{{vm.user.user_status.name}}</button>
 					<ul  class="dropdown-menu" role="menu">
-						<li ng-click="vm.changeUserInfo('enable',option.value)" ng-repeat="option in vm.lists.enable.options">{{option.name}}</li>
+						<li ng-click="vm.changeUserInfo('user_status',option)" ng-repeat="option in vm.lists.user_status.options">{{option.name}}</li>
 					</ul>
 				</div>
 		</div>

@@ -1,0 +1,56 @@
+<div class="ap_reklamodateli_questions white-div">
+		<div class="row-1 flex">
+				<div class="title-div">
+					<img src="assets/images/message-gray.png" class="title-icon">
+					<h2 class="title-text">вопросы рекламодателей</h2>
+				</div>
+				<button ui-sref="mass_notifications({which:'company'})" class="btn-blue"><img src="assets/images/megaphone-(1).png" alt="">Массовые уведомления</button>
+				<input ng-model="vm.searchText" ng-change="vm.search()" type="text" placeholder="Поиск" class="input input-search">
+		</div>
+		<table>
+				<thead>
+					<th>Компания</th>
+					<th>Тема</th>
+					<th>Собщение</th>
+					<th>Кто создал</th>
+					<th>Статус</th>
+					<th>Дата создания</th>
+					<th>Дата обновления</th>
+					<th>Операции</th>
+				</thead>
+				<tbody>
+				<tr ng-repeat="question in vm.questions">
+					<td>{{question.creator.name+" "+question.creator.surname}}</td>
+					<td>{{question.theme}}</td>
+					<td>{{question.message}}</td>
+					<td>{{question.creator.status.name}}</td>
+					<td ng-class="{'blue':question.status.id==2,'green':question.status.id==1}">{{question.status.name}}</td>
+					<td>{{question.created_at | date:'yyyy-MM-dd HH:mm'}}</td>
+					<td>{{question.updated_at | date:'yyyy-MM-dd HH:mm'}}</td>
+					<td class="operations">
+						<div  ui-sref="ticket({id:question.creator.id})"  class="btn-gray">
+						<i class="fa fa-paint-brush"></i>
+						<span class="my-tooltip">Подробнее</span>
+					</div>	
+					</td>
+				</tr>					
+				</tbody>
+			</table>
+		<div class="pagination flex">
+			<div class="limit dropdown">
+				<span>Отрбражать: </span>
+				<button bs-dropdown class="btn-gray">{{vm.limit}}</button>
+				<ul class="dropdown-menu" role="menu">
+					<li ng-hide="vm.limit==25" ng-click='vm.changeLimit(25)'>25</li>
+					<li ng-hide="vm.limit==50" ng-click='vm.changeLimit(50)'>50</li>
+					<li ng-hide="vm.limit==100" ng-click='vm.changeLimit(100)'>100</li>
+				</ul>
+			</div>
+			<div ng-click="vm.getNewData()" class="show-more btn-gray">
+				<span><<</span><span >Показать еще</span><span>>></span>
+			</div>
+			<div >
+				Показано {{vm.questions.length}} из {{vm.amount}} объявлений
+			</div>
+		</div>		
+	</div>

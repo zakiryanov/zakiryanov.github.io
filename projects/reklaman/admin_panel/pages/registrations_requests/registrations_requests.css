@@ -17,10 +17,17 @@
 
 .registrations_requests td{
   padding-right: 20px;
-  max-width: 120px;
+}
+
+.registrations_requests td.company_name{
+  max-width: 200px;
 }
 
 .registrations_requests td.comment{
+  max-width: 270px;
+}
+
+.registrations_requests td.mail{
   max-width: 200px;
 }
 

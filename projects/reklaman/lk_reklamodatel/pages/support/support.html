@@ -24,18 +24,18 @@
 		<tbody>
 			<tr ng-repeat="ticket in vm.tickets">
 				<td>{{$index+1}}</td>
-				<td>{{ticket.title | limitTo:25 }}
+				<td>{{ticket.subject | limitTo:25 }}
 					<span ng-if="ticket.subject.length>25">...</span>
 				</td>
-				<td class="message">{{ticket.text | limitTo:50}}
-					<span ng-if="ticket.text.length>50">...</span>
+				<td class="message">{{ticket.last_message.text | limitTo:50}}
+					<span ng-if="ticket.last_message.text.length>50">...</span>
 				</td>
-				<td>{{ticket.adminId?'Админ':'Компания'}}</td>
-				<td class="status" ng-class="{'blue':ticket.statusName=='finished'||ticket.statusName=='closed','green':ticket.statusName=='inProcess'||ticket.statusName=='new'}">{{ticket.statusText}}</td>
-				<td>{{ticket.created | date : 'dd.MM.yy HH:mm'}}</td>
-				<td>{{ticket.updated | date : 'dd.MM.yy HH:mm'}}</td>
+				<td>{{ticket.creator.status.name}}</td>
+				<td class="status" ng-class="{'blue':ticket.status.id==1,'green':ticket.status.id==3}">{{ticket.status.name}}</td>
+				<td>{{ticket.created_at | date : 'dd.MM.yy HH:mm'}}</td>
+				<td>{{ticket.updated_at | date : 'dd.MM.yy HH:mm'}}</td>
 				<td class="operations">
-					<div ui-sref="lk_ticket({id:ticket.id})" ng-class="{'invisible':ticket.new_messages==0}"  class="btn-gray">
+					<div ng-class="{'invisible':ticket.new_messages==0}"  class="btn-gray btn-disabled">
 						<i class="fa">{{ticket.new_messages}}</i>
 						<span class="my-tooltip">Новые сообщения</span>
 					</div>	
@@ -43,7 +43,7 @@
 						<i class="fa fa-check"></i>
 						<span class="my-tooltip">Завершить тикет</span>
 					</div>	
-					<div ui-sref="lk_ticket({id:ticket.id})"  class="btn-gray">
+					<div  class="btn-gray">
 						<i class="fa fa-arrow-right"></i>
 						<span class="my-tooltip">Перейти в тикет</span>
 					</div>	

@@ -15,13 +15,13 @@
 			</ul>
 		</div>
 		<div class="flex date">
-			<datepicker date-week-start-day="1" datepicker-mobile="true"  date-format="yyyy-MM-dd">
-				<input ng-change="vm.addToFilter('start',vm.filters.start)" ng-model="vm.filters.start" placeholder="2017-06-12" type="text" class="input">
+			<datepicker date-week-start-day="1" datepicker-mobile="true"  date-format="dd-MM-yyyy">
+				<input ng-change="vm.addToFilter('dateFrom',vm.filters.dateFrom)" ng-model="vm.filters.dateFrom" placeholder="12-06-2017" type="text" class="input">
 			</datepicker>
 
 			<p>-</p> 
-			<datepicker   date-week-start-day="1" datepicker-mobile="true"  date-format="yyyy-MM-dd">
-				<input ng-change="vm.addToFilter('end',vm.filters.end)" ng-model="vm.filters.end" placeholder="2017-07-13" type="text" class="input">
+			<datepicker   date-week-start-day="1" datepicker-mobile="true"  date-format="dd-MM-yyyy">
+				<input ng-change="vm.addToFilter('dateTo',vm.filters.dateFrom)" ng-model="vm.filters.dateTo" placeholder="13-07-2017" type="text" class="input">
 			</datepicker>
 		</div>
 			<button ng-click="vm.changeStatuses('accept')" class="btn-green"><img src="assets/images/close.png" alt="">Провести выплаты </button>
@@ -38,7 +38,7 @@
 			<th>Статус</th>
 			<th>Дата подтверждения</th>
 			<th>Действия</th>
-		</tr>		
+		</tr>			
 		</thead>
 		<tbody>
 			<tr ng-repeat="withdraw in vm.withdraws" ng-init="withdraw.checked = false">
@@ -46,26 +46,27 @@
 					<input id="{{$index}}" ng-class="{'active':withdraw.checked}" ng-model="withdraw.checked" class="checkbox-custom" type="checkbox">
 					<label for="{{$index}}"></label>
 				</td>
-				<td class="bolder">{{withdraw.amount}}</td>
-				<td>{{withdraw.created | date:'yyyy-MM-dd HH:mm'}}</td>
+				<td class="bolder">{{withdraw.balance}}</td>
+				<td>{{withdraw.created_at | date:'yyyy-MM-dd HH:mm'}}</td>
 				<td>{{withdraw.comment | limitTo:30}}<span ng-if="withdraw.comment.length>30">...</span></td>
-				<td class="status" ng-class="{'blue':(withdraw.status==2),'green':(withdraw.status==1)}">{{withdraw.statusText}}</td>
-				<td>{{withdraw.completedAt | date:'yyyy-MM-dd HH:mm'}}</td>
+				<td class="status" ng-class="{'blue':(withdraw.status.id==3),'green':(withdraw.status.id==2)}">{{withdraw.status.name}}</td>
+				<td>{{withdraw.accepted_at | date:'yyyy-MM-dd HH:mm'}}</td>
 				<td class="operations">
-					<div ui-sref="withdraw_info({id:withdraw._id})" class="btn-gray">
+					<div ui-sref="user_update" class="btn-gray">
 						<i class="fa fa-paint-brush"></i>
 						<span class="my-tooltip">Подробнее</span>
 					</div>	
-					<div ng-if="!vm.user_id" ui-sref="user_withdraws({id:withdraw.user})" class="btn-gray">
+					<div ng-if="!vm.user_id" ui-sref="user_withdraws({id:withdraw.company_id})" class="btn-gray">
 						<i class="fa fa-credit-card"></i>
 						<span class="my-tooltip">Платежи</span>
+
 					</div>
-					<div ng-click="vm.changeStatus(withdraw,'accept')" ng-if="withdraw.statusName == 'new'" class="btn-gray">
+					<div ng-click="vm.changeStatus(withdraw,'accept')" class="btn-gray">
 						<i class="fa fa-check"></i>
 						<span class="my-tooltip">Подтвердить</span>
 
 					</div>
-					<div ng-if="withdraw.statusName != 'canceled' && withdraw.statusName != 'completed'" ng-click="vm.changeStatus(withdraw,'reject')" class="btn-gray">
+					<div ng-click="vm.changeStatus(withdraw,'reject')" class="btn-gray">
 						<i class="fa fa-times"></i>
 						<span class="my-tooltip">Отклонить</span>
 
@@ -90,7 +91,7 @@
 			<span><<</span>  <span >Показать еще</span> <span>>></span>
 		</div>
 		<div >
-			Показано {{vm.withdraws.length}} из {{vm.amount}} объявлений
+			Показано {{vm.withdraws.length}} из {{vm.amount}} пользователей
 		</div>
 	</div>	
 </div>

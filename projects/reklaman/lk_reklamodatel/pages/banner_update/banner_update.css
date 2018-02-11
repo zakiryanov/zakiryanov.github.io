@@ -1,0 +1,310 @@
+.lk_banner_update{
+  font-size: 14px;
+   padding:20px;
+   color: #303030;
+}
+
+.lk_banner_update  label{
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.lk_banner_update .input{
+  width: 100%;
+}
+
+
+.lk_banner_update .banner .input,
+.lk_banner_update .audience .input{
+    background-image: none;
+}
+
+.lk_banner_update .dropdown .input{
+  background-image: url('../../assets/images/angle-bottom.png') ;
+  background-position: 95% center;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.lk_banner_update  h3{
+  margin: 30px 0;
+}
+
+.lk_banner_update .label-input{
+  margin-bottom: 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.lk_banner_update input[type="number"]{
+  width: 80px;
+  height: 35px;
+  padding:10px;
+}
+
+.lk_banner_update .cost input[type="number"]{
+  width: 100% ;
+}
+
+
+.lk_banner_update .line-1{
+  height: 70px;
+}
+
+.lk_banner_update  .dropdown{
+  display: inline-block;
+}
+
+.lk_banner_update .left-side .status{
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.lk_banner_update .banner>.name p{
+  color: #7c7c7c;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.lk_banner_update .banner>.name>div{
+  width: 100%;
+}
+
+.lk_banner_update .banner>.photo .input-green{
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;   
+}
+
+.lk_banner_update .banner>.photo span i{
+  text-decoration: underline;
+}
+
+.lk_banner_update .banner>.photo .input{
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  width: 80%;
+}
+
+.lk_banner_update .banner>.photo .input .text-arrow{
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 90%;
+}
+
+.lk_banner_update .banner>.photo input[type="file"]{
+  opacity: 0;
+  padding: 8px 20px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.lk_banner_update .audience h3{
+  margin-top: 60px;
+} 
+
+.lk_banner_update .audience .dropdown-menu{
+  display: block;
+} 
+
+.lk_banner_update .audience .country .dropdown{
+  margin-left: 15px;
+  width: 100%;
+}
+
+.lk_banner_update .dispalay-limit{
+  justify-content: space-between;
+}
+
+.lk_banner_update .dispalay-limit span{
+  margin-left: 7px;
+}
+
+.lk_banner_update .country label{
+  width: 150px;
+  
+}
+
+.banner-update .dropdown-menu{
+  display:none;
+}
+
+.lk_banner_update .country .dropdown li:hover{
+  background: #f5f5f5
+}
+
+.lk_banner_update .country .dropdown li label{
+  display: block;
+  width: 100%;
+}
+
+.lk_banner_update .right-side{
+  padding: 20px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+.lk_banner_update .area-gray{
+  border: 2px dashed #aaaaaa;
+  padding: 5px;
+  height: 470px;
+  width: 320px;
+  margin-top: -20px;
+  position: relative;
+
+}
+
+.lk_banner_update .area-green{
+  padding: 5px;
+  border: 2px dashed #37951b;
+  height: 160px;
+  width: 320px;
+  margin-top: 30px;
+    justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+
+.lk_banner_update .area-gray .background{
+  background: #f8f8f8;
+  margin-bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+   background-repeat: no-repeat;
+  background-position: center center;  
+   justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lk_banner_update .area-gray .background-img{
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  z-index: 10;
+  background: #f8f8f8;
+ display: -webkit-flex;
+ display: -moz-flex;
+ display: -ms-flex;
+ display: -o-flex;
+ display: flex;
+ justify-content: center;
+ -ms-align-items: center;
+ align-items: center;
+ background-size: contain;
+ background-position: center;
+ background-repeat: no-repeat;
+}
+
+.lk_banner_update .area-gray .background-img img{
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.lk_banner_update .area-gray,.lk_banner_update .area-green{
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.lk_banner_update .date>.flex{
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.lk_banner_update datepicker{
+  width: 240px;
+}
+
+.lk_banner_update .time-picker .input{
+ background-image: none;
+}
+
+.lk_banner_update .time-picker .targeting .label-input{
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.lk_banner_update .time-picker .targeting .input{
+  background:transparent;
+  border: none;
+  box-shadow: none;
+  color: #303030;
+  padding: 0;
+  padding-bottom: 5px;
+  margin-left: -20px;
+  max-width: 150px;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.lk_banner_update .time-picker .input{
+  width: 100px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.lk_banner_update .time-picker .days{
+  margin-left: 40px;
+}
+
+.lk_banner_update .time-picker .days .label-input{
+  justify-content: space-between;
+}
+
+.lk_banner_update .time-picker .days .label-input label:last-child{
+  margin-left: 15px;
+}
+
+.lk_banner_update .time-picker .buttons button{
+  margin-bottom: 20px;
+  padding: 14px 26px;
+}
+
+.lk_banner_update .time-picker .buttons button .fa{
+  margin-right: 10px;
+}
+
+.lk_banner_update .buttons-bottom{
+  padding: 30px 0;
+  margin-top: 50px;
+  border-top: 1px solid #eaeaea;
+}
+
+.lk_banner_update .buttons-bottom button{
+  margin-right: 20px;
+}
+
+.lk_banner_update .buttons-bottom button span{
+  margin-right: 10px;
+}
+
+.lk_banner_update .my-modal-footer,.lk_banner_update .my-modal-body{
+  padding:0 20px;
+}
+
+.lk_banner_update .my-modal-body{
+  justify-content: space-between;
+}
+
+.lk_banner_update .my-modal-footer .btn-green{
+  margin-top: 15px;
+}

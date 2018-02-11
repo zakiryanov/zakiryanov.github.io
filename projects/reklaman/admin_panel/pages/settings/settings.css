@@ -98,20 +98,14 @@
 	padding: 5px 8px;
 }
 
-.ap_settings .my-modal-body .input {
-    width: 95%;
-    margin-left: 2.5%;
-    background-position: 97% center;
-    border: none;
-}
 
-.ap_settings .my-modal-body .searches .input{
-	width: 31%;
+.ap_settings .my-modal-body .input{
+	width: 95%;
+	margin-left: 2.5%;
 	background-position: 97% center;
+	margin: 20 auto;
 	border: none;
 }
-
-
 
 .ap_settings-modal{
 	width: 500px;
@@ -162,12 +156,6 @@
 
 .ap_settings .my-modal-body .table-container .bold{
 	cursor: pointer;
-}
-
-.ap_settings .my-modal-body .table-container .region-info .bold .loader,
-.ap_settings .my-modal-body .table-container .country-info .bold .loader{
-	width: 15px;
-	height: 15px;
 }
 
 .ap_settings .my-modal-body .table-container .region-info .bold{

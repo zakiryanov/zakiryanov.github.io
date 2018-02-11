@@ -2,11 +2,11 @@
     <header>
     <img class="logo" src="assets/images/logo.png" alt="reklaman">
     <div class="right-div flex">
-      <span class="green bolder">Баланс: {{vm.company.accountAmount}} <i class="fa fa-rub"></i></span>
+      <span class="green bolder">Баланс: {{vm.company.balance}} <i class="fa fa-rub"></i></span>
       <button class="btn-green">+</button>
       <div set-background-img src="{{vm.company.photo}}" class="user-photo"></div>
       <span class="user-name">{{vm.company.name}}</span>
-      <div ng-click="vm.authorize()" class="logout">
+      <div class="logout">
       </div>
     </div>
   </header>

@@ -9,5 +9,5 @@ angular.module('app')
                 url: '/lk_reklamodatel',
                 templateUrl: 'lk_reklamodatel/index.html'
             });
-        $urlRouterProvider.otherwise('/admin_panel/reklamodateli');
+        $urlRouterProvider.otherwise('/lk_reklamodatel/company');
     });

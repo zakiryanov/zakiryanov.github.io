@@ -1,4 +1,4 @@
-<div class="ap_ticket  white-div">
+<div class="lk_ticket  white-div">
 	<div class="line-1">
 		<div class="title-div">
 			<img src="assets/images/message-gray.png" class="title-icon">
@@ -30,26 +30,26 @@
 	<div class="border-div"></div>
 	<div class="padding">
 		<div class="write-message flex">
-			<div set-background-img src="{{vm.company.photo}}" class="user-photo"></div>
+			<div class="user-photo"></div>
 			<div class="flex-column">
 				<textarea ng-model="vm.messageText" name="" class="input"></textarea>
 				<button ng-click="vm.createMessage()" class="btn-green">Написать</button>
 			</div>
 		</div>
 		<div class="messages">
-			<div class="message flex" ng-repeat="message in vm.ticket.messages | limitTo:vm.limit | orderBy:'-created_at'">
+			<div class="message flex" ng-repeat="message in vm.ticket.messages | limitTo:vm.limit">
 				<div set-background-img src="{{message.from.photo}}" class="user-photo"></div>
 				<div >
 					<p class="text">
 						{{message.text}}
 					</p>
 					<span>{{message.created_at | date:'dd.MM.yyyy HH:mm'}}</span>
-					<span>{{message.from.status.name}}</span>
+					<span>{{message.from.role}}</span>
 				</div>
 			</div>
 		</div>
-			<div class="show-more" ng-show="vm.isShowMore">
-				<button ng-click="vm.limit = null;vm.isShowMore=false" class="btn-gray"><span><<</span> Показать все сообщения <span>>></span></button>	
+			<div class="show-more">
+				<button ng-click="vm.limit = null" class="btn-gray"><span><<</span> Показать все сообщения <span>>></span></button>	
 			</div>
 			
 

@@ -1,35 +1,23 @@
 angular.module('admin_panel')
-.controller('mainAdminCtrl',function($http,myService,$rootScope,$localStorage,myService,reklamodatelService,userService,$cookies) {
+.controller('mainAdminCtrl',function($http,myService,$rootScope,$localStorage,myService,reklamodatelService,userService) {
 	
 	var vm = this;
 	vm.compressed=false;
 	vm.activeItem=1;
 
-	reklamodatelService.getQuestionsCounter(function(data){
-		vm.companyQuestionsCounter = data;
+	myService.getQuestionsCounter(function(data){
+		vm.questionsCounter = data;
 	});
 
-	userService.getQuestionsCounter(function(data){
-		vm.userQuestionsCounter = data;
-	});
+	vm.admin = {
+		"id":1,
+		"name":"Admin",
+		"photo":"assets/images/stud_photo.jpg",
+		"email":"anuarbekzakirianov97@gmail.com",
+		"status":{id:1,name:"Админ"}
+	};
+	$localStorage.admin = vm.admin;
 
-	vm.authorizeAsAdmin = function(){
-		myService.authorizeAsAdmin({company: {
-			email: 'root@reklaman.ru',
-			password: 'root'
-		}}
-		,function(data){
-			$localStorage.token = data.token;
-			$http.defaults.headers.common.Authorization = data.token;
-			$cookies.put('authToken',data.token,{ path: '/'});
-			location.reload();
-		})
-	} 
-
-	myService.getAdmin(function(data){
-		vm.admin = data;
-		$localStorage.admin = vm.admin;
-	})
 
 
 

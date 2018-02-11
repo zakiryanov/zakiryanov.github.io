@@ -46,11 +46,6 @@
   margin-left: 0;
 }
 
-
-.ap_payments th{
-  cursor: pointer;
-}
-
 .ap_payments td.summ{
   font-weight: bold;
 }

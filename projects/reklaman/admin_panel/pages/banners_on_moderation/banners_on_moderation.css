@@ -1,0 +1,106 @@
+.ap_banners_on_moderation{
+  font-size: 14px;
+  min-width: 900px;
+}
+
+.ap_banners_on_moderation .title-icon{
+  width: 16px;
+  height: 24px;
+}
+
+.ap_banners_on_moderation .line-1{
+  height: 70px;
+  padding:20px;
+   -ms-align-items: center;
+   align-items: center;
+}
+
+.ap_banners_on_moderation .line-1 button{
+  margin-left: 50px;
+  padding: 10px 20px   
+}
+
+.ap_banners_on_moderation .line-1 .button span{
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+ 
+.ap_banners_on_moderation .line-2{
+  padding:20px;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ap_banners_on_moderation .line-2 button{
+  padding: 9px 18px;
+  margin-right: 15px;
+}
+
+.ap_banners_on_moderation .line-2 .input{
+ border: none;
+ padding: 9px 24px;
+}
+
+.ap_banners_on_moderation table{
+  width: 100%;
+}
+
+.ap_banners_on_moderation td.company_name{
+  max-width: 150px;
+}
+
+.ap_banners_on_moderation  td{
+  vertical-align: top;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.ap_banners_on_moderation td:first-child{
+  padding: 0;
+  padding-top: 30px;
+}
+
+.ap_banners_on_moderation table td>.flex{
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.ap_banners_on_moderation table .photo{
+  min-width: 55px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
+.ap_banners_on_moderation .banner-info{
+  justify-content: space-between;
+  padding: 10px;
+  padding-top: 0;
+  max-width: 260px;
+  text-align: left;
+}
+
+.ap_banners_on_moderation .banner-info .green{
+  margin: 10px 0;
+}
+
+.ap_banners_on_moderation table .fa-rub{
+  color: #595959;
+  font-size: 13px;
+}
+.ap_banners_on_moderation .banner-info .people{
+  font-size: 12px;
+  color: #646464;
+}
+
+.ap_banners_on_moderation table .status button{
+  width: 120px;
+  padding: 9px 15px;
+}
+
+.ap_banners_on_moderation .operations{
+  padding-right: 5px;
+  min-width: 130px;
+}
