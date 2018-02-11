@@ -1,0 +1,282 @@
+<div class="ap_settings">
+	<div class="line-1 flex">
+		<div class="request-testing white-div">
+			<div class="title-div flex">
+				<img src="assets/images/settings-double-gray.png" class="title-icon">
+				<h2 class="title-text">тестирование запросов</h2>
+			</div>
+			<div class="route">
+				<label for="">Route</label>
+				<div class="dropdown">
+					<button bs-dropdown class="input">
+						{{vm.currentRoute.method+' '+vm.currentRoute.route+' (Type: '+vm.currentRoute.type+')'}}
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-click="vm.changeRoute(route)" ng-repeat="route in vm.routes">
+							{{route.method+' '+route.route+' (Type: '+route.type+')'}}
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="request-info">
+				<div ng-show="selectedRequest">
+  <div ng-if="selectedRequest.desc">
+    <h3>{{selectedRequest.desc}}</h3>
+  </div>
+  <div ng-if="selectedRequest.params">
+    <h2>Get params</h2>
+    <div class="form-group" ng-repeat="param in selectedRequest.params">
+      <label for="getParams{{param}}">{{param}}</label>
+      <input type="text" ng-model="params[param]" class="form-control" id="getParams{{param}}" placeholder="">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="selectUser">User</label>
+    <select name="" id="selectUser" ng-model="adminUserId" class="form-control" ng-change="changeUser()">
+      <option ng-repeat="user in users" value="{{user['_id']}}">{{user.firstName}} {{user.lastName}} (Id: {{user._id}})</option>
+    </select>
+  </div>
+
+  <div ng-if="selectedRequest.body">
+    <h2>Post params</h2>
+    <div class="form-group" ng-repeat="param in selectedRequest.body">
+      <label for="postParams{{param}}">{{param}}</label>
+      <input type="text" ng-model="body[param]" class="form-control" id="postParams{{param}}" placeholder="">
+    </div>
+  </div>
+
+  <div ng-if="selectedRequest.query">
+    <h2>Query</h2>
+    <div class="form-group" ng-repeat="query in selectedRequest.query">
+      <label for="setQuery{{query}}">{{query}}</label>
+      <input type="text" ng-model="body[query]" class="form-control" id="setQuery{{query}}" placeholder="{{query == 'withDisable' ? '1 or 0' : ''}}">
+    </div>
+  </div>
+
+  <div ng-if="selectedRequest.mainData">
+    <h2>Body</h2>
+    <div class="form-group">
+      <textarea rows="10" cols="100" name="text" ng-model="mainData.data"></textarea>
+    </div>
+  </div>
+
+
+  <div ng-if="selectedRequest.bodyArrOfObjects">
+    <h2>Body</h2>
+    <div class="form-group" ng-repeat="obj in bodyArrOfObjects">
+      <label for="bannerId">bannerId</label>
+      <input type="text" ng-model="obj.bannerId" class="form-control" id="bannerId" placeholder="">
+      <label ng-if="saveImage" for="image">image</label>
+      <input ng-if="saveImage" type="text" ng-model="obj.image" class="form-control" id="image" placeholder="">
+      <label for="flag">flag</label>
+      <select name="" id="flag" ng-model="obj.flag" class="form-control">
+        <option value="add">add</option>
+        <option value="del">delete</option>
+      </select>
+    </div>
+    <button type="button" ng-click="addLikesObj()">Добавить баннер</button>
+  </div>
+
+
+  <button type="button" class="btn-green" ng-click="run();">Отправить запрос</button>
+
+  <div style="margin-top: 40px" ng-if="result">
+    <h3 ng-if="result.data">data length: {{result.data.length}}</h3>
+    <pre>{{result}}</pre>
+  </div>
+</div>
+			</div>			
+		</div>
+		<div class="countries_managing white-div">
+			<div class="title-div">
+				<img src="assets/images/planet-earth.png" class="title-icon">
+				<h2 class="title-text">управление странами</h2>
+			</div>
+			<div class="buttons">
+				<button ng-class="{'btn-blue':vm.activeButton=='block','btn-gray':vm.activeButton!='block'}" ng-click="vm.changeZoneStatus('block')" ><i class="fa fa-pause"></i>Заблокировать все</button>
+				<button ng-class="{'btn-blue':vm.activeButton=='unblock','btn-gray':vm.activeButton!='unblock'}" ng-click="vm.changeZoneStatus('unblock')" ><i class="fa fa-play"></i>Разблокировать все</button>
+				<button ng-click="vm.showCountryModal=true" class="btn-gray"><i class="fa fa-plus"></i>Добавить страну</button>
+			</div>
+			<table>
+				<thead>
+					<th>Страна</th>
+					<th>Id</th>
+					<th>Регионы</th>
+					<th>Статус</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="country in vm.managing_countries">
+						<td class="bold">{{country.name}}</td>
+						<td>{{country._id}}</td>
+						<td>{{country.regions.length||0}}</td>
+						<td ng-class="{'blue':!country.enable,'green':country.enable}">{{country.enable?'Разблокирвана':'Заблокирована'}}</td>
+					</tr>						
+				</tbody>
+			</table>	
+		</div>
+		
+	</div>
+	<div class="line-2 white-div">
+		<div class="row-1 flex">
+			<div class="title-div">
+				<img src="assets/images/settings-gray.png" class="title-icon">
+				<h2 class="title-text">настройки</h2>
+			</div>
+			<input type="text" ng-change="vm.search()" ng-model="vm.searchText" placeholder="Поиск ..." class="input input-search">
+		</div>
+		<table>
+			<thead>
+				<th>Описание</th>
+				<th>Ключ</th>
+				<th>Значение</th>
+				<th>Дата создания</th>
+				<th>Операции</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="setting in vm.settings">
+					<td>
+						{{setting.description | limitTo:50}}
+						<span ng-if="setting.description.length>50">...</span>
+					</td>
+					<td>{{setting.key | limitTo:30}}
+						<span ng-if="setting.key.length>30">...</span>
+					</td>
+					<td>{{setting.value| limitTo:30}}
+						<span ng-if="setting.value.length>30">...</span>
+					</td>
+					<td>{{setting.created | date:'yyyy-MM-dd HH:mm'}}</td>
+					<td class="operations">
+						<div ng-click="vm.showUpdatingModal(setting)"  class="btn-gray">
+							<i class="fa fa-paint-brush"></i>
+							<span class="my-tooltip reverse">Редактировать</span>
+						</div>	
+					</td>
+				</tr>					
+			</tbody>
+		</table>
+		<div class="pagination flex">
+			<div class="limit dropdown">
+				<span>Отрбражать: </span>
+				<button bs-dropdown class="btn-gray">{{vm.limit}}</button>
+				<ul class="dropdown-menu" role="menu">
+					<li ng-hide="vm.limit==25" ng-click='vm.changeLimit(25)'>25</li>
+					<li ng-hide="vm.limit==50" ng-click='vm.changeLimit(50)'>50</li>
+					<li ng-hide="vm.limit==100" ng-click='vm.changeLimit(100)'>100</li>
+				</ul>
+			</div>
+			<div ng-click="vm.getNewData()" class="show-more btn-gray">
+				<span><<</span><span >Показать еще</span><span>>></span>
+			</div>
+			<div >
+				Показано {{vm.settings.length}} из {{vm.amount}} объявлений
+			</div>
+		</div>		
+	</div>
+
+
+	<!-- MODAL -->
+	<div ng-show="vm.showCountryModal"  ng-click="vm.showCountryModal=false" class="my-modal flex">
+		<div class="my-modal-content white-div"  ng-click="$event.stopPropagation()">
+			<div class="my-modal-header flex">
+				<div class="title-div">
+					<img src="assets/images/planet-earth.png" class="title-icon">
+					<h2 class="title-text">Добавление стран</h2>
+				</div>
+				<button ng-click="vm.showCountryModal=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body">
+				<div class="searches" style="display: flex;justify-content: space-around;">
+					<input type="text" ng-model="vm.searchModalCountry"  placeholder="Страна" class="input input-search">
+					<input type="text" ng-model="vm.searchModalRegions"  placeholder="Регион" class="input input-search">
+					<input type="text" ng-model="vm.searchModalCities"  placeholder="Город" class="input input-search">
+				</div>
+				
+				<div class="table-container">
+					<table>
+						<thead>
+							<th>Страна</th>
+							<th>vk_id</th>
+							<th>Добавление</th>
+						</thead>
+						<tbody ng-repeat="country in vm.countries | filter:{name:vm.searchModalCountry}" ng-init="country.checked=false;country.childerLoading=false">
+							<tr class="country-info">
+								<td class="bold" ng-click="vm.getRegionsByVkCountry(country)">
+									{{country.name}}
+									<img src="assets/images/{{country.childrenLoading?'loader.gif':'angle-bottom.png'}}" ng-class="{'loader':country.childrenLoading}" ng-if="country.exist" alt="v">
+								</td>
+								<td>
+									{{country.vk_id}}
+								</td>
+								<td>
+									<div ng-if="country.exist">
+										<span class="added green">Добавлена</span>
+										<button ng-click="vm.removeFromManaging(country,'country')" class="btn-gray"><i class="fa fa-close"></i></button>
+									</div>
+									<button ng-click="vm.addCountryToManaging(country)" ng-if="!country.exist" class="btn-gray add"><i class="fa fa-plus"></i></button>
+								</td>
+							</tr>
+							<tr class="region-info" ng-repeat-start="region in country.regions | filter:{name:vm.searchModalRegions}" ng-show="country.checked && country.exist" ng-init="region.checked=false;region.childerLoading=false">
+								<td class="bold" ng-click="vm.getVkCities(region,country.vk_id)">
+									{{region.name}}
+									<img src="assets/images/{{region.childrenLoading?'loader.gif':'angle-bottom.png'}}" ng-class="{'loader':region.childrenLoading}" ng-if="region.exist"  alt="v">
+								</td>
+								<td>
+									{{region.vk_id}}
+								</td>
+								<td>
+									<div ng-if="region.exist">
+										<span class="added green">Добавлен</span>
+										<button ng-click="vm.removeFromManaging(region,'region',country.vk_id)" class="btn-gray"><i class="fa fa-close"></i></button>
+									</div>
+									<button ng-click="vm.addRegionToManaging(region,country.vk_id)" ng-if="!region.exist" class="btn-gray add"><i class="fa fa-plus"></i></button>
+								</td>
+							</tr >
+							<tr class="city-info" ng-repeat-end ng-show="region.checked&&country.checked&&region.exist&&country.exist" ng-repeat="city in region.cities | filter:{name:vm.searchModalCities}" >
+								<td class="bold">{{city.name}} {{city.area?"("+city.area+")":""}}</td>
+								<td>
+									{{city.vk_id}}
+								</td>
+								<td>
+									<div ng-if="city.exist">
+										<span class="added green">Добавлен</span>
+										<button ng-click="vm.removeFromManaging(city,'city')" class="btn-gray"><i class="fa fa-close"></i></button>
+									</div>
+									<button ng-click="vm.addCityToManaging(city,region.vk_id,country.vk_id)" ng-if="!city.exist" class="btn-gray add"><i class="fa fa-plus"></i></button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL  END -->
+
+	<!-- MODAL 2 -->
+	<div ng-click="vm.showSettingsModal=false" ng-show="vm.showSettingsModal" class="my-modal flex">
+		<div class="my-modal-content ap_settings-modal white-div" ng-click="$event.stopPropagation()">
+			<div class="my-modal-header flex">
+				<div class="title-div">
+					<img src="assets/images/settings-gray.png" class="title-icon">
+					<h2 class="title-text">Редактировать настройку</h2>
+				</div>
+				<button ng-click="vm.showSettingsModal=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body">
+				<label>Ключ</label>
+				<input type="text" ng-model="vm.editingSetting.key" class="input">
+				<label>Описание</label>
+				<textarea type="text"  ng-model="vm.editingSetting.description" class="input"></textarea> 
+				<label>Значение</label>
+				<input type="text"  ng-model="vm.editingSetting.value" class="input">
+				<button ng-click="vm.updateSetting()" class="btn-blue"><i style="margin-right: 10px;" class="fa fa-check"></i>Сохранить</button>
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL 2 END -->
+
+
+</div>

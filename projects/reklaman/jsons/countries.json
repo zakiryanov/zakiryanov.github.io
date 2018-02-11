@@ -1,0 +1,116 @@
+[
+	{"id":"11c3e9a494d23fdd50qew1fa1",
+	 "name":"Россия",
+	 "vk_id":1,
+	 "status":{"id":"1","name":"Заблокирована"},
+	 "isManaging":true,
+	 "regions":
+		 [
+		 	{"id":"12c3e9a49qwedd501e71fa2",
+		 	"name":"Центр",
+		 	"isManaging":true,
+		 	"vk_id":1,
+		 	"status":{"id":"1","name":"Заблокирована"},
+		 	"cities":
+			 	[
+				 	{
+				 		"id":"xxc3ar23f23fdd501e71fa2",
+					 	"name":"Москва",
+					 	"isManaging":true,
+					 	"vk_id":1,
+					 	"status":{"id":"1","name":"Заблокирована"}					 	
+				 	},
+
+				 	{
+				 		"id":"yyc3e9a494d23fdd501e71fa2",
+					 	"name":"Санкт-Петербург",
+					 	"isManaging":true,
+					 	"vk_id":1,
+					 	"status":{"id":"1","name":"Заблокирована"}					 	
+				 	},
+
+				 	{
+				 		"id":"zzc3e9a494d23fdd501e71fa2",
+					 	"name":"Казань",
+					 	"isManaging":false,
+					 	"vk_id":1,
+					 	"status":{"id":"1","name":"Заблокирована"}			 	
+				 	}
+
+			 	]
+		 	},
+		 	{"id":"13c3e9a494d23fdd501e71fa2",
+		 	"name":"Юг",
+		 	"isManaging":false,
+		 	"status":{"id":"1","name":"Заблокирована"}
+		 	}
+		 ]
+	 },
+	{"id":"22c3eq2394d23fdd501e71fa2",
+	 "vk_id":2,
+	 "name":"Казахстан",
+	 "isManaging":true,
+	 "status":{"id":"1","name":"Заблокирована"},
+	 "regions":
+		 [
+		 	{"id":"23c3e9a494d23fdd501e71fa11",
+		 	"name":"Центр",
+		 	"isManaging":false,
+		 	"vk_id":1,
+		 	"status":{"id":"1","name":"Заблокирована"},
+		 	"cities":
+			 	[
+				 	{
+				 		"id":"5711234d23fdd501e71fa11",
+				 		"isManaging":false,
+				 		"vk_id":1,
+				 		"status":{"id":"1","name":"Заблокирована"},
+					 	"name":"Астана"					 	
+				 	},
+
+				 	{
+				 		"id":"77c3e9a494d23fdd501e71fa22",
+				 		"isManaging":false,
+				 		"vk_id":1,
+				 		"status":{"id":"1","name":"Заблокирована"},
+					 	"name":"Алматы"					 	
+				 	},
+
+				 	{
+				 		"id":"87c3e9a494d23fdd501e71fa33",
+					 	"name":"Костанай",
+					 	"isManaging":false,
+					 	"status":{"id":"1","name":"Заблокирована"},
+					 	"vk_id":1				 	
+				 	}
+
+			 	]
+		 	},
+		 	{"id":"24c3e9a494d23fdd501e71fa2",
+		 	"name":"Север",
+		 	"vk_id":1,
+		 	"isManaging":true,
+		 	"status":{"id":"1","name":"Заблокирована"}
+		 	}
+		 ]
+	 },
+	{"id":"33c3e9a494d23fdd501e71fa2",
+	 "vk_id":13,
+	 "name":"Украина",
+	 "isManaging":true,
+	 "status":{"id":"2","name":"Разблокирована"}
+	 },
+	{"id":"44c3e9a494d23fdd501e71fa2",
+	 "vk_id":16,
+	 "name":"Американское Самоа",
+	 "isManaging":false,
+	 "status":{"id":"2","name":"Разблокирована"}
+	 },
+	{"id":"552c3e9a494d23fdd501e71fa2",
+	 "vk_id":12,
+	 "name":"Беларусь",
+	 "isManaging":false,
+	 "status":{"id":"1","name":"Заблокирована"}
+	 }
+	
+]

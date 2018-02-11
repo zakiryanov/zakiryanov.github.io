@@ -1,0 +1,285 @@
+.lk_company .my-notification{
+	color: #fff;
+	background: #3b9e1d;
+	padding: 20px;
+	width: 98%;
+	border-radius: 2px;
+	margin: 10px;
+	position: relative;
+}
+
+.lk_company .title-text{
+	font-size: 17px;
+}
+
+.lk_company .white-div{
+	margin: 10px;
+}
+
+.lk_company .my-notification .bold{
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.lk_company .my-notification span{
+	position: absolute;
+	right: 15px;
+	top: 25%;
+	font-size: 35px;
+	cursor: pointer;
+}
+
+.lk_company  .line-1{
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.lk_company .my_banners{
+	display: table;
+	min-width: 410px;
+}
+
+.lk_company .my_banners .line-1{
+	padding: 15px;
+}
+
+.lk_company .my_banners .title-icon{
+	width: 16px;
+	height: 21px;
+}
+
+.lk_company .my_banners .line-1 .btn-blue{
+	padding: 11px 18px;
+	font-size: 13px;
+}
+
+.lk_company .my_banners td:not(:first-child){
+	text-align: center;
+	padding-right: 15px;
+}
+
+.lk_company .my_banners td{
+	text-align: left;
+	vertical-align: middle;
+}
+
+.lk_company table{
+	width: 100%;
+}
+
+.lk_company  th{
+	padding-right: 0;
+}
+
+.lk_company .table{
+	padding:0 5px;
+}
+
+.lk_company tr{
+	border-bottom: 0;
+	height: 50px;
+}
+
+.lk_company thead tr{
+	height: 20px;
+}
+
+.lk_company th{
+	color: #999999;
+	font-size: 12px;
+}
+
+.lk_company td{
+	position: relative;
+	padding: 0px;
+}
+
+.lk_company td:first-child{
+	padding-left: 10px;
+}
+
+.lk_company .my_banners td:hover .my-tooltip{
+	display: block;
+}
+
+.lk_company .my_banners td{
+	cursor: pointer;	
+}
+
+.lk_company .my_banners td:first-child{
+	max-width: 170px;
+}
+
+.lk_company .my_banners .status-image div{
+	width: 23px;
+	height: 23px;
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+
+.lk_company .my_banners td img{
+	width: 23px;
+	height: 23px;
+}
+
+.lk_company .img-hover{
+	display: none;
+}
+
+.lk_company .my_banners thead tr:hover{
+	background: #fff
+}
+
+.lk_company .my_banners tr:hover{
+	color: #fff;
+	background: #3b9e1d
+}
+
+.lk_company .my_banners tr:hover .bolder,
+.lk_company .my_banners tr:hover .fa{
+	color: #fff;
+}
+
+.lk_company .my_banners tr:hover .img-hover{
+	display: block;
+	width: 23px;
+	height: 23px;
+}
+
+.lk_company .my_banners tr:hover .img-default{
+	display: none;
+}
+
+.lk_company .my_banners .show-more{
+	padding: 15px;
+}
+
+.lk_company .my_banners .show-more .flex{
+	justify-content: center;
+	border-top: 2px solid #eaeaea;
+	padding-top: 15px;
+}
+
+.lk_company .my_banners .show-more .flex:hover span{
+	color: #999;
+	cursor: pointer;
+}
+
+.lk_company .my-tooltip.right{
+  left: 80%;
+  bottom: 15%;
+  width: 120px;
+  text-align: center;
+}
+
+.lk_company .my-tooltip.right::after,.lk_company .my-tooltip.right::before {
+  left:-3px;
+  bottom: 40%;
+}
+
+.lk_company .my-balance,.lk_company .video{
+	padding: 10px;
+	margin-left: 0;
+	justify-content: space-between;
+}
+
+.lk_company .video .video-img{
+	width: 85%;
+	height: 110px;
+	border: 2px dashed #00aed0;
+	margin: 0 auto;
+	margin-top: 15px;
+	display: block;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.lk_company .video{
+	margin-right: 10px;
+}
+
+.lk_company .my-balance .line-1{
+	border-bottom: 0;
+}
+
+.lk_company .my-balance .title-div{
+	min-width: 170px;
+	
+}
+
+.lk_company .my-balance .title-text{
+	vertical-align: middle;
+}
+
+.lk_company .my-balance .bolder{
+	margin-right: 10px;
+}
+
+.lk_company .my-balance .arrow-right{
+	cursor: pointer;
+	height: 15px;
+}
+
+.lk_company .my-balance p{
+	font-size:28px;
+	margin: 20px 0;
+	color: #303030;		
+}
+
+.lk_company .my-balance .btn-green{
+	width: 100%;
+	padding: 14px 15px;
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.lk_company .support{
+	margin: 0;
+	margin-right: 10px;
+	font-family: 'OpenSans';
+}
+
+.lk_company .support .title-icon{
+	width: 24px;
+	height: 16px;
+}
+
+.lk_company .support .line-1{
+	padding: 15px;
+	justify-content: space-between;
+}
+
+.lk_company .support .line-1 a{
+	color: #3b9e1d;
+	border-bottom: 1px dashed #3b9e1d;
+	cursor: pointer;
+}
+
+.lk_company .support .operations .btn-gray{
+	width: 25px;
+	height: 25px;
+}
+
+.lk_company .support .operations .btn-gray:first-child .fa{
+	font-family: inherit;
+	font-weight: bold;
+}
+
+.lk_company .support td{
+	max-width: 180px;
+}
+
+.lk_company .support .operations{
+	padding-left: 10px;
+}
+
+.lk_company .support  .ask{
+	width: 95%;
+	margin: 0 auto;
+	border-top: 1px solid #eaeaea;
+	padding: 15px;
+	padding-left: 0;
+}

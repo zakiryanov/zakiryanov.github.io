@@ -1,0 +1,8 @@
+[
+{"id":0,"name":"Новый","statusName":"new"},
+{"id":1,"name":"Завершено","statusName":"completed"},
+{"id":2,"name":"Отклонено","statusName":"canceled"},
+{"id":3,"name":"Деньги отправлены","statusName":"moneySent"},
+{"id":4,"name":"Деньги не удалось отправить","statusName":"moneyNotSent"},
+{"id":5,"name":"Необходимо перепроверить","statusName":"needAutoRecheck"}
+]

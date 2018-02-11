@@ -1,0 +1,83 @@
+<div class="lk_account-settings flex">
+	<div class="settings white-div">
+		<div class="title-div">
+			<img src="assets/images/settings-gray.png" class="title-icon">
+			<h2 class="title-text">настройка аккаунта</h2>
+		</div>
+		<div class="photo-select flex">
+			<div class="border">
+				<div ng-if="vm.file" class="background-img" ngf-background="vm.file"></div>
+				<div class="photo" set-background-img src="{{vm.company.photo}}" >
+					<p  ng-if="!vm.company.photo">Рекомендуемая
+						<br>
+					  пропорция	
+					</p>
+					<span  ng-if="!vm.company.photo" class="bold">150 &times; 150 px</span>
+				</div>
+			</div>			
+			<div class="select">
+				<label>Загрузите изображение</label>
+				<div>
+					<input ngf-select ng-model="vm.file" name="file" ngf-pattern="'image/*'"  ngf-accept="'image/*'" ngf-max-size="5MB" placeholder="Выберите файл" class="input input-select">
+					<span  class="green">~<i>4.5 Mb</i></span>
+					<p class="hint-text">*Размер не более 5 Mb</p>
+				</div>
+			</div>
+		</div>
+		<div class="label-input">
+			<label>E-mail</label>
+			<input class="input" type="text" ng-model="vm.company.email">
+		</div>
+		<div class="label-input">
+			<label>Смена пароля</label>
+			<div class="password-div" ng-init="pv1=false">
+				<input class="input" type="{{pv1?'text':'password'}}"  ng-model="vm.password">
+				<img src="assets/images/eye.png" ng-click="pv1=!pv1"  alt="">
+			</div>
+			<div class="password-div" ng-init="pv2=false">
+				<input class="input" type="{{pv2?'text':'password'}}"  ng-model="vm.password2">
+				<img src="assets/images/eye.png" ng-click="pv2=!pv2"  alt="">
+			</div>
+			<p ng-show="vm.showError" class="blue">Пароли не совпадают</p>
+		</div>
+		<div class="label-input">
+			<label>Телефон</label>
+			<input class="input" placeholder="+ 7(___)___-__-__" type="text"  ng-model="vm.company.phone">
+		</div>
+		<button ng-click="vm.update()" class="btn-green">
+			<img src="assets/images/checked.png" alt="">
+			Сохранить
+		</button>
+	</div>
+	<div class="info white-div">
+		<div class="title-div">
+			<img src="assets/images/settings-gray.png" class="title-icon">
+			<h2 class="title-text">Информация о компании</h2>
+		</div>
+		<div class="label-input">
+			<label>Название компании</label>
+			<input class="input" type="text" ng-model="vm.company.name">
+		</div>
+		<div class="label-input">
+			<label>Юридический адрес</label>
+			<input class="input" type="text" ng-model="vm.company.legal_address">
+		</div>
+		<div class="label-input">
+			<label>Почтовый адрес</label>
+			<input class="input" type="text" ng-model="vm.company.mail_address">
+		</div>
+		<div class="label-input">
+			<label>ИИН</label>
+			<input class="input" type="text" ng-model="vm.company.iin">
+		</div>
+		<div class="label-input">
+			<label>КПП</label>
+			<input class="input" type="text" ng-model="vm.company.kpp">
+		</div>
+		
+		<button ng-click="vm.updateTwo()" class="btn-green">
+			<img src="assets/images/checked.png" alt="">
+			Сохранить
+		</button>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+.ap_reklamodateli_questions{
+	min-width: 900px;
+}
+
+.ap_reklamodateli_questions .row-1{
+	justify-content: space-between;
+	padding:25px 20px;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.ap_reklamodateli_questions .title-icon{
+	height: 13px;
+}
+
+.ap_reklamodateli_questions .row-1 .input{
+	border: none
+}
+
+.ap_reklamodateli_questions table td{
+	max-width: 250px;
+	padding: 10px;
+}
+
+.ap_reklamodateli_questions table td:first-child{
+	max-width: 150px;
+	padding-left: 10px;
+}
+
+.ap_reklamodateli_questions table .operations{
+	padding-left: 10px;
+	padding-right: 10px;
+}

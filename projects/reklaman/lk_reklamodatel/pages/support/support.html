@@ -1,0 +1,86 @@
+<div class="lk_support white-div">
+	<div class="row-1 flex">
+		<div class="flex">
+			<div class="title-div">
+				<img src="assets/images/message-gray.png" class="title-icon">
+				<h2 class="title-text">техподдержка</h2>
+			</div>
+			<button ng-click="vm.showModal=true" class="btn-blue"><img src="assets/images/megaphone-(1).png" alt="">Новый тикет</button>
+		</div>
+
+		<input ng-change="vm.search()" type="text" ng-model="vm.searchText" placeholder="Поиск" class="input input-search">
+	</div>
+	<table>
+		<thead>
+			<th>№</th>
+			<th>Тема</th>
+			<th>Собщение</th>
+			<th>Кто создал</th>
+			<th>Статус</th>
+			<th>Дата создания</th>
+			<th>Дата обновления</th>
+			<th>Операции</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="ticket in vm.tickets">
+				<td>{{$index+1}}</td>
+				<td>{{ticket.title | limitTo:25 }}
+					<span ng-if="ticket.subject.length>25">...</span>
+				</td>
+				<td class="message">{{ticket.text | limitTo:50}}
+					<span ng-if="ticket.text.length>50">...</span>
+				</td>
+				<td>{{ticket.adminId?'Админ':'Компания'}}</td>
+				<td class="status" ng-class="{'blue':ticket.statusName=='finished'||ticket.statusName=='closed','green':ticket.statusName=='inProcess'||ticket.statusName=='new'}">{{ticket.statusText}}</td>
+				<td>{{ticket.created | date : 'dd.MM.yy HH:mm'}}</td>
+				<td>{{ticket.updated | date : 'dd.MM.yy HH:mm'}}</td>
+				<td class="operations">
+					<div ui-sref="lk_ticket({id:ticket.id})" ng-class="{'invisible':ticket.new_messages==0}"  class="btn-gray">
+						<i class="fa">{{ticket.new_messages}}</i>
+						<span class="my-tooltip">Новые сообщения</span>
+					</div>	
+					<div ng-click="vm.closeTicket(ticket)" class="btn-gray">
+						<i class="fa fa-check"></i>
+						<span class="my-tooltip">Завершить тикет</span>
+					</div>	
+					<div ui-sref="lk_ticket({id:ticket.id})"  class="btn-gray">
+						<i class="fa fa-arrow-right"></i>
+						<span class="my-tooltip">Перейти в тикет</span>
+					</div>	
+				</td>
+			</tr>					
+		</tbody>
+	</table>
+	<!-- MODAL  -->
+	<div ng-click="vm.showModal=false" ng-show="vm.showModal" class="my-modal  flex">
+		<div class="my-modal-content white-div" ng-click="$event.stopPropagation()">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/megaphone-(2).png" class="title-icon">
+					<h2 class="title-text">Создание нового тикета</h2>
+				</div>
+				<button ng-click="vm.showModal=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body flex-column">
+				<div class="label-input flex">
+					<label  >Тема</label>
+					<input ng-model="vm.newTicket.subject" type="text" class="input">
+				</div>
+				<div class="label-input flex">
+					<label >Сообщение</label>
+					<textarea ng-model="vm.newTicket.text"  rows="8" class="input"></textarea>
+				</div>				
+			</div>
+			<div class="my-modal-footer flex">
+				<button ng-click="vm.clearNewTicket()" class="btn-gray">Очистить поля</button>
+				<button ng-click="vm.createTicket()" class="btn-blue">
+					<img src="assets/images/megaphone-(1).png" alt="">
+					Создать тикет
+				</button>
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL  END -->	
+
+</div>

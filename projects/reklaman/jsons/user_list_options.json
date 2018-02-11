@@ -1,0 +1,5 @@
+{
+	"gender":{"label":"Пол","options":[{"id":3,"value":null,"name":"Любой"},{"id":1,"value":"male","name":"Мужской"},{"id":2,"value":"female","name":"Женский"}]},
+	"enable":{"label":"Статус пользователя","options":[{"id":1,"value":true,"name":"Активен"},{"id":2,"value":false,"name":"Заблокирован"}]},
+	"status":{"label":"Статус","options":[{"id":1,"value":"partner","name":"Партнер"},{"id":2,"value":"user","name":"Обычный пользователь"}]}
+}

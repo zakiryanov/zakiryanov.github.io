@@ -1,0 +1,251 @@
+ @font-face {
+ 	font-family: 'PTSans'; /* Имя шрифта */
+ 	src: url('../fonts/PTSans-Bold.ttf'); /* Путь к файлу со шрифтом */
+ 	font-weight: bold
+ }
+ @font-face {
+ 	font-family: 'PTSans'; /* Имя шрифта */
+ 	src: url('../fonts/PTSans-Regular.ttf'); /* Путь к файлу со шрифтом */
+ 	font-weight: normal;
+ }
+
+ body{
+ 	font-family: 'PTSans';
+ }
+
+ .container {
+ 	width: 95%;
+ 	max-width: 1000px
+ }
+
+
+.page-header .icons{
+	display: none;
+	position: relative;
+	float: right;
+	margin-right: -8px;
+}
+
+.page-header .icons .icon{
+	padding:20px 13px;
+	display: inline-block;
+	text-align: center;	
+	vertical-align: top;
+}
+
+.page-header .icons .icon .second:nth-child(2){
+	display: none;
+}
+
+.page-footer .copyright .socials{
+	display: none;
+}
+
+.mobile-login-modal{
+	top: 94%;
+	right: 48%;
+	position: absolute;
+	z-index: 10;
+	color: #767676;
+	background: #f1f1f1;
+	padding: 15px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 8px -2px #999;
+	display: none;
+
+}
+
+.mobile-login-modal input[type="text"]{
+	margin-bottom: 10px;
+	padding: 15px 20px;
+	background: #f8f8f8;
+	border: 1px  solid #e1e1e1
+}
+
+.mobile-login-modal input[type="checkbox"]{
+	margin: 0 10px;
+}
+
+.mobile-login-modal input[type="text"]:focus{
+	outline: none;
+	background: #fff;
+	border-color: #888888
+}
+
+.mobile-login-modal input[type="text"].error{
+	border-color: #d24a43
+}	
+
+.mobile-login-modal button{
+	background: #2e9f2b;
+	color: #fff;
+	padding: 15px 20px;
+	border: none;
+	margin: 10px 0 15px;
+	width: 100%;
+}
+
+.mobile-login-modal button:hover{
+	background: #56bc4e
+}
+
+.mobile-login-modal button img{
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.mobile-login-modal .links a:first-child{
+	font-size: 13px;
+	color: #767676
+}
+
+.mobile-login-modal .links a:last-child{
+	color: #333230;
+	margin-left: 10px;
+}
+
+.mobile-menu-modal{
+	top: 100%;
+	right: 0;
+	position: absolute;
+	z-index: 10;
+	color: #767676;
+	background: #f1f1f1;
+	font-weight: bold;
+	padding: 25px;
+	box-shadow: 1px 1px 8px -2px #999;
+	display: none;
+	line-height: 2;
+
+}
+
+.mobile-menu-modal li a{
+	color: #424242;
+}
+
+.invert-block.state-primary .gradient-bg{
+	width: 100%;
+}
+
+
+ @media screen and (max-width: 768px) {
+
+ 	.push{
+		padding-bottom: 0;
+	}
+
+ 	.logo{
+ 		margin: 15px;
+ 	}
+
+
+	.logo img{
+		width: 60px;
+	}
+
+ 	.page-header{
+ 		padding-top: 0;
+ 	}
+
+ 	.page-header .icons{
+		display: block;
+	}	
+
+	.page-header .main-menu{
+		display: none;
+	}
+
+	.page-footer .phone-section {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+		font-size: 24px;
+	}
+
+	.page-footer .row{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.page-footer  .primary{
+		order: 1;
+		width: 100%;
+	}
+
+	.page-footer  .secondary{
+		margin-top:0px;   
+		float: none; 
+		width: 100%; 
+
+	}
+
+	.page-footer .google-play-link {
+		float: left; 
+	}
+
+	.page-footer .phone-section .btn{
+		width: 200px;
+		margin-top: 15px;
+		margin-left: 0px;
+		font-size: 17px;
+	}
+
+	.footer-menu{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	.footer-menu li{
+		line-height: 1.5;
+	}
+
+	.footer-menu .socials{
+		display: none;
+	}
+
+	.page-footer .copyright .socials{
+		display: block;
+	}
+
+	.page-footer .copyright .socials a{
+		margin-left: 10px;
+	}
+
+	.copyright{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		-ms-align-items: center;
+		align-items: center;	
+	}
+
+ }

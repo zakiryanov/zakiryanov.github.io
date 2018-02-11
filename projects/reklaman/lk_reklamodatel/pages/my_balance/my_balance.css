@@ -1,0 +1,137 @@
+.lk_my_balance{
+	min-width: 900px;
+}
+
+.lk_my_balance .line-1 .flex{
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.lk_my_balance .line-1{
+	justify-content: space-between;
+	padding:25px 20px;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.lk_my_balance .line-1 p{
+	color: #303030;
+	font-size: 30px;
+}
+
+.lk_my_balance .line-1 .btn-green{
+	padding: 14px 20px;
+	font-size: 14px;
+}
+
+
+.lk_my_balance .line-1 .btn-green span{
+	margin-right: 10px;
+}
+
+.lk_my_balance table{
+	width: 100%;
+}
+
+.lk_my_balance table td{
+	padding: 10px;
+}
+
+.lk_my_balance table td:first-child{
+	padding-left: 15px;
+	color: #b7b7b7;
+}
+
+.lk_my_balance td .btn-green{
+	padding: 10px 13px;
+}
+
+
+
+
+
+
+.lk_my_balance  .my-modal label{
+	color: #303030;
+}
+
+
+.lk_my_balance .my-modal.one .title-icon{
+	height: 19px;
+}
+
+.lk_my_balance .my-modal{
+	font-size: 14px;
+}	
+
+.lk_my_balance .my-modal .title-text{
+	font-size: 13px;
+}
+
+.lk_my_balance .my-modal.one .my-modal-header{
+	-ms-align-items: center;
+	align-items: center;
+	padding: 0;
+}
+
+.lk_my_balance .my-modal .my-modal-header .btn-gray{
+	padding: 8px 10px;
+}
+
+.lk_my_balance .my-modal.one .my-modal-content{
+  width: 330px;
+  height: 200px;
+  padding: 20px;
+}
+
+.lk_my_balance .my-modal  .label-input.flex{
+	 -ms-align-items: center;
+	 align-items: center;
+	 justify-content: center;
+	 margin:20px 0 35px 0;
+}
+
+.lk_my_balance .my-modal.one .my-modal-footer{
+	justify-content: space-between;
+	padding-top: 0px;
+}
+
+.lk_my_balance .my-modal.two label{
+	display: block;
+	margin: 20px 0 7px 0;
+}
+
+.lk_my_balance .my-modal.two .my-modal-content{
+	padding: 20px;
+	height: 510px;
+	width: 400px;
+}
+
+.lk_my_balance .my-modal.two .my-modal-header{
+	padding: 0;
+}
+
+.lk_my_balance .my-modal.two .input{
+	width: 100%;
+	padding: 7px 20px;
+	padding-right: 20px;
+}
+
+.lk_my_balance .my-modal.two  .label-input.flex{
+	justify-content: flex-start;
+	margin: 30px 0 10px;
+}
+
+.lk_my_balance .my-modal.two  .label-input.flex label{
+	margin: 0;
+}
+
+.lk_my_balance .my-modal.two  .my-modal-footer .btn-blue{
+	margin: 20px 0;
+}
+
+.lk_my_balance .my-modal .input[type="number"]{
+	width: 100px;
+	padding-right: 10px;
+	margin: 0 10px 0 20px;
+}

@@ -1,0 +1,118 @@
+
+.first-block{
+	padding-top:70px;
+	text-align: center;
+	display: none;
+	background: url('../images/LightBulbIcon.png') no-repeat;
+	background-position: center 0px;
+	background-size:300px 330px;
+}
+
+.first-block h1{
+	line-height: 1.3;
+	text-transform: uppercase;
+	font-size: 28px;
+	font-weight: bold;
+	color: #358e1a
+}
+
+.first-block h1 span:nth-child(2){
+	color: #028fac;
+	font-size: 34px;
+	display: block;
+}
+
+.first-block p{
+	margin: 50px 0px 65px;
+	font-size: 17px;
+}
+
+.first-block button{
+	padding: 15px 30px;
+	color: #fff;
+	text-transform: uppercase;
+	background:  #358e1a;
+	border: none;
+	outline: none;
+	border-radius: 5px
+}
+
+.first-block img{
+	margin-left: 10px;
+}
+
+.text-block h2{
+		font-size: 30px;
+	}
+
+@media screen and (max-width: 768px) {
+	.page-header{
+		padding-bottom: 10px;
+	}
+
+	.first-block{
+		display: block;
+	}
+
+	.picture-block{
+		display: none;
+	}
+
+	.homepage-block{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		-ms-align-items: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.homepage-block>li{
+		width: 100%;
+	}
+
+	.homepage-block .text-block {
+		width: 100%;
+		margin-top: 80px;
+		padding-left: 0;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	.homepage-block .text-block:first-child{
+		margin-top: 0;
+	}
+
+	
+	
+	.text-block .btn{
+		padding: 11px 35px;
+	}
+
+	.teaser-list{
+		margin-left: 0px
+	}
+	
+	.variant-footer {
+		margin-top: 40px;
+	}
+
+}
+

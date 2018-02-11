@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="googlebot" content="index,follow">
+
+  <!-- Title -->
+  <title>Reklaman</title>
+
+  <!-- CSS -->
+  <!-- CSS COMPONENTS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="bower_components/angularjs-datepicker/dist/angular-datepicker.min.css">
+  <link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.min.css">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <!-- CSS PAGES -->
+  <link rel="stylesheet" href="admin_panel/index.css">
+  <link rel="stylesheet" href="admin_panel/pages/reklamodateli/reklamodateli.css">
+  <link rel="stylesheet" href="admin_panel/pages/payments/payments.css">
+  <link rel="stylesheet" href="admin_panel/pages/users/users.css">
+  <link rel="stylesheet" href="admin_panel/pages/user_update/user_update.css">
+  <link rel="stylesheet" href="admin_panel/pages/user_withdraws/user_withdraws.css">
+  <link rel="stylesheet" href="admin_panel/pages/settings/settings.css">
+  <link rel="stylesheet" href="admin_panel/pages/tickets/tickets.css">
+  <link rel="stylesheet" href="admin_panel/pages/banners/banners.css">
+  <link rel="stylesheet" href="admin_panel/pages/banners_on_moderation/banners_on_moderation.css">
+  <link rel="stylesheet" href="admin_panel/pages/registrations_requests/registrations_requests.css">
+  <link rel="stylesheet" href="admin_panel/pages/banner_update/banner_update.css">
+  <link rel="stylesheet" href="admin_panel/pages/ticket/ticket.css">
+  <link rel="stylesheet" href="admin_panel/pages/banner_info/banner_info.css">
+  <link rel="stylesheet" href="admin_panel/pages/banner/banner.css">
+  <link rel="stylesheet" href="admin_panel/pages/mass_notifications/mass_notifications.css">
+  <link rel="stylesheet" href="admin_panel/pages/withdraw_info/withdraw_info.css">
+  <link rel="stylesheet" href="admin_panel/pages/company_account/company_account.css">
+
+  <link rel="stylesheet" href="lk_reklamodatel/index.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/company/company.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/my_banners/my_banners.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/banner_update/banner_update.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/banner_create/banner_create.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/support/support.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/account_settings/account_settings.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/answer_questions/answer_questions.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/my_balance/my_balance.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/banner_info/banner_info.css">
+  <link rel="stylesheet" href="lk_reklamodatel/pages/ticket/ticket.css">
+
+  <!-- Favicons -->
+  <link href="images/favicon/favicon.png" rel="shortcut icon">
+</head>
+
+<body ng-app="app" ng-cloak>
+<div ui-view></div>
+ 
+
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/ngstorage/ngStorage.js"></script>
+  <script src="bower_components/angular-strap-master/dist/angular-strap.min.js"></script>
+  <script src="bower_components/"></script>
+  <script src="bower_components/angular-strap-master/dist/angular-strap.tpl.min.js"></script>
+  <script src="bower_components/angularjs-datepicker/dist/angular-datepicker.min.js"></script>  
+  <script src="bower_components/ng-file-upload/dist/ng-file-upload.min.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+   <script src="bower_components/angular-img-cropper/dist/angular-img-cropper.min.js"></script> 
+   <script src="bower_components/angular-ui-notification/dist/angular-ui-notification.min.js"></script> 
+  <script src="js/ru-ru.js"></script>
+  <!-- endbower -->
+  <!-------------------- MODULES AND ROUTES  -------------------->
+  <script src="admin_panel/js/index.module.js"></script>
+  <script src="lk_reklamodatel/js/index.module.js"></script>
+  <script src="js/index.module.js"></script>
+  <script src="js/index.route.js"></script>
+  <script src="admin_panel/js/index.route.js"></script>
+    <script src="admin_panel/js/index.js"></script>
+  <script src="lk_reklamodatel/js/index.js"></script>
+  <script src="lk_reklamodatel/js/index.route.js"></script>
+  <!-- COMPONENTS -->
+  <script src="components/directives/setBackgrounImg.directive.js"></script>
+  <script src="components/directives/setBackgrounColor.directive.js"></script>
+  <script src="components/services/my.service.js"></script>
+  <script src="components/services/countries.service.js"></script>
+  <script src="components/filters/filters.js"></script>
+  <script src="components/services/user.service.js"></script>
+  <script src="components/services/settings.service.js"></script>
+  <script src="components/services/reklamodatel.service.js"></script>
+  <script src="components/services/banner.service.js"></script>
+  <script src="components/services/ticket.service.js"></script>
+  <script src="components/services/faq.service.js"></script>
+  <script src="components/services/import.service.js"></script>
+  <!-- CONTROLLERS -->
+
+  <script src="admin_panel/pages/reklamodateli/reklamodateli.js"></script>
+  <script src="admin_panel/pages/payments/payments.js"></script>
+  <script src="admin_panel/pages/users/users.js"></script>
+  <script src="admin_panel/pages/user_update/user_update.js"></script>
+  <script src="admin_panel/pages/user_withdraws/user_withdraws.js"></script>
+  <script src="admin_panel/pages/settings/settings.js"></script>
+  <script src="admin_panel/pages/tickets/tickets.js"></script>
+  <script src="admin_panel/pages/banners/banners.js"></script>
+  <script src="admin_panel/pages/banners_on_moderation/banners_on_moderation.js"></script>
+  <script src="admin_panel/pages/reklamodateli_questions/reklamodateli_questions.js"></script>
+  <script src="admin_panel/pages/registrations_requests/registrations_requests.js"></script>
+  <script src="admin_panel/pages/banner_update/banner_update.js"></script>
+  <script src="admin_panel/pages/ticket/ticket.js"></script>
+  <script src="admin_panel/pages/banner_info/banner_info.js"></script>
+  <script src="admin_panel/pages/banner/banner.js"></script>
+  <script src="admin_panel/pages/mass_notifications/mass_notifications.js"></script>
+  <script src="admin_panel/pages/withdraw_info/withdraw_info.js"></script>
+  <script src="admin_panel/pages/company_account/company_account.js"></script>
+
+  <script src="lk_reklamodatel/pages/company/company.js"></script>
+  <script src="lk_reklamodatel/pages/my_banners/my_banners.js"></script>
+  <script src="lk_reklamodatel/pages/banner_update/banner_update.js"></script>
+  <script src="lk_reklamodatel/pages/banner_create/banner_create.js"></script>
+  <script src="lk_reklamodatel/pages/support/support.js"></script>
+  <script src="lk_reklamodatel/pages/account_settings/account_settings.js"></script>
+  <script src="lk_reklamodatel/pages/answer_questions/answer_questions.js"></script>
+  <script src="lk_reklamodatel/pages/my_balance/my_balance.js"></script>
+  <script src="lk_reklamodatel/pages/banner_info/banner_info.js"></script>
+  <script src="lk_reklamodatel/pages/ticket/ticket.js"></script>
+
+</body>
+</html>

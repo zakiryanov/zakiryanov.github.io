@@ -1,0 +1,88 @@
+.ap_payments .line-1{
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  height: 70px;
+  padding:20px;
+
+}
+
+.ap_payments .line-2{
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+  padding:20px;
+  font-weight: normal;
+}
+
+.ap_payments .line-2 span{
+  font-weight: 500;
+  color: #404040;
+}
+
+.ap_payments .line-3{
+  -ms-align-items: center;
+  align-items: center;
+  padding: 20px;
+  color: #303030;
+}
+
+.ap_payments .line-3 .input{
+  padding: 11px 17px;
+  border: 1px solid #e1e1e1;
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+.ap_payments datepicker{
+  width: 240px;
+}
+
+.ap_payments .line-3 p{
+  margin: 0 20px; 
+}
+
+.ap_payments .line-3 p:first-child{
+  margin-left: 0;
+}
+
+
+.ap_payments th{
+  cursor: pointer;
+}
+
+.ap_payments td.summ{
+  font-weight: bold;
+}
+
+.ap_payments td.paid_at .green{
+  text-decoration: underline;
+}
+
+.ap_payments td.paid_at span:first-child,
+.ap_payments td.paid_at span:last-child{
+  cursor: pointer;
+}
+
+.ap_payments .with-photo .user-photo{
+  margin-right: 10px;
+  background: url('../assets/images/kfc.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.ap_payments .status{
+  color: #008eaa;
+}
+
+.ap_payments td.green{
+  color: #3b9e1d;
+}
+
+.ap_payments td:first-child{
+  color: #999
+}
+
+.ap_payments td:last-child .btn-green{
+   padding: 7px 16px;
+}

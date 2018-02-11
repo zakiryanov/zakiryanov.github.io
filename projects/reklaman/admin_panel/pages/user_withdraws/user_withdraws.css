@@ -1,0 +1,70 @@
+.ap_user_withdraws{
+  font-size: 14px;
+}
+
+.ap_user_withdraws .line-1{
+  height: 70px;
+  padding:20px;
+  justify-content: space-between;
+   -ms-align-items: center;
+   align-items: center;
+}
+
+.ap_user_withdraws .line-1 .input{
+  width: 300px;
+  border: none;
+}
+ 
+.ap_user_withdraws .line-2{
+  padding:20px;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.ap_user_withdraws .line-2 .dropdown .input{
+  max-width: 230px;
+  padding-right: 80px;
+}
+
+.ap_user_withdraws .line-2 .date{
+ justify-content: space-between;
+ -ms-align-items: center;
+ align-items: center;
+ margin: 0 10px;
+}
+
+.ap_user_withdraws .line-2 datepicker .input{
+  padding-right: 10px;
+  margin: 0 5px;
+} 
+
+.ap_user_withdraws  .btn-green,.ap_user_withdraws .btn-blue{
+  margin-right: 15px;
+}
+
+.ap_user_withdraws .btn-blue{
+  margin-right: 0;
+}
+ 
+.ap_user_withdraws  .btn-green img,.ap_user_withdraws .btn-blue img{
+  width: 17px;
+  height: 17px;
+  margin-top: -2px;
+}
+
+.ap_user_withdraws  .btn-green img{
+ transform: rotate(45deg);
+}
+
+
+.ap_user_withdraws table{
+  width: 100%;
+}
+
+.ap_user_withdraws .status{
+  max-width: 130px;
+}
+
+.ap_user_withdraws .operations{
+  padding-right: 5px;
+} 

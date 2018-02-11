@@ -1,0 +1,176 @@
+.ap_users{
+  font-size: 14px;
+  min-width: 900px
+}
+
+.ap_users .line-1{
+  height: 70px;
+  padding:20px;
+}
+
+.ap_users .title-div{
+  display: inline-block;
+}
+
+.ap_users .line-1 .btn-blue{
+  margin-left: 70px;
+  display: inline-block;
+  padding: 10px 25px;
+}
+
+.ap_users .line-1 .btn-blue img{
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.ap_users .line-2{
+  padding:20px;
+}
+
+.ap_users .line-3{
+  padding: 20px;
+}
+
+.ap_users .line-3 a{
+  padding: 8px 12px;
+}
+
+.ap_users .line-3 a img{
+   width: 17px;
+   height: 17px;
+}
+
+.ap_users .line-4{
+  justify-content: space-between;
+  padding-left: 20px;
+  margin-top: 15px;
+  font-weight: 500;  
+}
+
+.ap_users label{
+  display: block;
+  margin-bottom: 7px;
+}
+
+.ap_users .line-4 .dropdown .dropdown-menu{
+  display: block;
+}
+
+.ap_users .dropdown{
+  margin-top: 7px; 
+}
+
+.ap_users .row-1 .input{
+  width: 200px;
+  padding: 10px;
+  background: #f5f5f5;
+}
+
+.ap_users .line-4 .item{
+    margin-right: 20px;
+}
+
+.ap_users .row-2{
+  margin-top: 30px;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.ap_users .line-4 .row-2 .item{
+    margin-right: 10px;
+}
+
+.ap_users .item:last-child .input{
+  width: 250px;
+}
+
+.ap_users .row-1 .item:first-child .input{
+  width: 120px;
+}
+
+.ap_users .item:last-child .dropdown-menu li:hover{
+  background: #f5f5f5
+}
+
+.ap_users .item:last-child ul label{
+  display: inline-block;
+  margin-top: 5px;
+  color: #303030;
+  cursor: pointer;
+  width: 100%;
+ 
+}
+
+.ap_users .item:last-child ul li{
+  padding: 5px 15px;
+}
+
+.ap_users .row-2 .input{
+  padding: 7px ;
+  background-image: none;
+  width: 60px;
+  margin:0 5px;
+}
+
+.ap_users .row-2 .btn-green{
+  padding: 9px 13px;
+  margin-top: 15px;
+}
+
+.ap_users .row-2 .btn-green img{
+  width: 15px;
+  height: 17px;
+  vertical-align: middle;
+}
+
+.ap_users .result{
+  margin: 20px 15px 0 10px;
+}
+
+.ap_users .row-3 button{
+  padding: 8px 17px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.ap_users .line-5{
+  justify-content: flex-end;
+  margin: 20px 30px 70px 0;
+}
+
+.ap_users th{
+  vertical-align: bottom;
+}
+
+.ap_users td{
+  max-width: 100px;
+  font-size: 13px;
+}
+
+.ap_users td:first-child{
+  max-width: 150px;
+  word-wrap: break-word;
+}
+
+.ap_users .operations{
+  padding-right: 5px;
+  min-width: 90px;
+}
+
+.ap_users .friends{
+  text-align: center;
+}
+
+.ap_users .friends>div{
+  background: #f5f5f5;
+  padding:2px 5px;
+  justify-content: space-around;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.ap_users .line{
+  margin: 0 3px
+}
+
+ 

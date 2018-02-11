@@ -1,0 +1,103 @@
+<div class="lk_my_balance white-div">
+	<div class="line-1 flex">
+		<div class="flex">
+			<div class="title-div">
+				<img src="assets/images/wallet-gray.png" class="title-icon">
+				<h2 class="title-text">Мой баланс</h2>
+			</div>
+		</div>
+
+		<p>Баланс: <span class="bolder">{{vm.company.balance}} </span>рублей</p>
+
+		<button ng-click="vm.showModalOne=true" class="btn-green"><span>+</span> Пополнить баланс</button>
+	</div>
+	<table>
+		<thead>
+			<th>№</th>	
+			<th>Дата создания счета</th>
+			<th>Дата платежа</th>
+			<th>Сумма</th>
+			<th>Реквизиты</th>
+			<th>Документы</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="billing in vm.billings">
+				<td>{{$index+1}}</td>
+				<td>{{billing.created_at | date:'dd.MM.yy HH:mm:ss'}}</td>
+				<td>{{billing.payment_date | date:'dd.MM.yy HH:mm:ss'}}</td>
+				<td class="blue">{{billing.summ}} <i class="fa fa-rub"></i></td>
+				<td>{{billing.requisites}}</td>
+				<td><button class="btn-green">Смотреть счет</button></td>
+			</tr>		
+		</tbody>
+	</table>
+
+	<!-- MODAL  1-->
+	<div ng-show="vm.showModalOne" ng-click="vm.showModalOne=false" class="my-modal one flex">
+		<div ng-click="vm.prevent($event)" class="my-modal-content white-div">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/wallet-gray.png" class="title-icon">
+					<h2 class="title-text bold">Новый платеж</h2>
+				</div>
+				<button ng-click="vm.showModalOne=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="label-input flex">
+				<label  >Введите сумму</label>
+				<input ng-model="vm.newBilling" min="0" type="number" class="input">
+				<i class="fa fa-rub"></i>
+			</div>			
+			<div class="my-modal-footer flex">
+				<button ng-click="vm.pay()" class="btn-green">Оплатить</button>
+				<button ng-click="vm.goToCreateBilling()" class="btn-blue">
+					Создать счет на оплату
+				</button>
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL 1  END -->	
+
+		<!-- MODAL 2 -->
+	<div ng-show="vm.showModalTwo"  ng-click="vm.showModalTwo=false" class="my-modal two flex">
+		<div  ng-click="vm.prevent($event)" class="my-modal-content white-div">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/megaphone-(2).png" class="title-icon">
+					<h2 class="title-text">Создание счета</h2>
+				</div>
+				<button ng-click="vm.showModalTwo=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body flex-column">
+				<div class="label-input flex">
+					<label  >Введите сумму</label>
+					<input ng-model="vm.newBilling" min="0" type="number" class="input">
+					<i class="fa fa-rub"></i>
+				</div>
+				<div class="label-input">
+					<label >Название компании</label>
+					<input ng-model="vm.company.name" type="text" class="input">
+				</div>
+				<div class="label-input">
+					<label >Юридический адрес</label>
+					<input ng-model="vm.company.legal_address" class="input">
+				</div>	
+				<div class="label-input">
+					<label >ИИН</label>
+					<input ng-model="vm.company.iin" class="input">
+				</div>	
+				<div class="label-input">
+					<label >КПП</label>
+					<input ng-model="vm.company.kpp" class="input">
+				</div>				
+			</div>
+			<div class="my-modal-footer flex">
+				<button ng-click="vm.createBilling()" class="btn-blue">
+					Создать счет на оплату
+				</button>
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL 2  END -->	
+</div>

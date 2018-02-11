@@ -1,0 +1,179 @@
+.ap_settings table{
+	width: 100%;
+}
+
+.ap_settings .request-testing .title-div{
+	margin-bottom: 30px;
+}
+
+.ap_settings .request-testing{
+	padding: 20px;
+	padding-right: 60px;
+}
+
+.ap_settings .request-testing label{
+	display: block;
+	margin-bottom: 10px;
+}
+
+.ap_settings .request-testing .input{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.ap_settings .request-testing .data-length{
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.ap_settings .request-testing pre{
+	width: 100%;
+	max-width: 250px;
+	height: 40px;
+	overflow: auto;
+}
+
+.ap_settings .countries_managing .title-div{
+	padding: 20px;
+}
+
+.ap_settings .countries_managing .buttons{
+	padding: 20px;
+}
+
+.ap_settings .countries_managing .buttons button{
+	padding: 10px 14px;
+	font-size: 14px;
+}
+
+.ap_settings .countries_managing .buttons button .fa{
+	padding-right: 10px;
+	font-size: 10px;
+}
+
+.ap_settings .countries_managing .btn-blue:hover{
+	background: #008eaa
+}
+
+.ap_settings .countries_managing td:last-child{
+	padding-right: 10px;
+}
+
+.ap_settings .countries_managing td .btn-gray{
+	padding: 7px 14px
+}
+
+.ap_settings .countries_managing td .btn-gray:hover{
+	background: #37951b;
+	color: #fff;
+}
+
+
+.ap_settings .line-2 .row-1{
+	justify-content: space-between;
+	padding:25px 20px;
+}
+
+
+.ap_settings .line-2 .row-1 .input{
+	border: none
+}
+
+.ap_settings .line-2 table td{
+	max-width: 200px;
+	padding-left: 10px;
+}
+
+.ap_settings .line-2 table td:first-child{
+	max-width: 350px;
+	padding-left: 10px;
+}
+
+.ap_settings .line-2 table .operations{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ap_settings .my-modal-content button{
+	padding: 5px 8px;
+}
+
+.ap_settings .my-modal-body .input {
+    width: 95%;
+    margin-left: 2.5%;
+    background-position: 97% center;
+    border: none;
+}
+
+.ap_settings .my-modal-body .searches .input{
+	width: 31%;
+	background-position: 97% center;
+	border: none;
+}
+
+
+
+.ap_settings-modal{
+	width: 500px;
+}
+
+.ap_settings-modal .my-modal-body .input{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-image: none;
+	border: 1px solid #e1e1e1
+}
+
+.ap_settings-modal .my-modal-body textarea{
+	height: 120px;
+	resize: none;
+}
+
+.ap_settings .my-modal-body label{
+	margin-left: 2.5%;
+}
+
+.ap_settings .my-modal-body .btn-blue{
+	padding: 10px 24px;
+	margin-left: 2.5%;	
+	
+}
+
+.ap_settings .my-modal-body .table-container{
+	overflow: auto;
+	margin-bottom: 20px;
+	height: 280px;
+}
+
+.ap_settings .my-modal-body table .add:hover{
+	background: #37951b;
+	color: #fff;
+}
+
+.ap_settings .my-modal-body table .added{
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+.ap_settings .my-modal-body .show-more{
+	width: 250px;
+	margin: 0 auto;
+}
+
+.ap_settings .my-modal-body .table-container .bold{
+	cursor: pointer;
+}
+
+.ap_settings .my-modal-body .table-container .region-info .bold .loader,
+.ap_settings .my-modal-body .table-container .country-info .bold .loader{
+	width: 15px;
+	height: 15px;
+}
+
+.ap_settings .my-modal-body .table-container .region-info .bold{
+	padding-left: 20px;
+}
+
+.ap_settings .my-modal-body .table-container .city-info .bold{
+	padding-left: 40px;
+}

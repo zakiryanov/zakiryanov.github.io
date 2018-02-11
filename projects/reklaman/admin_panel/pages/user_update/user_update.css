@@ -1,0 +1,91 @@
+.ap_user_update{
+  font-size: 16px;
+   padding:20px;
+   width: 730px;
+}
+
+.ap_user_update .label-input{
+  width: 100%;
+  margin-right: 10px;
+}
+
+.ap_user_update label{
+  color: #303030;
+  display: block;
+  margin-top: 18px;
+}
+
+.ap_user_update .input{
+  padding: 13px 20px;
+  background-color: #f6f6f6;
+  margin-top: 10px;
+  background-image: none;
+  width: 100%;
+  text-align: left;
+}
+
+.ap_user_update .dropdown .input{
+  background-image: url('../../assets/images/angle-bottom.png') ;
+  background-position: 95% center;
+  text-align: left;
+}
+
+.ap_user_update datepicker .input{
+    background-image: url('../../../assets/images/calendar.png') !important;
+
+}
+
+.ap_user_update .line-1{
+  height: 70px;
+}
+
+.ap_user_update  .main-photo{
+  margin: 15px;
+  margin-left: 0;
+  width: 170px;
+  height: 170px;
+  margin-top: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ap_user_update .line-2 .flex-column{
+  width: 100%;
+  margin-top: 5px;
+}
+
+.ap_user_update .line-3,
+.ap_user_update .line-4,
+.ap_user_update .line-5,
+.ap_user_update .line-6{
+  justify-content: space-between;
+}
+
+.ap_user_update .line-7{
+  margin-top: 40px;
+}
+
+.ap_user_update .btn-gray{
+  background: #cdcdcd;
+  color: #fff;
+  margin-left: 10px;
+  padding: 12px 25px
+}
+
+.ap_user_update .btn-gray img{
+  width: 15px;
+}
+
+.ap_user_update .line-7 .btn-gray:hover{
+  background-color: #008eaa;
+}
+
+.ap_user_update .btn-green{
+  padding: 12px 40px
+}
+
+.ap_user_update .btn-green img{
+   width: 11px;
+   height: 9px;
+}

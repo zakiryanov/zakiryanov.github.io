@@ -1,0 +1,58 @@
+[
+	{"id":"11c3e9a494d23fdd50qew1fa1",
+	 "name":"Россия",
+	 "vk_id":1,
+	 "status":{"id":"1","name":"Заблокирована"},
+	 "isManaging":true,
+	 "regions":
+		 [
+		 	{"id":"12c3e9a49qwedd501e71fa2",
+		 	"name":"Центр",
+		 	"isManaging":true,
+		 	"vk_id":1,
+		 	"status":{"id":"1","name":"Заблокирована"},
+		 	"cities":
+			 	[
+				 	{
+				 		"id":"xxc3ar23f23fdd501e71fa2",
+					 	"name":"Москва",
+					 	"isManaging":true,
+					 	"vk_id":1,
+					 	"status":{"id":"1","name":"Заблокирована"}					 	
+				 	},
+
+				 	{
+				 		"id":"yyc3e9a494d23fdd501e71fa2",
+					 	"name":"Санкт-Петербург",
+					 	"isManaging":true,
+					 	"vk_id":1,
+					 	"status":{"id":"1","name":"Заблокирована"}					 	
+				 	}
+
+			 	]
+		 	}
+		 ]
+	 },
+	{"id":"22c3eq2394d23fdd501e71fa2",
+	 "vk_id":2,
+	 "name":"Казахстан",
+	 "isManaging":true,
+	 "status":{"id":"1","name":"Заблокирована"},
+	 "regions":
+		 [
+		 	{"id":"24c3e9a494d23fdd501e71fa2",
+		 	"name":"Север",
+		 	"vk_id":1,
+		 	"isManaging":true,
+		 	"status":{"id":"1","name":"Заблокирована"}
+		 	}
+		 ]
+	 },
+	{"id":"33c3e9a494d23fdd501e71fa2",
+	 "vk_id":13,
+	 "name":"Украина",
+	 "isManaging":true,
+	 "status":{"id":"2","name":"Разблокирована"}
+	 }
+	
+]

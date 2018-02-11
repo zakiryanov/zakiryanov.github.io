@@ -1,0 +1,203 @@
+.lk_banner_info{
+  font-size: 14px;
+  min-width: 900px;
+  padding-bottom: 35px;
+}
+
+.lk_banner_info .title-icon{
+  width: 20px;
+  height: 24px;
+}
+
+.lk_banner_info .line-1,
+.lk_banner_statistics .line-1,
+.lk_banner_statistics .line-2{
+  margin-bottom: 20px;
+  padding:20px;
+   -ms-align-items: center;
+   align-items: center;
+   justify-content: space-between; 
+}
+
+.lk_banner_info .line-1 .instruction{
+  border: 2px dashed #008eaa;
+  border-radius: 4px;
+  padding: 11px;
+  background: #fff;
+  color: #008eaa; 
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.lk_banner_info .line-1 .instruction:hover{
+  background: #00aed0;
+  border-color: transparent;
+  color: #fff;
+}
+
+.lk_banner_info .line-1 .instruction .fa-play{
+  margin-right: 10px;
+}
+
+.lk_banner_info .line-1 .flex{
+  -ms-align-items: center;
+  align-items: center; 
+}
+
+.lk_banner_info table td:not(:first-child){
+  vertical-align: top;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.lk_banner_info table td:not(:first-child) p.green{
+  margin-top: 7px;
+}
+
+.lk_banner_info table tr{
+  
+}
+
+.lk_banner_info table td>.flex{
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.lk_banner_info table .photo{
+  min-width: 55px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.lk_banner_info .banner-info{
+  justify-content: space-between;
+  padding: 10px;
+  padding-top: 0;
+  max-width: 260px;
+  text-align: left;
+}
+
+.lk_banner_info .banner-info .green{
+  margin: 10px 0;
+}
+
+.lk_banner_info table .fa-rub{
+  color: #595959;
+  font-size: 13px;
+}
+.lk_banner_info .banner-info .people{
+  font-size: 12px;
+  color: #646464;
+}
+
+.lk_banner_info table .status button{
+  width: 120px;
+  padding: 9px 15px;
+}
+
+.lk_banner_info .status{
+  max-width: 130px;
+    font-size: 12px;
+}
+
+.lk_banner_info .status .btn-blue:hover{
+  max-width: 130px;
+    font-size: 12px;
+}
+
+.lk_banner_info .status .reason p:first-child{
+  color: #7c7c7c;
+  margin-top: 15px;
+}
+
+.lk_banner_info .operations{
+  padding-right: 5px;
+}
+
+/*------------------------- BANNER STATISTICS ---------------*/
+
+.lk_banner_statistics .reload{
+  background: #37951b;
+  border-radius: 100%;
+  padding: 5px 6px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.lk_banner_statistics .donuts .white-div{
+  padding: 20px;
+  margin-right: 0;
+   width: 47%;
+}
+
+.lk_banner_statistics .donuts .white-div .line-1{
+  padding: 0;
+}
+
+.lk_banner_statistics .donuts .title-text{
+  text-transform: none;
+  font-size: 16px;
+}
+
+.lk_banner_statistics .donuts .buttons{
+  margin-bottom: 20px;
+  color: #303030;
+}
+
+.lk_banner_statistics .donuts .buttons span{
+     cursor: pointer;
+    margin-left: 10px;
+}
+
+.lk_banner_statistics .statistics-1 .line-2 .btn-blue{
+  margin-left: 15px;
+}
+
+.lk_banner_statistics .statistics-1 .line-1{
+  margin-bottom: 0;
+}
+
+.lk_banner_statistics .date{
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.lk_banner_statistics .date .input{
+  padding-right: 40px;
+  width: 180px;
+}
+
+.lk_banner_statistics .line-2 .toggler{
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.lk_banner_statistics .line-2 .toggler p{
+  margin: 0 20px;
+  font-size: 13px;
+  color: #303030;;
+  cursor: pointer;  
+} 
+
+.lk_banner_statistics .graph{
+  width: 100%;
+  margin-top: -30px;
+  height: 400px;
+  padding: 10px;
+}
+
+
+.lk_banner_statistics .donut{
+  width: 100%;
+ -ms-align-items: center;
+ align-items: center;
+  justify-content: space-between;
+}
+
+.lk_banner_statistics .donut p{
+  margin-bottom: 10px;
+}

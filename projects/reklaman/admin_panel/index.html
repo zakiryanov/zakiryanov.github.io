@@ -1,0 +1,70 @@
+<div class="admin_panel" ng-controller="mainAdminCtrl as vm">
+
+  <header>
+    <img class="logo" src="assets/images/logo.png" alt="reklaman">
+    <div class="right-div flex">
+      <a ui-sref="tickets({which:'company'})" >Впоросы рекламодателей</a>
+      <span ui-sref="tickets({which:'company'})" class="counter"> {{vm.companyQuestionsCounter}}
+      </span>
+      <a ui-sref="tickets({which:'user'})">Впоросы Пользователей</a>
+      <span ui-sref="tickets({which:'user'})" class="counter">{{vm.userQuestionsCounter}}</span>
+      <div set-background-img src="{{vm.admin.photo}}" class="user-photo"></div>
+      <span class="user-name">{{vm.admin.name}}</span>
+      <div ng-click="vm.authorizeAsAdmin()" class="logout">
+      </div>
+    </div>
+  </header>
+  <div class="content flex">
+    <div class="sidebar flex" ng-class="{'sidebar-compressed':vm.compressed}">
+      <div class="top flex">
+        <div class="arrow" ng-click="vm.compressed=!vm.compressed">
+          <img src="assets/images/double-angle-pointing-to-right.png" alt="">
+        </div>
+        <div ng-click="vm.activeItem=1" ng-class="{'active-item':vm.activeItem==1}" ui-sref="reklamodateli" class="item flex">
+          <img src="assets/images/megaphone-(1).png" alt="megaphone">
+          <div class="item-name" >
+            <span >Рекламодатели</span>
+
+          </div>
+        </div>
+        <div ng-click="vm.activeItem=2" ng-class="{'active-item':vm.activeItem==2}" class="item flex" ui-sref="users" >
+          <img src="assets/images/user.png" alt="megaphone">
+          <div class="item-name">
+            <span>Пользователи</span>
+
+          </div>
+        </div>
+        <div class="divider"><p>| | |</p></div>
+        <div ng-click="vm.activeItem=3" ng-class="{'active-item':vm.activeItem==3}"  ui-sref="settings" class="item flex">
+          <img src="assets/images/settings2.png" alt="megaphone">
+          <div class="item-name">
+            <span>Настройки</span>
+
+          </div>
+        </div>
+      </div>     
+      <div class="bottom">
+        <div class="circles">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="copy flex">
+          <img class="logo" src="assets/images/logo-white.png" alt="reklaman">
+          <span> &copy; Рекламан, 2017 г</span>
+        </div>            
+      </div>  
+    </div>
+
+    <div class="main-content-footer">
+      <div class="main-content" ui-view>    </div>  
+
+      <footer>
+        <a href="">Пользовательское соглашение</a>
+        <a href="">Конфиденциальность</a>
+        <a href="">Оферта</a>
+      </footer>
+    </div>
+
+    </div>  
+</div>

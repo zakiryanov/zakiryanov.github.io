@@ -1,0 +1,34 @@
+.registrations_requests{
+  font-size: 14px;
+}
+
+.registrations_requests .title-icon{
+  width: 25px;
+  height: 16px;
+}
+
+.registrations_requests .line-1{
+  height: 70px;
+  padding:20px;
+  justify-content: space-between;
+   -ms-align-items: center;
+   align-items: center;
+}
+
+.registrations_requests td{
+  padding-right: 20px;
+  max-width: 120px;
+}
+
+.registrations_requests td.comment{
+  max-width: 200px;
+}
+
+.registrations_requests td.operations{
+  min-width:100px;
+}
+
+.registrations_requests td.operations button:hover{
+  background: #37951b;
+  color: #fff;
+}

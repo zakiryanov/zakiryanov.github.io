@@ -1,0 +1,13 @@
+{
+	"id":1,
+	"name":"Kentucky Fried Chicken",
+	"photo":"assets/images/kfc.png",
+	"email":"anuarbekzakirianov97@gmail.com",
+	"phone":"+7 ( 856 ) 035 - 52- 57",
+	"registrated_at":"2017-05-15 19:34",
+	"balance":27000,
+	"legal_address":"Россиия, Татарстан, Набережные Челны, ул. Усманова, дом 33",
+	"mail_address":"Россиия, Татарстан, Набережные Челны, ул. Усманова, дом 33",
+	"iin":"1650535912",
+	"kpp":"16503359124546"
+}

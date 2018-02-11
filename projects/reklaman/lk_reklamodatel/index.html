@@ -1,0 +1,81 @@
+ <div class="lk_reklamodatel" ng-controller="mainLkCtrl as vm">
+    <header>
+    <img class="logo" src="assets/images/logo.png" alt="reklaman">
+    <div class="right-div flex">
+      <span class="green bolder">Баланс: {{vm.company.accountAmount}} <i class="fa fa-rub"></i></span>
+      <button class="btn-green">+</button>
+      <div set-background-img src="{{vm.company.photo}}" class="user-photo"></div>
+      <span class="user-name">{{vm.company.name}}</span>
+      <div ng-click="vm.authorize()" class="logout">
+      </div>
+    </div>
+  </header>
+  <div class="content flex">
+    <div class="sidebar flex" ng-class="{'sidebar-compressed':vm.compressed}" >
+      <div class="top flex">
+        <div class="arrow" ng-click="vm.compressed=!vm.compressed">
+          <img src="assets/images/double-angle-pointing-to-right.png" alt="">
+        </div>
+        <div ng-click="vm.activeItem=1" ng-class="{'active-item':vm.activeItem==1}" ui-sref="company" class="item flex">
+          <img src="assets/images/home.png" alt="megaphone">
+          <div class="item-name" >
+            <span >Главная</span>
+
+          </div>
+        </div>
+        <div ng-click="vm.activeItem=2" ng-class="{'active-item':vm.activeItem==2}" class="item flex" ui-sref="my_banners" >
+          <img src="assets/images/smartphone-white.png" alt="megaphone">
+          <div class="item-name">
+            <span>Мои баннеры</span>
+
+          </div>
+        </div>
+        <div  class="divider"><p>| | |</p></div>
+        <div ng-click="vm.activeItem=3" ng-class="{'active-item':vm.activeItem==3}" ui-sref="account_settings" class="item flex">
+          <img src="assets/images/user.png" alt="megaphone">
+          <div class="item-name">
+            <span>Профиль</span>
+
+          </div>
+        </div>
+        <div ng-click="vm.activeItem=4" ng-class="{'active-item':vm.activeItem==4||vm.newMessages>0}" ui-sref="lk_support" class="item flex">
+          <span ng-if="vm.newMessages>0" class="messages_count">{{vm.newMessages}}</span>
+          <img src="assets/images/message-white.png" alt="megaphone">
+          <div class="item-name">
+            <span>Тикеты</span>
+
+          </div>
+        </div>
+        <div ui-sref="answer_questions" ng-click="vm.activeItem=5" ng-class="{'active-item':vm.activeItem==5}" ui-sref="settings" class="item flex">
+          <img src="assets/images/information.png" alt="megaphone">
+          <div class="item-name">
+            <span>FAQ</span>
+
+          </div>
+        </div>
+      </div>     
+      <div class="bottom">
+        <div class="circles">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="copy flex">
+          <img class="logo" src="assets/images/logo-white.png" alt="reklaman">
+          <span> &copy; Рекламан, 2017 г</span>
+        </div>            
+      </div>  
+    </div>
+
+    <div class="main-content-footer">
+      <div class="main-content" ui-view> </div>  
+
+      <footer>
+        <a href="">Пользовательское соглашение</a>
+        <a href="">Конфиденциальность</a>
+        <a href="">Оферта</a>
+      </footer>
+    </div>
+    
+  </div>
+ </div>

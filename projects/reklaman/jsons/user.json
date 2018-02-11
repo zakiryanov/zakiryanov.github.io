@@ -1,0 +1,68 @@
+{
+	"id":1,
+	"status":{"id":1,"name":"Обычный пользователь"},
+	"gender":{"id":1,"name":"Мужской"},
+	"user_status":{"id":1,"name":"Активен"},
+	"lines":[{"id":1,"amount":183},{"id":2,"amount":4121},{"id":3,"amount":123}],
+	"name":"Artem",
+	"surname":"Buharev",
+	"photo":"assets/images/kfc.png",
+	"email":"anuarbekzakirianov97@gmail.com",
+	"phone":"+7(927)035-52-57",
+	"country":{"id":1,
+	 "name":"Россия",
+	 "regions":
+		 [
+		 	{"id":1,
+		 	"name":"Центр",
+		 	"cities":
+			 	[
+				 	{
+				 		"id":1,
+					 	"name":"Москва"					 	
+				 	},
+
+				 	{
+				 		"id":2,
+					 	"name":"Санкт-Петербург"					 	
+				 	},
+
+				 	{
+				 		"id":3,
+					 	"name":"Казань"					 	
+				 	}
+
+			 	]
+		 	},
+		 	{"id":2,
+		 	"name":"Юг"
+		 	}
+		 ]
+	 },
+	"region":{"id":1,
+		 	"name":"Центр",
+		 	"cities":
+			 	[
+				 	{
+				 		"id":1,
+					 	"name":"Москва"					 	
+				 	},
+
+				 	{
+				 		"id":2,
+					 	"name":"Санкт-Петербург"					 	
+				 	},
+
+				 	{
+				 		"id":3,
+					 	"name":"Казань"					 	
+				 	}
+
+			 	]
+		 	},
+	"city":{"id":1,"name":"Москва"},
+	"referal":{"id":1,"email":"root@reklaman.ru"},
+	"registrated_at":"1498630512714",
+	"birth_date":"13 сентября 2017",
+	"balance":27000
+}

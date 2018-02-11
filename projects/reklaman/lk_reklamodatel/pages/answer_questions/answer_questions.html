@@ -1,0 +1,85 @@
+<div class="lk_answer_questions white-div">
+	<div class="line-1 flex">
+		<div class="flex">
+			<div class="title-div">
+				<img src="assets/images/information-gray.png" class="title-icon">
+				<h2 class="title-text">ответы на вопросы</h2>
+			</div>
+
+			<button ng-click="vm.showModal=true" class="btn-blue"><span>?</span>Задать вопрос</button>
+		</div>		
+		<button ng-click="vm.showModalVideo=true" class="instruction"><i class="fa fa-play"></i> ВИДЕОИНСТРУКЦИЯ</button>
+	</div>
+	<div class="flex">
+		<div class="questions">
+			<ul >
+				<li ng-click='vm.gotoAnchor($index)' ng-repeat="question in vm.answers" ng-class="{'gray':$index<vm.limit}" >
+					{{question.question}}				
+				</li>
+			</ul>
+		</div>
+		<div class="answers">
+			<div id="anchor{{$index}}" ng-repeat="answer in vm.answers | limitTo:vm.limit">
+				<h4 class="bolder">{{answer.question}}</h4>
+				<p>{{answer.answer}}</p>
+			</div>
+			<div class="show-more">
+				<div class="btn-gray" ng-click="vm.limit=vm.limit+6" class="flex">
+					<span><<</span>
+					<span>Показать еще</span>
+					<span>>></span>
+				</div>			
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- MODAL  -->
+	<div ng-show="vm.showModal" ng-click="vm.showModal=false" class="my-modal  flex">
+		<div class="my-modal-content white-div" ng-click="$event.stopPropagation()">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/question.png" class="title-icon">
+					<h2 class="title-text">Задайте вопрос</h2>
+				</div>
+				<button ng-click="vm.showModal=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body flex-column">
+				<div class="label-input flex">
+					<label >Ваш вопрос</label>
+					<textarea ng-model="vm.questionText"  rows="8" class="input"></textarea>
+				</div>				
+			</div>
+			<div class="my-modal-footer flex">
+				<button ng-click="vm.questionText=''" class="btn-gray">Очистить поля</button>
+				<button ng-click="vm.createQuestion()" class="btn-blue">
+					<span>?</span> Задать вопрос
+				</button>
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL  END -->	
+
+
+			<!-- MODAL  2 -->
+	<div ng-if="vm.showModalVideo" ng-click="vm.showModalVideo=false" class="my-modal my-modal-video  flex">
+		<div class="my-modal-content white-div" ng-click="$event.stopPropagation()">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/video-camera.png" class="title-icon">
+					<h2 class="title-text">Видео</h2>
+				</div>
+				<button ng-click="vm.showModalVideo=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body flex-column">
+				<iframe src="https://www.youtube.com/embed/qr80Tk2DrLI" frameborder="0" allowfullscreen></iframe>			
+			</div>
+			<div class="my-modal-footer flex">
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL 2  END -->	
+
+</div>

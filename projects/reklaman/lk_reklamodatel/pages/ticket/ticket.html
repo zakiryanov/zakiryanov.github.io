@@ -1,0 +1,60 @@
+<div class="ap_ticket  white-div">
+	<div class="line-1">
+		<div class="title-div">
+			<img src="assets/images/message-gray.png" class="title-icon">
+			<h2 class="title-text">тикет</h2>
+		</div>
+	</div>
+	<div class="back">
+		<button ng-click="vm.back()" class="btn-blue">
+			<img src="assets/images/return.png" alt="">
+			Назад
+		</button>
+	</div>
+	<div class="theme">
+		<label>Тема тикета</label>
+		<input ng-model="vm.ticket.subject" type="text" class="input">
+	</div>
+	<div class="status flex">
+		<div>
+			<label>Статус тикета</label>
+			<div class="dropdown">		
+			<button class="input" bs-dropdown>{{vm.ticket.status.name}}</button>
+				<ul  class="dropdown-menu" role="menu">
+					<li ng-click="vm.ticket.status=status" ng-repeat="status in vm.statuses">{{status.name}}</li>
+				</ul>
+			</div>
+		</div>
+		<button ng-click="vm.save()" class="btn-green">Сохранить</button>	
+	</div>
+	<div class="border-div"></div>
+	<div class="padding">
+		<div class="write-message flex">
+			<div set-background-img src="{{vm.company.photo}}" class="user-photo"></div>
+			<div class="flex-column">
+				<textarea ng-model="vm.messageText" name="" class="input"></textarea>
+				<button ng-click="vm.createMessage()" class="btn-green">Написать</button>
+			</div>
+		</div>
+		<div class="messages">
+			<div class="message flex" ng-repeat="message in vm.ticket.messages | limitTo:vm.limit | orderBy:'-created_at'">
+				<div set-background-img src="{{message.from.photo}}" class="user-photo"></div>
+				<div >
+					<p class="text">
+						{{message.text}}
+					</p>
+					<span>{{message.created_at | date:'dd.MM.yyyy HH:mm'}}</span>
+					<span>{{message.from.status.name}}</span>
+				</div>
+			</div>
+		</div>
+			<div class="show-more" ng-show="vm.isShowMore">
+				<button ng-click="vm.limit = null;vm.isShowMore=false" class="btn-gray"><span><<</span> Показать все сообщения <span>>></span></button>	
+			</div>
+			
+
+	</div>
+
+		
+	
+</div>

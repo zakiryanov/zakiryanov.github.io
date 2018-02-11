@@ -1,0 +1,85 @@
+.lk_account-settings .title-div{
+	margin-bottom: 30px;
+}
+
+.lk_account-settings .settings,.lk_account-settings .info{
+	padding: 20px;
+	padding-bottom: 50px;
+	
+}
+
+.lk_account-settings .btn-green{
+	margin-top: 30px;
+}
+
+.lk_account-settings .btn-green img{
+	width: 12px;
+	height: 10px;
+}
+
+.lk_account-settings label{
+	margin-top: 25px;
+	display: block;
+	color: #303030;
+}
+
+.lk_account-settings .input{
+	padding-right: 20px;
+}
+
+.lk_account-settings .settings .blue{
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.lk_account-settings .input:not(.input-select){
+	margin-top: 7px;
+	width: 100%;
+}
+
+.lk_account-settings .settings .photo-select .border{
+	width: 150px;
+	height: 150px;
+	border: 2px dashed #aaaaaa;
+	padding: 5px;
+	margin-right: 20px;
+	position: relative;
+}
+
+
+.lk_account-settings .settings .photo-select .photo{
+	background: #f8f8f8;
+	height: 100%;
+	text-align: center;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.lk_account-settings .settings .photo-select .photo p{
+	padding-top: 40px;
+	margin-bottom: 10px;
+}
+
+.lk_account-settings .settings .photo-select .select .input{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-right: 0;
+}
+
+.lk_account-settings .settings .password-div{
+	position: relative;
+}
+
+.lk_account-settings .settings .password-div img{
+	position: absolute;
+	right: 7px;
+	top: 40%;
+	cursor: pointer;
+}
+
+.lk_account-settings .info{
+	margin-left: 0;
+	width: 420px;
+	display: table;
+}

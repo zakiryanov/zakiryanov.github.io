@@ -1,0 +1,112 @@
+.lk_support{
+	min-width: 900px;
+}
+
+.lk_support .row-1 .flex{
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.lk_support .row-1 .btn-blue{
+	margin-left: 50px;
+}
+
+.lk_support .row-1{
+	justify-content: space-between;
+	padding:25px 20px;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.lk_support .title-icon{
+	height: 13px;
+}
+
+.lk_support .row-1 .input{
+	border: none
+}
+
+.lk_support table td{
+	max-width: 250px;
+	padding: 10px;
+}
+
+.lk_support table td:first-child{
+	max-width: 150px;
+	padding-left: 15px;
+	color: #b7b7b7;
+}
+
+.lk_support table .operations{
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 110px;
+}
+
+.lk_support table .status{
+	min-width: 90px
+}
+
+.lk_support table .message{
+	width:190px;
+}
+
+.lk_support .operations .btn-gray{
+	width: 25px;
+	height: 25px;
+	padding: 5px;
+}
+
+.lk_support .operations .btn-gray:first-child .fa{
+	font-family: inherit;
+	font-weight: bold;
+}
+
+.lk_support .my-modal .title-icon{
+	height: 19px;
+}
+
+.lk_support .my-modal{
+	font-size: 14px
+}
+
+.lk_support .my-modal .title-text{
+	font-size: 13px;
+}
+
+.lk_support .my-modal-header .btn-gray{
+	padding: 6px 9px;
+}
+
+.lk_support .my-modal-content{
+  width: 550px;
+  height: 420px;
+}
+
+.lk_support .my-modal-body{
+ 	padding: 20px;
+}
+
+.lk_support .my-modal .input{
+	background-image: none;
+	width: 400px;
+	resize: none;
+}
+
+.lk_support .my-modal label{
+	margin-top: 15px;
+	color: #303030;
+	font-size: 16px;
+}
+
+.lk_support .my-modal .label-input{
+	justify-content: space-between;
+	margin-bottom: 35px;
+}
+
+.lk_support .my-modal-footer{
+	justify-content: space-between;
+	padding: 20px;	
+	padding-top: 0px;
+
+}

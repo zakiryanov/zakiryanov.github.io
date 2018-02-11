@@ -1,0 +1,62 @@
+<div class="registrations_requests  white-div">
+	<div class="line-1">
+		<div class="title-div">
+			<img src="assets/images/message-gray.png" class="title-icon">
+			<h2 class="title-text">запросы на регистрацию</h2>
+		</div>
+	</div>
+	<table>
+		<thead>
+		<tr>
+			<th>Компания</th>
+			<th>Имя</th>
+			<th>Email</th>
+			<th>Телефон</th>
+			<th>Комментарий</th>
+			<th>Дата создания</th>
+			<th>Статус</th>
+		</tr>			
+		</thead>
+		<tbody>
+			<tr ng-repeat="request in vm.requests">
+				<td class="company_name">{{request.FIO}}</td>
+				<td>{{request.CompanyName }}<span>
+				<td class="mail">{{request.Email}}</td>	
+				<td>{{request.Phone}}</td>
+				<td class="comment">{{request.Comment}}</td>
+				<td>{{request.created | date:'yyyy-MM-dd HH:mm'}}</td>
+				<td class="operations">
+					<div ng-click="vm.delete(request)" class="btn-gray">
+						<i class="fa fa-times"></i>
+						<span class="my-tooltip">Отклонить</span>
+
+					</div>
+					<div ng-click="vm.add(request)" class="btn-gray">
+						<i class="fa fa-plus"></i>
+						<span class="my-tooltip">Добавить</span>
+
+					</div>
+					
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div class="pagination flex">
+		<div class="limit dropdown">
+			<span>Отрбражать: </span>
+			<button bs-dropdown class="btn-gray">{{vm.limit}}</button>
+			<ul class="dropdown-menu" role="menu">
+				<li ng-hide="vm.limit==25" ng-click='vm.changeLimit(25)'>25</li>
+				<li ng-hide="vm.limit==50" ng-click='vm.changeLimit(50)'>50</li>
+				<li ng-hide="vm.limit==100" ng-click='vm.changeLimit(100)'>100</li>
+			</ul>
+		</div>
+		<div ng-click="vm.getNewData()" class="show-more btn-gray">
+			<span><<</span>  <span >Показать еще</span> <span>>></span>
+		</div>
+		<div >
+			Показано {{vm.requests.length}} из {{vm.amount}} объявлений
+		</div>
+	</div>	
+</div>

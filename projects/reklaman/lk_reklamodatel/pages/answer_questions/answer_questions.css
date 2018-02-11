@@ -1,0 +1,148 @@
+
+.lk_answer_questions{
+   padding:20px;
+}
+
+.lk_answer_questions .line-1 .title-icon{
+  width: 24px;
+  height: 22px;
+}
+
+.lk_answer_questions .line-1{
+  height: 70px;
+   -ms-align-items: center;
+   align-items: center;
+   justify-content: space-between; 
+   margin-bottom: 30px;
+}
+
+.lk_answer_questions .line-1 .instruction{
+  border: 2px dashed #008eaa;
+  border-radius: 4px;
+  padding: 11px;
+  background: #fff;
+  color: #008eaa; 
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.lk_answer_questions .line-1 .instruction:hover{
+  background: #00aed0;
+  border-color: transparent;
+    color: #fff;
+
+}
+
+.lk_answer_questions .line-1 .instruction .fa-play{
+  margin-right: 10px;
+}
+
+.lk_answer_questions .line-1 .flex{
+  -ms-align-items: center;
+  align-items: center; 
+}
+
+.lk_answer_questions .line-1 .btn-blue{
+  margin-left: 50px;
+  padding: 10px 20px   
+}
+
+.lk_answer_questions .line-1 .btn-blue span{
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.lk_answer_questions .questions li{
+  padding: 12px;
+  width: 280px;	
+  padding-right: 70px;
+  cursor: pointer;	
+}
+
+.lk_answer_questions .questions li:hover{
+  text-decoration: underline;
+}
+
+.lk_answer_questions .answers {
+	margin-left: 20px;
+	max-width: 650px;
+}
+
+.lk_answer_questions .answers h4{
+  margin: 24px 0;
+}
+
+.lk_answer_questions .answers>div:first-child h4{
+	margin-top: 0;
+}
+
+.lk_answer_questions .answers .show-more{
+	margin-top: 30px;
+	width: 200px;
+}
+
+.lk_answer_questions .answers .show-more .btn-gray{
+	padding: 12px 8px;
+}
+
+.gray{
+	background: #f6f6f6
+}
+
+.lk_answer_questions .my-modal .title-icon{
+	height: 19px;
+}
+
+.lk_answer_questions .my-modal{
+	font-size: 14px
+}
+
+.lk_answer_questions .my-modal .title-text{
+	font-size: 13px;
+}
+
+.lk_answer_questions .my-modal-header .btn-gray{
+	padding: 6px 9px;
+}
+
+.lk_answer_questions .my-modal-content{
+  width: 550px;
+  height: 340px;
+}
+
+.lk_answer_questions .my-modal-body{
+ 	padding: 20px;
+}
+
+.lk_answer_questions .my-modal .input{
+	background-image: none;
+	width: 400px;
+	resize: none;
+}
+
+.lk_answer_questions .my-modal label{
+	margin-top: 15px;
+	color: #303030;
+	font-size: 16px;
+}
+
+.lk_answer_questions .my-modal .label-input{
+	justify-content: space-between;
+	margin-bottom: 35px;
+}
+
+.lk_answer_questions .my-modal-footer{
+	justify-content: space-between;
+	padding: 20px;	
+	padding-top: 0px;
+}
+
+.lk_answer_questions .my-modal-footer .btn-blue span{
+	margin-right: 10px;
+}
+
+.lk_answer_questions .my-modal-video .my-modal-content{
+  width: 550px;
+  height: 440px;
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SHIELD - Free Bootstrap 3 Theme">
+    <meta name="author" content="Carlos Alvarez - Alvarez.is - blacktie.co">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title> Часы Vinoce</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link href="assets/css/animate-custom.css" rel="stylesheet">
+
+
+	  <link rel="stylesheet" href="assets/css/flipclock.css">
+	  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
+	  <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <script src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+
+  	<div id="navbar-main">
+		  <!-- Fixed navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-header logo">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+			  </button>
+				<p class="navbar-toggle pull-left">8-708-700-99-77</p>
+			</div>
+			<div class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav">
+			 
+				<li><a href="#home" class="smoothScroll">Начало</a></li>
+				<li> <a href="#about" class="smoothScroll"> Описание</a></li>
+				  <li> <a href="#charach" class="smoothScroll"> Характеристики</a></li>
+				<li> <a href="#services" class="smoothScroll"> Сервис</a></li>
+				  <!--<li> <a href="#portfolio" class="smoothScroll"> Часы в жизни</a></li>-->
+				  <li> <a href="#team" class="smoothScroll"> Отзывы</a></li>
+				<li> <a href="#footerwrap" class="smoothScroll"> Контакты</a></li>
+				  </ul>
+				<p class="number hidden-xs">8-708-700-99-77</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="zakaz" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" id="zakazClose" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div id="zakaz-1">
+						<h4>Заполните форму,что бы мы смогли с вами связаться</h4>
+						<input type="text" class="zakazField" id="zakazName" placeholder="Ваше имя">
+						<input type="text" class="zakazField" id="zakazNumber" placeholder="Ваш номер">
+						<p id="info"></p>
+						<button id="zakazSubmit" class="bye bye-reverse">получить часы</button>
+					</div>
+					<div id="zakaz-2">
+						<h4>Спасибо за заказ! Ваша заявка принята. Наш менеджер свяжется с вами в ближайшее время. Oжидайте звонока!</h4>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+		<!-- ==== HEADERWRAP ==== -->
+	    <div id="headerwrap" id="home" name="home">
+			<header class="clearfix header_text">
+	  		 		<h1 >Элитные часы настоящего мужчины от Vinoce.
+						<br>
+						Для тех, кто себя уважает.
+						<br>
+						<a data-toggle="modal" href="#zakaz" class="bye">Заказать</a>
+					</h1>
+	  		</header>
+	    </div>
+
+		<div class="container" id="about" name="about">
+			<div class="row white">
+				<br>
+				<h1 class="centered">О наших часах</h1>
+				<hr>
+
+				<div class="col-md-6">
+					<p>Создание циферблата - целое искусство, в котором не обойтись
+						без художественного мастерства и новейших технологий.
+						Часовые мастера Vinoce создали дизайн на который
+						уже многие годы равняются все остальные часовые компании.
+					</p>
+				</div><!-- col-md-6 -->
+
+				<div class="col-md-6">
+					<p>Часы Vinoce на сегодняшний день являются показателем успеха
+						современного мужчины. Звёзды Голливуда, шоу-бизнеса,
+						политики и спортсмены не могут ошибаться. "Каждый уважающий себя мужчин
+						а должен носить часы Vinoce!"</p>
+				</div><!-- col-lg-6 -->
+			</div><!-- row -->
+		</div><!-- container -->
+
+	  <div id="charach">
+		<div id="greywrap" class="about">
+			<div class="container" >
+				<div class="row">
+					<div class="col-md-7 centered row">
+						<div class="col-md-10">
+							<img class="img-responsive" src="assets/img/gold.jpg" align="">
+
+						</div>
+						<div class="about-img-set col-md-2">
+							<img data-toggle="modal" href="#myModal" class="item showModalImg" src="assets/img/black.jpg" alt="">
+							<img data-toggle="modal" href="#myModal" class="item showModalImg" src="assets/img/two1.jpg" alt="">
+							<img data-toggle="modal" href="#myModal" class="item showModalImg" src="assets/img/two.jpg" alt="">
+							<img data-toggle="modal" href="#myModal"  class="item showModalImg" src="assets/img/video.jpg" alt="" id="item-video" />
+						</div>
+					</div>
+					<div class="col-md-5">
+						<h2>Характеристики</h2>
+						<hr>
+						<ul>
+							<li>
+								<span class="about_icon"><i class=" fa fa-male"></i></span>
+								<div class="about_text">
+									<p>Модель</p>
+									<span>Мужская</span>
+								</div>
+							</li>
+							<li>
+								<span class="about_icon"><i class=" fa fa-cog"></i></span>
+								<div class="about_text">
+									<p>Механизм:</p>
+									<span>Кварцевые</span>
+								</div>
+							</li>
+							<li>
+								<span class="about_icon"><i class=" fa fa-clock-o"></i></span>
+								<div class="about_text">
+									<p>Материал:</p>
+									<span>Нержавеющая сталь, каучук</span>
+								</div>
+							</li>
+							<li>
+								<span class="about_icon"><i class=" fa fa-square-o"></i></span>
+								<div class="about_text">
+									<p>Стекло:</p>
+									<span>Минеральное, износостойкое</span>
+								</div>
+							</li>
+							<li>
+								<span class="about_icon"><i class=" fa fa-cogs"></i></span>
+								<div class="about_text">
+									<p>Функции:</p>
+									<span>Часовая, минутная, секундная стрелки</span>
+								</div>
+							</li>
+							<li>
+								<span class="about_icon"><i class=" fa fa-check"></i></span>
+								<div class="about_text">
+									<p>Особенности:</p>
+									<span>Водоустойчивость - 30 метров, раскладывающаяся застежка</span>
+								</div>
+							</li>
+						</ul>
+						<div class="timer text-center">
+							<h3 class="title">Успейте заказать часы до окончания скидки!</h3>
+							<div class="your-clock"></div>
+							<a data-toggle="modal" href="#zakaz" class="bye bye-reverse">Заказать по акции</a>
+
+						</div>
+					</div>
+
+				</div><!-- row -->
+			</div>
+			<br>
+			<br>
+		</div>
+	  </div>
+		<div id="services">
+			<div id="greywrap" >
+				<div class="row" >
+					<h1 class="centered">гарантии и сервис</h1>
+					<div class="col-sm-4 callout">
+						<span class="icon fa fa-thumbs-up"></span>
+						<h2>Качество</h2>
+						<p>Мы отвечаем за качетво наших часов.При покупке вы получаете гарантию сроком 1 год.</p>
+					</div><!-- col-sm-4 -->
+
+					<div class="col-sm-4 callout">
+						<span class="icon fa-truck fa"></span>
+						<h2>Доставка</h2>
+						<p>Сроки доставки в среднем составляют от 1 до 2 дней. Вы сможете уточнить точный срок и стоимость доставки после оформления заказа.   </p>
+					</div><!-- col-sm-4 -->
+
+					<div class="col-sm-4 callout">
+						<span class="icon fa-credit-card  fa"></span>
+						<h2>Оплата</h2>
+						<p> Вы ничем не рискуете: оплата заказа при получении или другие удобные для Вас способы оплаты. </p>
+					</div><!-- col-md-4 -->
+				</div><!-- row -->
+			</div><!-- greywrap -->
+		</div>
+
+
+		<section class="status">
+			<div class="container">
+				<div class="row">
+					<h1 class="whiteborder">повысьте свой статус <br> в глазах окружающих</h1>
+				</div>
+			</div><!-- container -->
+		</section><!-- section -->
+
+		<!-- ==== PORTFOLIO ==== -->
+		<div class="container" id="portfolio" name="portfolio">
+		<br>
+			<div class="row">
+				<br>
+				<h1 class="centered">коллекция часов</h1>
+				<hr>
+				<br>
+			</div><!-- /row -->
+			<div class="container">
+			<div class="row">
+
+				<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+                             a modal for each of your projects. -->
+
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body">
+								<p><img class="img-responsive" src="" alt="часы">
+									<iframe width="500" height="315" class="iframe" src="https://www.youtube.com/embed/qTTZTSip7F" frameborder="0" allowfullscreen></iframe>								<h4 id="clockName"></h4>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+
+					<!-- PORTFOLIO IMAGE 1 -->
+					<div class="col-md-4 collection-clock ">
+						<div class="grid mask">
+							<figure>
+								<span class="skidka"> - 40%</span>
+								<h5 class="clockName">Slim Gold</h5>
+								<img data-toggle="modal" href="#myModal" class="img-responsive showModalImg" src="assets/img/black1.jpg" alt="часы">
+								<figcaption>
+									<button data-toggle="modal" href="#zakaz" class="zakazButton">Заказать</button>
+								</figcaption><!-- /figcaption -->
+							</figure><!-- /figure -->
+						</div><!-- /grid-mask -->
+					</div><!-- /col -->
+
+
+				<!-- PORTFOLIO IMAGE 2 -->
+				<div class="col-md-4 collection-clock">
+			    	<div class="grid mask">
+						<figure>
+							<span class="skidka"> - 40%</span>
+							<h5 class="clockName">Slim Black</h5>
+							<img class="img-responsive showModalImg" data-toggle="modal" href="#myModal" src="assets/img/clock_view/view3.jpeg" alt="часы">
+							<figcaption>
+									<button data-toggle="modal" href="#zakaz" class="zakazButton">Заказать</button>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+
+				<!-- PORTFOLIO IMAGE 3 -->
+				<div class="col-md-4 collection-clock">
+			    	<div class="grid mask">
+						<figure>
+							<span class="skidka"> - 40%</span>
+							<h5 class="clockName">Slim Leather</h5>
+							<img class="img-responsive showModalImg" data-toggle="modal" href="#myModal" src="assets/img/clock_view/view4.jpeg" alt="часы">
+							<figcaption>
+									<button data-toggle="modal" href="#zakaz" class="zakazButton">Заказать</button>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+			</div><!-- /row -->
+
+	
+			<br>
+			<br>
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+		<!-- ==== SECTION DIVIDER4 ==== -->
+		<section class="insta">
+			<div class="container">
+				<h1>так же вы можете найти нас в  instagram</h1>
+				<hr>
+				<h3><a@SLIMWATCH.KZ</h3>
+				<a href="https://www.instagram.com/slimwatch.kz/" class="bye bye-reverse">подписаться</a>
+			</div><!-- container -->
+		</section><!-- section -->
+
+	<!-- ==== TEAM MEMBERS ==== -->
+	<div class="container" id="team" name="team">
+
+		<br>
+		<div class="row white centered">
+			<h1 class="centered">Отзывы наших покупателей</h1>
+			<hr>
+			<br>
+			<br>
+			<div class="col-md-3 centered">
+				<img class="img img-circle" src="assets/img/ula1.jpg" height="120px" width="120px" alt="часы">
+				<br>
+				<h4><b>Улан</b></h4>
+				<p>Очень красиво, богато и импозантно смотрятся на руке, современно и модно. Надеюсь, что и служить они будут также красиво и надежно и то, что когда буду отдыхать на море, их не придется прятать в номере или кому то отдавать на сохранение.</p>
+			</div><!-- col-md-3 -->
+
+			<div class="col-md-3 centered">
+				<img class="img img-circle" src="assets/img/dias.jpg" height="120px" width="120px" alt="часы">
+				<br>
+				<h4><b>Диас</b></h4>
+				<p>Классные часы. Ношу больше года. Проблем нет. Четкий циферблат и ничего лишнего..</p>
+			</div><!-- col-md-3 -->
+
+			<div class="col-md-3 centered">
+				<img class="img img-circle" src="assets/img/damir.jpg" height="120px" width="120px" alt="часы">
+				<br>
+				<h4><b>Дамир</b></h4>
+				<p>Заказывал первый раз в интернете, спасибо консультантам, подробно про все объяснили. Часы пришли быстро,часами доволен.</p>
+			</div><!-- col-md-3 -->
+
+			<div class="col-md-3 centered">
+				<img class="img img-circle" src="assets/img/alish.jpg" height="120px" width="120px" alt="часы">
+				<br>
+				<h4><b>Алишер</b></h4>
+				<p>Добрый день! Хочу поблагодарить за часики)) Покупка прошла быстро и доставка быстрая. Исполнение отличное! Спасибо за удовольствие</p>
+			</div><!-- col-lg-3 -->
+
+		</div><!-- row -->
+	</div><!-- container -->
+
+		<div id="footerwrap">
+			<div class="container">
+				<div class="row">
+					<p class="col-md-6">Все права защищены 2017 ©</p>
+					<div class="col-md-6 contacts">
+						<p>Контакты: </p>
+						<div>
+							<p>8 (702) 783-70-80 </p>
+							<p>8 (708) 700-99-77 </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/retina.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+	<script src="assets/js/flipclock.min.js"></script>
+	<script>
+
+	</script>
+  </body>
+</html>

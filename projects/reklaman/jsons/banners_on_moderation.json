@@ -1,0 +1,418 @@
+{
+"amount":222,
+"banners":
+	[
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421d5ash4j124h",
+					"name":"Казань"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":2,"name":"Женский"},
+		"age_from":35,
+		"age_to":45,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken afdasdfasdf asdf asdfasd"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		},
+		{"id":1,
+		"name":"Лонгер сырный",
+		"photo":"assets/images/image.png",
+		"link":"https://vk.com/im?sel=173982646",
+		"cities":
+			[	
+				{
+					"id":"421k241h4j124h",
+					"name":"Москва"
+				},
+				{
+					"id":"421dash4j124h",
+					"name":"Санкт-Петербург"
+				}
+			],		 
+		"appropriate_users":"58965",
+		"gender":{"id":1,"name":"Мужской"},
+		"age_from":25,
+		"age_to":50,
+		"cost":0.7,
+		"consumption":31.99,
+		"displays":35454,
+		"saved":7548,
+		"transition":4545,
+		"status":{"id":4,"name":"На модерации"},
+		"accepted":"",
+		"company":{"id":"23kjlrqew","name":"Kentucky Fried Chicken"}
+		}
+	]
+}	

@@ -1,0 +1,185 @@
+<div class="lk_banner_info  white-div">
+	<div class="line-1 flex">
+		
+		<div class="title-div">
+			<img src="assets/images/graph.png" class="title-icon">
+			<h2 class="title-text">баннер «{{vm.banner.name}}»</h2>
+		</div>
+		
+		<button ng-click="vm.showModal=true" class="instruction"><i class="fa fa-play"></i> ВИДЕОИНСТРУКЦИЯ</button>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Объявление</th>
+				<th>Статус</th>
+				<th>Стоимость</th>
+				<th>Расход</th>
+				<th>Показы</th>
+				<th>Сохранено</th>
+				<th>Переходы</th>
+				<th>Статистика</th>
+			</tr>			
+		</thead>
+		<tbody>
+			<tr>
+				<td ui-sref="banner_info" >					
+					<div class="flex">
+						<div class="photo" set-background-img src="{{vm.banner.photo}}"></div>
+						<div class="banner-info flex-column">
+							<p class="green bolder name">
+							{{vm.banner.name | limitTo:40}}
+							<span ng-if="vm.banner.name.length>40">...</span>
+							</p>
+							<p class="description bold">
+								{{vm.banner.gender.name}},{{vm.banner.age_from}}-{{vm.banner.age_to}} лет,
+								<span ng-repeat="city in banner.cities | limitTo:3">{{city.name}}
+									<span ng-if="$index+1<banner.cities.length">, </span>									
+								</span>
+								<span ng-if="banner.cities.length>3">и еще {{vm.banner.cities.length-3}} города(-ов)</span>
+							</p>
+							<p class="people">{{vm.banner.appropriate_users}} человек</p>
+							<a target="_blank" href="{{vm.banner.link}}" class="link green">{{vm.banner.link}}</a>
+						</div>
+					</div>
+				</td>
+				<td class="status" >
+					<button class="btn-gray btn-disabled" ng-class="{'btn-green':banner.status.id==2,'btn-blue':banner.status.id==3}">{{vm.banner.status.name}}</button>
+					<div ng-if="banner.status.reason" class="reason">
+						<p>Причина:</p>
+						<p>{{vm.banner.status.reason }}</p>
+					</div>
+				</td>
+				<td>{{vm.banner.cost}} <i class="fa fa-rub"></i></td>
+				<td>{{vm.banner.consumption}} <i class="fa fa-rub"></i></td>
+				<td>{{vm.banner.audience}}</td>
+				<td>
+					{{vm.banner.saved}}
+					<p class="green">{{vm.banner.saved_percent}}%</p>	
+				</td>
+				<td>
+					{{vm.banner.transitions}}
+					<p class="green">{{vm.banner.transitions_percent}}%</p>	
+				</td>
+				<td class="operations">
+					<div ui-sref="lk_banner_update({id:banner.id})" class="btn-gray">
+						<i class="fa fa-paint-brush"></i>
+						<span class="my-tooltip">Редактировать</span>
+					</div>	
+					<div ng-click="vm.delete()" class="btn-gray">
+						<i class="fa fa-trash"></i>
+						<span class="my-tooltip">Удалить</span>
+					</div>					
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+
+</div>
+
+<div class="lk_banner_statistics">
+
+
+	<div class="statistics-1 white-div">
+		<div class="line-1 flex">
+
+			<div class="title-div">
+				<img src="assets/images/graph.png" class="title-icon">
+				<h2 class="title-text">Статистика</h2>
+			</div>		
+			<button ng-click="vm.getGraph()" class="reload"><img src="assets/images/reload.png" alt=""></button>
+		</div>
+		<div class="line-2 flex">
+			<div class="flex">
+				<button ng-click="vm.drawGraph('transitions','#37951b')" class="btn-green">Переходы</button>
+				<button ng-click="vm.drawGraph('impressions','#008eaa')" class="btn-blue">Показы</button>
+			</div>
+			<div class="flex toggler">
+				<p ng-click="vm.drawGraph('ctr','#f7d61c')">CTR</p>
+				<p ng-click="vm.drawGraph('spent','#c95c36')">Потрачено, <i class="fa fa-rub"></i> </p>
+			</div>
+			<div class="flex date">
+				<datepicker   date-week-start-day="1"  datepicker-mobile="true"  date-format="dd-MM-yyyy" >
+					<input ng-change="vm.getGraph()" placeholder="13 ноября 2017" ng-model="vm.date_from"   type="text" class="input">
+				</datepicker>
+				<span class="divider-line">-</span>
+				<datepicker  date-week-start-day="1" datepicker-mobile="true"  date-format="dd-MM-yyyy">
+					<input ng-change="vm.getGraph()"    placeholder="13 декабря 2017" ng-model="vm.date_to"   type="text" class="input">
+				</datepicker>
+			</div>	
+		</div>
+		<div class="graph">
+			<div id="lk_line_graph"></div>
+		</div>
+	</div>
+
+	<div class="donuts flex">
+		<div class="likes white-div" ng-repeat="(diagramName,diagram) in vm.diagrams" ng-if="$index==0||$index==1">
+			<div class="line-1 flex">
+
+				<div class="title-div">
+					<img src="assets/images/{{diagram.img}}" class="title-icon">
+					<h2 class="title-text">{{diagram.title}}</h2>
+				</div>		
+				<button ng-click="vm.getDiagram(diagramName)" class="reload"><img src="assets/images/reload.png" alt=""></button>
+			</div>
+
+			<div class="donut flex">
+				<div>
+					<div ng-if="diagram.showButtons" class="buttons">
+						<button ng-click="diagram.type='transitions';vm.getDiagram(diagramName)" class="btn-green">Переходы</button>
+						<span ng-click="diagram.type='impressions';vm.getDiagram(diagramName)">Показы</span>
+					</div>
+					<p ng-repeat="label in diagram.labels"><i set-background-color="{{diagram.colors[$index]}}" class="fa fa-circle"></i> {{label}} - <span class="bolder">{{diagram.values[$index]}}%</span></p>
+				</div>	
+				<div  id="lk_{{diagramName}}_donut"></div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="donuts flex">
+		<div class="likes white-div" ng-repeat="(diagramName,diagram) in vm.diagrams" ng-if="$index==2||$index==3">
+			<div class="line-1 flex">
+
+				<div class="title-div">
+					<img src="assets/images/{{diagram.img}}" class="title-icon">
+					<h2 class="title-text">{{diagram.title}}</h2>
+				</div>		
+				<button ng-click="vm.getDiagram(diagramName)" class="reload"><img src="assets/images/reload.png" alt=""></button>
+			</div>
+
+			<div class="donut flex">
+				<div>
+					<div ng-if="diagram.showButtons" class="buttons">
+						<button ng-click="diagram.type='transitions';vm.getDiagram(diagramName)" class="btn-green">Переходы</button>
+						<span ng-click="diagram.type='impressions';vm.getDiagram(diagramName)">Показы</span>
+					</div>
+					<p ng-repeat="label in diagram.labels"><i  set-background-color="{{diagram.colors[$index]}}"  class="fa fa-circle"></i> {{label}} - <span class="bolder">{{diagram.values[$index]}}%</span></p>
+				</div>	
+				<div  id="lk_{{diagramName}}_donut"></div>
+			</div>
+		</div>
+		
+	</div>
+
+		<!-- MODAL  -->
+	<div ng-if="vm.showModal" ng-click="vm.showModal=false" class="my-modal my-modal-video  flex">
+		<div class="my-modal-content white-div" ng-click="$event.stopPropagation()">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/video-camera.png" class="title-icon">
+					<h2 class="title-text">Видео</h2>
+				</div>
+				<button ng-click="vm.showModal=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body flex-column">
+				<iframe src="https://www.youtube.com/embed/qr80Tk2DrLI" frameborder="0" allowfullscreen></iframe>			
+			</div>
+			<div class="my-modal-footer flex">
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL  END -->	
+</div>

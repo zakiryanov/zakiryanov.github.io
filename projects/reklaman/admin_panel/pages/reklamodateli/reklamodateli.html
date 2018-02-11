@@ -1,0 +1,96 @@
+<div class="ap_reklamodateli  white-div">
+	<div class="line-1 flex">
+		<div class="title-div">
+			<img src="assets/images/megaphone-(2).png" class="title-icon">
+			<h2 class="title-text">рекламодатели</h2>
+		</div>
+
+		<div class="links">
+			<a  class="btn-blue banner" ui-sref="banners"><img src="assets/images/smartphone-white.png" alt="smartphone"> Баннеры на модерацию ({{vm.bannersOnModeration}})</a>
+		<a class="btn-blue zapros" ui-sref="registrations_requests"><img src="assets/images/users.png" alt="users"> Запросы на регистрацию ({{vm.registrationsRequests}})</a>
+		<a class="btn-blue payment" ui-sref="payments"><img src="assets/images/wallet.png" alt="wallet"> Платежи</a>
+		</div>	
+	</div>
+	<div class="line-2 flex">
+		<div>
+			<a ui-sref="company_account" class="btn-green">+ Добавить компанию</a>
+			<input type="text" ng-change="vm.search()"	ng-model="vm.searchText" class="input input-search" placeholder="Поиск компании в списке...">
+		</div>
+		<p>Всего рекламодателей	- {{vm.total_amount}}</p>	
+	</div>
+	<table>
+		<thead>
+		<tr>
+			<th>№</th>
+			<th>Название</th>
+			<th>Email</th>
+			<th>Телефон</th>
+			<th>Дата регистрации</th>
+			<th>Баланс</th>
+			<th>Операции</th>
+		</tr>			
+		</thead>
+		<tbody>
+			<tr ng-repeat="company in vm.companies">
+				<td>{{$index+1}}</td>
+				<td  class="with-photo flex">
+					<div set-background-img src="{{company.photo}}" class="user-photo"></div>
+					<span>{{company.name |limitTo:22}}
+						<span ng-if="company.name.length>22">...</span>
+					</span>
+					
+				</td>
+				<td>{{company.email |limitTo:28}}
+					<span ng-if="company.email.length>28">...</span>
+				</td>
+				<td>{{company.phone}}</td>
+				<td>{{company.reg_date | date:'yyyy-MM-dd HH:mm'}}</td>
+				<td>{{company.accountAmount}}</td>
+				<td class="operations">
+					<div ui-sref="company_account({id:company._id})" class="btn-gray">
+						<i class="fa fa-paint-brush"></i>
+						<span class="my-tooltip">Редактировать</span>
+					</div>
+					
+					<div ui-sref="banners({id:company._id})" class="btn-gray mobile">
+						<i class="fa fa-mobile"></i>
+						<span class="my-tooltip">Баннеры</span>
+
+					</div>		
+					<div ui-sref="payments({id:company._id})" class="btn-gray">
+						<i class="fa fa-credit-card"></i>
+						<span class="my-tooltip">Платежи</span>
+
+					</div>
+					<div ui-sref="ticket({id:company._id,which:'company',isTicketId:false})"  class="btn-gray">
+						<i class="fa fa-comments-o"></i>
+						<span class="my-tooltip reverse">Обратная связь</span>
+
+					</div>
+					<div ng-click="vm.authorizeAsCompany(company._id)" class="btn-gray">
+					<i class="fa fa-long-arrow-right"></i>
+						<span class="my-tooltip reverse">Перейти в компанию</span>
+					</div>	
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<div class="pagination flex">
+		<div class="limit dropdown">
+			<span>Отрбражать: </span>
+			<button bs-dropdown class="btn-gray">{{vm.limit}}</button>
+			<ul class="dropdown-menu" role="menu">
+				<li ng-hide="vm.limit==25" ng-click='vm.changeLimit(25)'>25</li>
+				<li ng-hide="vm.limit==50" ng-click='vm.changeLimit(50)'>50</li>
+				<li ng-hide="vm.limit==100" ng-click='vm.changeLimit(100)'>100</li>
+			</ul>
+		</div>
+		<div ng-click="vm.getNewData()" class="show-more btn-gray">
+			<span><<</span>  <span >Показать еще</span> <span>>></span>
+		</div>
+		<div >
+			Показано {{vm.companies.length}} из {{vm.amount}} пользователей
+		</div>
+	</div>	
+</div>

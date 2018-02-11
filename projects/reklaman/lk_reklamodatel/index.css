@@ -1,0 +1,55 @@
+.lk_reklamodatel header .btn-green{
+	border-radius: 100%;
+	padding:4px 8px;
+	font-size: 17px;
+	margin-left: 20px;
+	margin-right: 60px;
+}
+
+.lk_reklamodatel .sidebar .item img{
+  width: 18px; 
+  height: 20px;
+  margin-left: 5px;
+}
+
+.lk_reklamodatel .sidebar .item{
+	position: relative;
+}
+
+.lk_reklamodatel .sidebar .messages_count{
+  padding:3px 5px;
+  background: #3b9e1d;
+  color: #fff;
+  padding-top: 2px;
+  font-size: 12px;
+  border-radius: 100%;
+  position: absolute;
+  top:12px;
+  left: 11px;
+}
+
+
+
+.my-modal-video .title-text{
+  font-size: 13px;
+}
+
+.my-modal-video .my-modal-header .title-icon{
+  width: 21px;
+  height: 24px;
+}
+
+.my-modal-video .my-modal-header .btn-gray{
+  padding: 6px 9px;
+}
+
+
+.my-modal-video .my-modal-body{
+  padding: 20px;
+}
+
+.my-modal-video iframe{
+  height: 330px;
+  border-radius: 4px
+}
+

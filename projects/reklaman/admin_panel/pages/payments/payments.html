@@ -1,0 +1,81 @@
+<div class="ap_payments  white-div">
+	<div class="line-1 flex">
+		<div class="title-div">
+			<img src="assets/images/wallet-gray.png" class="title-icon">
+			<h2 class="title-text">платежи</h2>
+		</div>
+ 
+		<input type="text" ng-model="vm.searchText" ng-change="vm.search()" class="input input-search" placeholder="Поиск ...">
+	</div>
+	<div class="line-2 flex">
+		<p>Оплачено счетов на сумму: <span>{{vm.totalSum}} руб</span> </p> 
+	</div>
+	<div class="line-3 flex">
+		<p>Показать за период:</p>
+		<datepicker date-week-start-day="1" date-typer="false" datepicker-mobile="true"  date-format="yyyy-MM-dd">
+			<input ng-change="vm.filter()" ng-model="vm.filters.dateFrom" placeholder="2017-01-31" type="text" class="input">
+		</datepicker>
+
+		<p>-</p> 
+		<datepicker date-week-start-day="1" date-typer="false" datepicker-mobile="true"  date-format="yyyy-MM-dd">
+			<input ng-change="vm.filter()" ng-model="vm.filters.dateTo" placeholder="2017-12-31" type="text" class="input">
+		</datepicker>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>№</th>
+				<th >Рекламодатель</th>
+				<th ng-click="vm.changeSort('created')" >Дата создания счета</th>
+				<th ng-click="vm.changeSort('completedAt')">Дата платежа</th>
+				<th ng-click="vm.changeSort('amount')">Сумма </th>
+				<th ng-click="vm.changeSort('type')">Тип платежа</th>
+				<th ng-click="vm.changeSort('status')">Состояние</th>
+				<th>Документы</th>
+			</tr>   
+		</thead>
+		<tbody>
+			<tr ng-repeat="payment in vm.payments" ng-if="payment.company">
+				<td>{{$index+1}}</td>
+				<td  class="with-photo flex">
+					<div set-background-img src="{{payment.company.photo}}" class="user-photo"></div>
+					<span>{{payment.company.name |limitTo:22}}
+						<span ng-if="payment.name.length>22">...</span>
+					</span>
+					
+				</td>
+				<td>{{payment.created | date:'yyyy-MM-dd HH:mm'}} </td>
+				<td class="paid_at">
+				 <span ng-if="payment.completedAt">{{payment.completedAt | date:'yyyy-MM-dd HH:mm'}}</span>
+				 <div class="flex" ng-if="!payment.completedAt">
+				 	<span  ng-click="vm.acceptPayment(payment,true)" class="green">Подтвердить</span>
+				 	<span>/</span>
+				 	<span  ng-click="vm.acceptPayment(payment,false)">Удалить</span>
+				 </div>
+				</td>
+				<td class="summ">{{payment.amount}}</td>
+				<td>{{payment.type}}</td>
+				<td class="status" ng-class="{'green':(payment.status==1)}">{{vm.statuses[payment.status]}}</td>
+				<td><a ng-if="payment.type == 'bill'" ng-href="/company/bill/{{payment.id}}" target="_blank" class="btn-green">Счет</a></td>
+			</tr>
+
+		</tbody>
+	</table>
+		<div class="pagination flex">
+		<div class="limit dropdown">
+			<span>Отрбражать: </span>
+			<button bs-dropdown class="btn-gray">{{vm.limit}}</button>
+			<ul class="dropdown-menu" role="menu">
+				<li ng-hide="vm.limit==25" ng-click='vm.changeLimit(25)'>25</li>
+				<li ng-hide="vm.limit==50" ng-click='vm.changeLimit(50)'>50</li>
+				<li ng-hide="vm.limit==100" ng-click='vm.changeLimit(100)'>100</li>
+			</ul>
+		</div>
+		<div ng-click="vm.getNewData()" class="show-more btn-gray">
+			<span><<</span>  <span >Показать еще</span> <span>>></span>
+		</div>
+		<div >
+			Показано {{vm.payments.length}} из {{vm.amount}} объявлений
+		</div>
+	</div>	
+</div>

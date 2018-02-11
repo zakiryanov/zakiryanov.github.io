@@ -1,0 +1,150 @@
+<div class="lk_company flex-column">
+	<div class="my-notification" ng-if="vm.showNotification">
+		<p class="bold">Внимание! Технические работы 22.02.2017</p>
+		<p>20.02.2017 примерно с 14:00 до 18:00 будут проводиться технические работы... Спасибо за понимание</p>
+		<span ng-click="vm.showNotification=false">&times;</span>
+	</div>
+	<div class="flex">
+		<div class="my_banners white-div">
+			<div class="line-1 flex">
+				<div class="title-div">
+					<img src="assets/images/smartphone-gray.png" class="title-icon">
+					<h2 class="title-text">Мои баннеры</h2>
+				</div>
+				<button ui-sref="lk_banner_create" class="btn-blue"><span>+</span> Создать баннер</button>
+			</div>
+			<div class="table">
+				<table>
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Статус</th>
+							<th>Показы</th>
+							<th>Расход</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ui-sref="banner_info({id:banner.id})" ng-repeat="banner in vm.banners">
+							<td class="bolder">
+								{{banner.name | limitTo:50}}
+							<span ng-if="banner.name.length>50">...</span>
+							</td>
+							<td class="status-image" >
+								<div ng-if="banner.statusName=='disabled'">
+									<img class="img-default" src="assets/images/pause-green.png" alt="">
+									<img class="img-hover" src="assets/images/pause-white.png" alt="">
+									<span class="my-tooltip right">не активный</span>
+								</div>
+								<div ng-if="banner.statusName=='active'">
+									<img class="img-default" src="assets/images/play-green.png" alt="">
+									<img class="img-hover" src="assets/images/play-white.png" alt="">
+									<span class="my-tooltip right">активный</span>
+								</div>
+
+							</td>
+							<td>{{vm.statistics.bannerShowCnt[banner._id] || 0}}</td>
+							<td>{{vm.statistics.bannerTransfer[banner._id]||0}} <i class="fa fa-rub"></i></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+			<div class="show-more">
+				<div ui-sref="my_banners" class="flex">
+					<span><<</span>
+					<span>Подробнее</span>
+					<span>>></span>
+				</div>			
+			</div>
+		</div>
+		<div class="right-side">
+			<div class="flex">
+				<div class="my-balance white-div flex-column">
+					<div class="line-1 flex">
+						<div class="title-div">
+							<img src="assets/images/wallet-gray.png" class="title-icon">
+							<h2 class="title-text">Мой баланс</h2>
+						</div>
+						<img ui-sref="my_balance" class="arrow-right" src="assets/images/right-arrow-green.png" alt="">
+					</div>
+					<p><span class="bolder">{{vm.company.accountAmount}} </span> рублей</p>
+					<button ui-sref="my_balance" class="btn-green">+ Пополнить баланс</button>
+				</div>
+				<div class="video white-div">
+					<div class="title-div">
+						<img src="assets/images/video-camera.png" class="title-icon">
+						<h2 class="title-text">видеоинструкция</h2>
+					</div>
+					<img ng-click="vm.showModal=true" class="video-img" src="assets/images/video.png" alt="">
+				</div>
+			</div>
+			<div class="support white-div">
+				<div class="line-1 flex">
+					<div class="title-div">
+						<img src="assets/images/message-gray.png" class="title-icon">
+						<h2 class="title-text">техподдержка</h2>
+					</div>
+					<a ui-sref="lk_support">Все тикеты <img src="assets/images/right-arrow-green.png" alt=""></a>	
+				</div>
+				<div class="table">
+					<table>
+						<tbody>
+							<tr ng-repeat="ticket in vm.tickets">
+								<td>{{ticket.updated | date:'dd.MM.yy'}}</td>
+								<td ng-class="{'green':ticket.status.id==3,'blue':ticket.status.id==1}">{{ticket.statusText}}</td>
+								<td>{{ticket.text | limitTo:50}}
+									<span ng-if="ticket.last_message.text.length>50">...</span>
+								</td>
+								<td class="operations">
+									<div ng-class="{'invisible':ticket.new_messages==0}" class="btn-gray">
+										<i class="fa">{{ticket.new_messages}}</i>
+										<span class="my-tooltip">Новые сообщения</span>
+									</div>
+
+									<div ng-click="vm.closeTicket(ticket)" class="btn-gray">
+										<i class="fa fa-check"></i>
+										<span class="my-tooltip">Завершить тикет</span>
+
+									</div>		
+									<div ui-sref="lk_ticket({id:ticket._id})" class="btn-gray">
+										<i class="fa fa-arrow-right"></i>
+										<span class="my-tooltip">Перейти в тикет</span>
+									</div>	
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div ui-sref="answer_questions" class="ask">
+					<button class="btn-blue">
+						<img src="assets/images/megaphone-(1).png" alt="">
+						Задать вопрос
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+			<!-- MODAL  -->
+	<div ng-if="vm.showModal" ng-click="vm.showModal=false" class="my-modal my-modal-video flex">
+		<div class="my-modal-content white-div" ng-click="$event.stopPropagation()">
+			<div class="my-modal-header  flex">
+				<div class="title-div">
+					<img src="assets/images/video-camera.png" class="title-icon">
+					<h2 class="title-text">Видео</h2>
+				</div>
+				<button ng-click="vm.showModal=false" class="btn-gray"><i class="fa fa-times"></i></button>
+			</div>
+			<div class="my-modal-body flex-column">
+				<iframe src="https://www.youtube.com/embed/qr80Tk2DrLI" frameborder="0" allowfullscreen></iframe>			
+			</div>
+			<div class="my-modal-footer flex">
+			</div>				
+		</div>
+	</div>
+
+	<!-- MODAL  END -->	
+
+</div>

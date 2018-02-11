@@ -1,0 +1,11 @@
+{
+	"id":{"title":"Id вывода","value":"5874b793afb524ad085a2c97"},
+	"user_id":{"title":"Id пользователя","value":"5874b793afb524ad085a2c97"},
+	"status":{"title":"Статус","value":{"id":"1","name":"Новый"}},
+	"wallet_number":{"title":"Счёт ЯД или телефон","value":"797845878488854"},
+	"created_at":{"title":"Создан","value":1498630512714},
+	"client_order_id":{"title":"clientOrderId","value":165},
+	"method":{"title":"Метод запроса","value":"testDesposition"},
+	"yandex_request":{"title":"Запрос в Яндекс","value":{"dstAccount":"79270355257","amount":"30.00","currency":643,"contract":"Вывод средств клиента 56e7b534018982dd35c09b32","paymentParams":{"pof_offerAccepted":1},"requestDT":"2017-02-17T08:44:26.871Z","agentId":200470}},
+	"yandex_reponse":{"title":"Ответ с Яндекса","value":{"data":"some response"}}
+}
