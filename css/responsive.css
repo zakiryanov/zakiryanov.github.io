@@ -132,4 +132,9 @@
 	  margin-top: 20px;
 	  padding: 0 20px 0 60px;
 	}
+	#about,
+	.bg-about{
+		min-height: 800px;
+		background-position: center -170px
+	}
 }
