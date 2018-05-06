@@ -9,9 +9,19 @@
 
 
   $(document).ready(function(){
-
+    var urlArr = window.location.href.split('#')
+    if(urlArr.length>0 && urlArr[1]=='hh'){
+      $('.hh-show').show();
+      $('.hh-hide').hide()
+    }else{
+      $('.hh-show').hide();
+    }
     //active menu
     $(document).on("scroll", onScroll);
+
+    $('.work').click(function(){
+      window.open($(this).find('.link-to-site a').attr('href'),'_blank')
+    })
 
     $('a[href^="#"]').on('click', function (e) {
       e.preventDefault();

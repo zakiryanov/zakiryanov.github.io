@@ -56,6 +56,8 @@ img { max-width: 100%; }
   font-size: 16px;
 }
 
+
+
 /*----------------------------------------- 2) Preloader --------------------------------------------------*/
 #preloader {
   position: fixed;
@@ -582,7 +584,12 @@ p {
   height: 270px;
   padding: 5px;
   margin: 40px 0;
+  display: block;
   position: relative;
+}
+
+.work-link{
+
 }
 
 .work img{
@@ -603,13 +610,12 @@ p {
 .work:hover .link-div{
   opacity: 1;
   transition: .6s;
-
+    cursor: pointer;
 }
 
 .work .img-div{
   width: 100%;
   height: 90%;
-  cursor: pointer;
   min-width:300px;
   transition: .5s;
   overflow: hidden;
@@ -617,8 +623,18 @@ p {
 
 .work .link-div{
   position: absolute;
-  width: 100%;
-  top: 120px;
+  left: 5%;
+  right: 5%;
+  top: 0;
+  bottom: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
   text-align: center;
   opacity: 0;
   color: #ffffff;
@@ -626,11 +642,12 @@ p {
 
 }
 
-.work .link-div a{
+.work .link-div p{
   color: #555555;
-  font-weight: bold;
-  font-size: 25px;
-  background: rgba(255,255,255,.8);
+  display: inline-block;
+  font-weight: bold;  
+  font-size: 15px;
+  background: rgba(255,255,255,1);
   padding: 15px 35px;
 }
 
@@ -1179,7 +1196,7 @@ p {
   background: #d8d8d8;
 }
 .gplus a:after{
-  background: #dd4b39;
+  background: #24292e;
 }
 
 .footer-bottom{
