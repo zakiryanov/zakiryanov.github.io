@@ -1190,7 +1190,7 @@ p {
   background: #ABABAB;
 }
 .vk a:after{
-  background-color: #507299;
+  background-color: #53b1f0;
 }
 .gplus{
   background: #d8d8d8;
@@ -1238,6 +1238,7 @@ p {
 .skillst .skillbar:nth-child(3) .count-bar {background-color: #193556;}
 .skillst .skillbar:nth-child(4) .count-bar {background-color: #4dba87;}
 .skillst .skillbar:nth-child(5) .count-bar {background-color: #a6120d;}
+.skillst .skillbar:nth-child(6) .count-bar {background-color: #88c043;}
 .skillst .count-bar span{ font-size: 12px;}
 .skillst .title {
   position: absolute;
