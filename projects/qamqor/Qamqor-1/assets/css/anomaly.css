@@ -1,0 +1,97 @@
+	#main-div{
+		margin-bottom: 50px;
+		min-height: 100vh
+	}
+
+	.title{
+		text-align: center;
+	}
+
+	table{
+		font-size: 13px;
+		border: 1px solid #555;
+		margin: 0 auto;
+		margin-top: 20px;
+		width: 88%;
+	}
+	td,th{
+		border: 1px solid #555;
+		padding: 5px !important;
+		text-align: center;
+	}
+	th{
+		vertical-align: top;
+	}
+	td.byyears{
+		text-align: left;
+	}
+	#map{
+		display: none;
+	}
+	.line-chart{
+		width: 50%;
+		display: inline-block;	
+	}
+
+	.section{
+		padding: 20px;
+		border: 1px solid #555;
+		margin: 30px auto;
+		width: 90%;
+	}
+	h3,h2{
+		text-align: center;
+	}
+	h2{
+		margin-top: 50px;
+	}
+	.month{
+		width: 35px;
+		height: 35px;
+		padding: 2px;
+		padding-bottom: 4px;
+		margin: 1px;
+		border:1px solid #555;
+		display: inline-block;
+		vertical-align: inherit;
+	}
+	.month p{
+		margin-bottom: 0;
+		font-size: 12px;
+	}
+	.month p:last-child{
+		font-weight: bold;
+		text-align: center;
+	}
+	.red{
+		background: rgb(247, 69, 59);
+		color:#fff;
+	}
+	table td:nth-child(4){
+		max-width: 300px;
+	}			
+	table td:nth-child(3){
+		max-width: 300px;
+	}		
+	table th:nth-child(5),
+	table th:nth-child(6){
+		max-width: 200px;
+	}		
+	.indicator{
+		color: #fff;
+		font-weight: bold;
+	}	
+	.recommend{
+		background-color: #5f0078;
+	}
+	.predl{
+		background-color: #7e7d7f;
+	}
+	.byyears{
+		min-width: 550px;
+	}
+
+	.byyears .btn{
+		color: #fff;
+		margin-left: 10px;
+	}

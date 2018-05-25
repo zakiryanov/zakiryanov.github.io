@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Qamqor</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.auto-complete.min.js"></script>
+	<script src="assets/js/tooltipster.bundle.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+	<link href="assets/css/c3.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/tooltipster.bundle.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/jquery.auto-complete.css" rel="stylesheet">
+	<script src="assets/js/d3.v3.min.js" charset="utf-8"></script>
+	<script src="assets/js/c3.min.js"></script>
+
+	<link rel="stylesheet" href="lib/dijit/themes/flat/flat.css">
+	<link rel="stylesheet" href="lib/esri/css/esri.css">
+	<link rel="stylesheet" href="lib/analytics/main.css">
+
+	<link href="assets/css/custom.css?2" rel="stylesheet">
+	<link href="assets/css/media.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/anomaly.css">
+
+	<script>
+		var dojoConfig = {
+			parseOnLoad: true,
+			locale: document.documentElement.lang,
+			async: true,
+			isDebug: true,
+			waitSeconds: 10,
+			packages: [
+			{
+				"name": "analytics",
+				"location": "../analytics"
+			}
+			]
+		};
+	</script>
+	<script src="lib/dojo/dojo.js"></script>
+</head>
+<body class="loading" >
+	<!-- <body > -->
+	<div id="loader">
+	</div>
+	<section id="nav">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+						<h1>Информационно-аналитическая Система <span>"Мониторинг Правонарушений РК"</span></h1>
+						<h3>Карта рисков - выявление аномалии правовой статистики.</h3>
+						<h4 id="regionName"></h4>
+						<button id='pdfconvert' class="button">PDF</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="map"></div>
+
+	<div id="main-div">
+		<div id="deepAnalyze"></div>
+			<div id="cr_4">
+			<div class="ao_3"></div>
+			<div class="ao_2"></div>
+			<div class="ao_1"></div>
+		</div>
+		<div id="cr_5">
+			<div class="ao_3"></div>
+			<div class="ao_2"></div>
+			<div class="ao_1"></div>
+		</div>
+		<div id="cr">
+			<div class="ao_3"></div>
+			<div class="ao_2"></div>
+			<div class="ao_1"></div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="copyright">
+						<p>© 2017 Информационный сервис</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<link href="assets/css/roboto_condensed.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	</script>
+
+	<script>
+		require([
+			"dojo/ready",
+			"dojo/parser",
+			"analytics/po/Anomaly",
+			"dojo/domReady!"
+			], function (ready, parser, Anomaly) {
+				ready(function () {
+					try {
+						var regionCode = window.location.href.slice(window.location.href.indexOf('?') + 1).split('=')[1];
+						if(!regionCode || regionCode==0) regionCode = 191148 
+						Anomaly.init(regionCode);
+						} catch (e) {
+							throw e;
+						}
+					});
+			});
+		</script>
+
+	</body>
+	</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Qamqor</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/css/custom.css?2" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/anomaly.css">
+	<link href="assets/css/roboto_condensed.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="loading" >
+	<div id="loader">
+	</div>
+	<section id="nav">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+						<h1>Информационно-аналитическая Система <span>"Мониторинг Правонарушений РК"</span></h1>
+						<h3>Карта рисков - выявление аномалии правовой статистики.</h3>
+						<button id='pdfconvert' class="button">PDF</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="map"></div>
+
+	<div id="main-div">
+		<div id="cr_4">
+			<div class="ao_3"></div>
+			<div class="ao_2"></div>
+			<div class="ao_1"></div>
+		</div>
+		<div id="cr_5">
+			<div class="ao_3"></div>
+			<div class="ao_2"></div>
+			<div class="ao_1"></div>
+		</div>
+		<div id="cr">
+			<div class="ao_3"></div>
+			<div class="ao_2"></div>
+			<div class="ao_1"></div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="copyright">
+						<p>© 2017 Информационный сервис</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+		<script src="lib/dojo/dojo.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script>
+		require([
+			"dojo/ready",
+			"dojo/parser",
+			"analytics/po/Anomaly",
+			"dojo/domReady!"
+			], function (ready, parser, Anomaly) {
+				ready(function () {
+					try {
+						Anomaly.init();
+					} catch (e) {
+						throw e;
+					}
+				});
+			});
+		</script>
+
+	</body>
+	</html>

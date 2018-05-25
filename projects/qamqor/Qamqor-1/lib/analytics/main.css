@@ -1,0 +1,11 @@
+.c3-area {
+    opacity: 1 !important;
+}
+
+.c3-line {
+	z-index: 50 !important;
+}
+
+.c3-target-Min .c3-circle, .c3-target-Max .c3-circle {
+    display:none;
+}

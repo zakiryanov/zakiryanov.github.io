@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Qamqor</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="assets/css/custom.css?2" rel="stylesheet">
+	<style>
+		table{
+			font-size: 13px;
+			border: 1px solid #555;
+			margin: 0 auto;
+			margin-top: 20px;
+			width: 88%;
+		}
+		td,th{
+			border: 1px solid #555;
+			padding: 5px !important;
+			text-align: center;
+		}
+		th{
+			vertical-align: top;
+		}
+		td:last-child{
+			text-align: left;
+		}
+		#map{
+			display: none;
+		}
+		.line-chart{
+			width: 50%;
+			display: inline-block;	
+		}
+
+		.section{
+			padding: 20px;
+			border: 1px solid #555;
+			margin: 30px auto;
+			width: 90%;
+		}
+		h3,h2{
+			text-align: center;
+		}
+		h2{
+			margin-top: 50px;
+		}
+		.month{
+			width: 45px;
+			height: 45px;
+			padding: 2px;
+			margin: 1px;
+			border:1px solid #555;
+			display: inline-block;
+		}
+		.red{
+			background: rgb(247, 69, 59);
+			color:#fff;
+		}
+		.month p{
+			margin-bottom: 0;
+			font-size: 12px;
+		}
+		.month p:last-child{
+			font-weight: bold;
+			text-align: center;
+		}
+		table td:nth-child(4){
+			max-width: 300px;
+		}			
+		table td:nth-child(3){
+			max-width: 300px;
+		}		
+		table th:nth-child(5),
+		table th:nth-child(6){
+			max-width: 200px;
+		}		
+		table td:nth-child(5),
+		table td:nth-child(6){
+			color: #fff;
+			font-weight: bold;
+		}
+		section{
+			width: 90%;
+			margin: 35px 0;
+			margin-left: 5%;
+			text-align: center;
+		}
+		section:first-child{
+			width: 90%;
+			margin: 35px 0;
+		}
+
+	</style>
+	<style type="text/css" media="print">
+  @page { size: landscape; }
+</style>
+</head>
+<body class="loading" >
+	<!-- <body > -->
+	<div id="loader">
+	</div>
+	<section id="nav">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+						<h1>Информационно-аналитическая Система <span>"Мониторинг Правонарушений РК"</span></h1>
+						<h3>Статистика уголовных правонарушений за 2017 года в сравнении с аналогичным периодом прошлого года на основе аналитической системы.</h3>
+						<button id='pdfconvert' class="button">PDF</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="map"></div>
+
+	<div id="main-div" >
+		<div class="barcharts">
+			<section >
+				<div class="row">
+					<div id="pie-chart-2016" class="col-xs-4 col-xs-offset-2"></div>
+					<div id="pie-chart-2017" class="col-xs-4 col-xs-offset-2"></div>
+				</div>
+			</section>
+			<section id="chart-1"></section>
+			<section id="chart-2"></section>
+			<section id="chart-3"></section>
+			<section id="chart-4"></section>
+			<section id="chart-5"></section>
+			<section id="chart-9"></section>
+			<section id="chart-10"></section>
+			<!-- <section id="chart-6"></section> -->
+			<section id="chart-7"></section>
+			<section id="chart-8"></section>
+		</div>
+		<section class="pie-charts">
+			<h3>Районы, отличающие по своей структуре на фоне стандартного распределения преступности в группе</h3>
+			<div class="row"></div>
+		</section>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="copyright">
+						<p>© 2017 Информационный сервис</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+	<script src="lib/dojo/dojo.js"></script>
+	<link href="assets/css/roboto_condensed.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<script>
+		require([
+			"dojo/ready",
+			"dojo/parser",
+			"analytics/po/Apparatka",
+			"dojo/domReady!"
+			], function (ready, parser, Apparatka) {
+				ready(function () {
+					try {
+						Apparatka.init();
+					} catch (e) {
+						throw e;
+					}
+				});
+			});
+		</script>
+
+	</body>
+	</html>
