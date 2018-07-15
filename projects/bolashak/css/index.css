@@ -1,0 +1,266 @@
+/*--------------- COMMON STYLES -------------------------*/
+html{
+  font-size: 16px;
+  font-family: Arial,sans-serif;
+}
+
+button{
+  text-transform: uppercase;
+  background: #e38800;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 25px;
+  transition: .4s
+}
+
+button:hover{
+  background-color: #ff9c08
+}
+
+section{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 3rem 6rem;
+}
+
+.title{
+  text-transform: uppercase;
+  font-size: 45px;
+  text-align: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #e38800;
+  font-size: 70px;
+}
+
+.slick-prev{
+  left: -70px;
+}
+
+.side-block{
+  background: #e38800;
+  font-size: 24px;
+  padding: 20px 0px 20px 50px;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+
+.side-block:after{
+  content: "";
+  position: absolute; 
+  left: 100%; bottom: 0px;
+}
+
+.bg-img{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-img-white{
+  background-image: url(../assets/img/card-2.png);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-size: cover;
+  opacity: .15;
+  z-index: -1;
+}
+
+.phone-number,
+.phone-number:hover{
+  color:inherit;
+}
+
+/*--------------- SECTION 1-------------------------*/
+.section-1{
+  background-image: url('../assets/img/section_1.png');
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0;
+  height: 100vh;
+}
+
+header{
+  padding: 3rem 6rem;
+}
+
+header .icon{
+  width: 50px;
+}
+
+header .logo{
+  width: 400px;
+}
+
+header .phone-number{
+  font-size: 2rem;
+}
+
+.section-1 .btn-block{
+  top: 85vh;
+  position: absolute;
+  left: 0;
+}
+
+.section-1 .side-block{
+  margin-top: 70px;
+}
+
+.section-1 .side-block:after{
+  border: 66px solid transparent; 
+  border-left: 50px solid #e38800;
+  border-top: 82px solid #e38800;
+}
+
+/*--------------- SECTION 2 -------------------------*/
+
+.section-2{
+  font-size: 20px;
+}
+
+.section-2 .descr{
+  font-size: 1.3rem;    
+  margin: 40px auto;
+}
+
+.section-2 .card{
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.section-2 .btn-block{
+  margin-top: 40px;
+}
+
+/*--------------- SECTION 3 -------------------------*/
+
+.section-3{
+  padding: 0;
+}
+
+/*--------------- SECTION 4 -------------------------*/
+
+.slide{
+  margin-top: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+}
+
+/*--------------- SECTION 5 -------------------------*/
+
+.section-5{
+  padding: 3rem 0;
+}
+
+.section-5 .side-block{
+  font-size: 43px;
+  font-weight: normal;
+}
+
+.section-5 .side-block:after{
+  border: 48px solid transparent; 
+  border-left: 40px solid #e38800;
+  border-top: 56px solid #e38800;
+}
+
+.section-5 .my-card{
+  height: 500px;
+  width: 45%;
+  padding: 70px;
+}
+
+.section-5 .my-card .bg-img {
+  height: 100%;
+}
+.section-5 .my-card .descr {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/*--------------- SECTION 6 -------------------------*/
+
+.section-6{
+  padding: 3rem 0;
+  position: relative;
+}
+
+.section-6 .side-block{
+  padding: 10px 0px 10px 200px;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 30px;
+}
+
+.section-6 .side-block:after{
+  border: 50px solid transparent;
+  border-left: 40px solid #e38800;
+  border-top: 60px solid #e38800
+}
+
+.section-6 .logo{
+ margin-right: 50px;
+}
+
+.section-6 .descr{
+ font-size: 25px;
+ width: 50%;
+ margin: 60px auto;
+}
+
+.section-6 ul{
+  padding: 0 6rem
+}
+
+/*--------------- SECTION 7 -------------------------*/
+
+.section-7{
+  color: #e38800;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.section-7 .title{
+  text-align: left;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.section-7 .address{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-7 .email{
+  font-size: 30px;
+  font-weight: bold;
+}
+.section-7 .phone-number{
+  font-size: 35px;
+  font-weight: bold;
+}
+footer{
+  margin-top: 150px;
+}
+footer p{
+  margin-top: 30px;
+  color: #000;
+  margin-left: 50px;
+}
