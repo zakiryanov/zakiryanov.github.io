@@ -17,6 +17,7 @@ $mail->SMTPDebug = 2;
 $mail->Debugoutput = 'html';
 //Set the hostname of the mail server
 $mail->Host = 'smtp.gmail.com';
+$mail ->CharSet = "UTF-8"; 
 // use
 // $mail->Host = gethostbyname('smtp.gmail.com');
 // if your network does not support SMTP over IPv6
@@ -40,7 +41,7 @@ $mail->addAddress($_POST['addAddress'], 'name');
 $mail->Subject = $_POST['subject'];
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->MsgHTML("Пришел заказ на часы ".$_POST['currentClock']." от ".$_POST['name'].". Номер ".$_POST['phone']);
+$mail->MsgHTML($_POST['msg']);
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {

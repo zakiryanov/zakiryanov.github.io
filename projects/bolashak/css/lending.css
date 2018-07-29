@@ -1,0 +1,222 @@
+/*--------------- COMMON STYLES -------------------------*/
+html{
+  font-size: 16px;
+  font-family: Arial,sans-serif;
+}
+
+section{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 3rem 6rem;
+}
+
+.title{
+  text-transform: uppercase;
+  font-size: 45px;
+  text-align: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #e38800;
+  font-size: 70px;
+}
+
+/*--------------- MODAL -------------------------*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  margin-top:-100px;
+  position: relative;
+  background-color: #fefefe;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  min-width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-content .title {
+  font-size: 1.6rem;
+  text-align: center;
+  color: #888;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+.error {
+  display: none;
+  text-align: center;
+  color: red;
+}
+
+.congrats {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color:#e38800;
+  padding: 20px;
+}
+
+/* The Close Button */
+
+.close {
+  color: #777;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 15px;
+  border: none
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body input {
+  width: 100%;
+  margin-top: 40px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #e38800;
+  padding: 7px;
+}
+
+.modal-body button{
+  display: block;
+  margin:20px auto;
+  margin-top: 50px;
+}
+
+
+/*--------------- SECTION 1-------------------------*/
+.section-1{
+  background-image: url('../assets/img/main.jpg');
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0;
+  height: 100vh;
+}
+
+.section-1 .side-block{
+  margin-top: 70px;
+}
+
+.section-1 .side-block:after{
+  border: 66px solid transparent; 
+  border-left: 50px solid #e38800;
+  border-top: 82px solid #e38800;
+}
+
+/*--------------- SECTION 2 -------------------------*/
+
+.section-2{
+  font-size: 20px;
+}
+
+.section-2 .descr{
+  font-size: 1.3rem;    
+  margin: 40px auto;
+}
+
+.section-2 .card{
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.section-2 .btn-block{
+  margin-top: 40px;
+}
+
+/*--------------- SECTION 3 -------------------------*/
+
+.section-3{
+  padding: 0;
+}
+
+/*--------------- SECTION 4 -------------------------*/
+
+.slide{
+  margin-top: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+}
+
+/*--------------- SECTION 5 -------------------------*/
+
+.section-5{
+  padding: 3rem 0;
+}
+
+.section-5 .side-block{
+  font-size: 43px;
+  font-weight: normal;
+}
+
+.section-5 .side-block:after{
+  border: 48px solid transparent; 
+  border-left: 40px solid #e38800;
+  border-top: 56px solid #e38800;
+}
+
+.section-5 .my-card{
+  height: 500px;
+  width: 45%;
+  padding: 30px 70px;
+}
+
+.section-5 .my-card .bg-img {
+  height: 70%;
+}
+.section-5 .my-card .descr {
+  height: 30%;
+  padding-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media only screen and (max-width : 1400px) {
+  .side-block{
+    transform: scale(0.85);
+    left: -4%;
+  }
+  .showModal{
+    font-size: 1.3rem;
+    padding: 17px 20px;
+  }
+}
+
