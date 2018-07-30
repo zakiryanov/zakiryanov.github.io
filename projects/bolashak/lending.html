@@ -28,12 +28,20 @@
      <header class="d-flex justify-content-between">
         <img class="logo" src="assets/img/logo.png" alt="ИП Джакупов">
         <ul class="nav-list d-flex align-items-center justify-content-around">
-            <li><a href="">наши проекты</a></li>
+            <li>
+                <a href="#" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">наши проекты</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="lending.html#brilliant">жк бриллиант</a>
+                    <a class="dropdown-item" href="lending.html#bolashak">жк болашак</a>
+                    <a class="dropdown-item" href="lending.html#sairan">жк сайран</a>
+                    <a class="dropdown-item" href="lending.html#triumf">жк триумф</a>
+                    <a class="dropdown-item" href="aisha.html">жк ресторан aisha</a>
+                </div>
+            </li>
             <li><a href="about.html">о нас</a></li>
             <li><a href="reviews.html">отзывы</a></li>
             <li><a href="contacts.html">контакты</a></li>
         </ul>
-
     </header>
     <div class="side-block wow fadeIn">
         ЖК "БОЛАШАК"
@@ -58,7 +66,7 @@
 </section>
 
 <section class="section-3">
-    <script type="text/javascript" charset="utf-8" async src=""></script>
+    <script id="mapScript" type="text/javascript" charset="utf-8" async></script>
 </section>
 
 <section class="section-4">
@@ -78,7 +86,7 @@
     <div class="bg-img-white"></div>
 
     <div class="side-block">
-       
+
     </div>
 
     <div class="d-flex justify-content-around">
@@ -101,6 +109,9 @@
             <p class="descr">В жилом комплексе будет оборудована системами видеонаблюдения, позволяющими 24 часа в сутки обеспечивать безопасность как самого комплекса, так и его жителей. </p>
         </div>
     </div>
+    <div class="text-center">
+        <button class="showModal">оставить заявку</button>
+    </div>
 </section>
 
 <!--MODAL-->
@@ -111,20 +122,95 @@
             <span class="close">&#10006;</span>
         </div>
         <div class="modal-body">
-            <h2 class="title">Заполните форму,что бы мы смогли с вами связаться</h2>
-            <input type="text" id="clientName" placeholder="Ваше имя">
-            <br>
-            <input type="text" id="clientPhone" placeholder="Номер сотового телефона">
-            <p class="error">Пожалуйста заполните пуcтые поля</p>
-            <button type="button" id="sendToMail" class="pink-button">Заказать звонок</button>
-        </div>
-        <div class="congrats">
-            Спасибо за заявку!
-            <br>
-            Мы обязательно свяжемся с вами в ближайшее время!
-        </div>
+         <div class="row d-flex">
+             <div class="col-7">
+                 <div class="d-flex justify-content-between form-group">
+                     <span>Выбрать объект</span>
+                     <select id="">
+                         <option value="bolashak" selected>ЖК БОЛАШАК</option>
+                         <option disabled value="">ЖК БРИЛЛИАНТ</option>
+                         <option disabled value="">ЖК ТРИУМФ</option>
+                         <option disabled value="">ЖК САЙРАН</option>
+                         <option disabled value="">РЕСТОРАН АЙША</option>
+                     </select>
+                 </div>
+                 <div class="d-flex justify-content-between form-group">
+                     <span>Количество комнат</span>
+                     <select id="roomsCount">
+                         <option selected disabled value="">Выберите количество комнат</option>
+                         <option value="2">2 комнатная</option>
+                         <option value="3">3 комнатная</option>
+                         <option value="4">4 комнатная</option>
+                     </select>
+                 </div>
+                 <div class="d-flex justify-content-between form-group">
+                     <span>Жилая площадь</span>
+                     <select id="areaCount">
 
+                     </select>
+                 </div>
+                 <input type="text" id="clientName" placeholder="Ваше имя">
+                 <input type="text" id="clientPhone" placeholder="Ваш номер телефона">
+                 <div class="d-flex justify-content-between">
+                     <button id="sendToMail">оставить завку</button>
+                     <button id="reset">сброс</button>
+                 </div>
+             </div>
+             <div class="col-5">
+                 <div class="area-info">
+                     <table>
+                         <thead>
+                             <tr>
+                                 <th>этаж</th>
+                                 <th>цена за 1 кв/м<sup>2</sup></th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>2</td>
+                                 <td>200.000</td>
+                             </tr>
+                             <tr>
+                                 <td>3</td>
+                                 <td>200.000</td>
+                             </tr>
+                             <tr>
+                                 <td>4</td>
+                                 <td>200.000</td>
+                             </tr>
+                             <tr>
+                                 <td>5</td>
+                                 <td>200.000</td>
+                             </tr>
+                             <tr>
+                                 <td>6</td>
+                                 <td>195.000</td>
+                             </tr>
+                             <tr>
+                                 <td>7</td>
+                                 <td>190.000</td>
+                             </tr>
+                             <tr>
+                                 <td>8</td>
+                                 <td>185.000</td>
+                             </tr>
+                             <tr>
+                                 <td>9</td>
+                                 <td>175.000</td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="congrats">
+        Спасибо за заявку!
+        <br>
+        Мы обязательно свяжемся с вами в ближайшее время!
     </div>
+
+</div>
 </div>
 
 <script src="./js/jquery.min.js"></script>
@@ -136,6 +222,13 @@
 
 <script>
     $(document).ready(function(){
+
+
+        $(window).bind('hashchange', function() {
+            console.log('hi')
+            window.location.reload(false); 
+        });
+
         var selectedProject = location.href.split('#')[1];
         var modal = document.getElementById('myModal');
         var currentClock = "";
@@ -146,33 +239,44 @@
                 showButton:true,
                 card:'.png',
                 planirovka:'.jpg',
-                planirovkaNum:4
-                },
+                planirovkaNum:4,
+                text:`Объект  расположен в центре города и находится в окружении всех необходимых объектов инфраструктуры – детских садов, школ, детских площадок, магазинов, ресторанов и др.
+                Мы предлагаем  2,3,4 комнатные квартиры , относящиеся к высокому плану жилья благодаря большому выбору площадей и планировок, и самое главное доступной цене.
+                Дом состоит из 3х подъездов и 9 этажей, с подземным паркингом. 
+                Концепцией безопасности жилого комплекса предусмотрено круглосуточное видеонаблюдение на территории комплекса, в подъездах и паркингах. Большую часть придомовой территории охватывают внешние видеокамеры, установленные на фасадах зданий, а перемещения людей между этажами фиксируются видеокамерами внутри подъездов.`
+            },
             'sairan':{
                 translate:'сайран',
-                map:'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6aaa9285e375d4b2cace82371b2b23df629fa9207d2629184747be3fdad6fcf4&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;scroll=true',
+                map:'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac652ea263af0e099aef2f1c0050fc7ea17cc63664f12301a7f89953001a3bc1d&amp;width=100%&amp;height=466&amp;lang=ru_RU&amp;scroll=true',
                 showButton:false,
                 card:'.png',
                 planirovka:'.png',
-                planirovkaNum:5
-                },
+                planirovkaNum:5,
+                text:`ЖК Сайран состоит их 2х домов, один из первых построенных домов, был построен в 2015 году, сдан сентябрь 2015год. Дом состоит из 2х подьездов и 5 этажей. Также с подземным паркингом, детская площадка из тартанового покрытия. Второй был построен в 2016 году. Сдан сентябрь 2016год`
+            },
             'brilliant':{
                 translate:'бриллиант',
-                map:'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6aaa9285e375d4b2cace82371b2b23df629fa9207d2629184747be3fdad6fcf4&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;scroll=true',
+                map:'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A264fdb1ad57b4581fa9c6b2150139c6fed5eff25a8815e4091213163ef9a69d8&amp;width=100%&amp;height=516&amp;lang=ru_RU&amp;scroll=true',
                 showButton:false,
                 card:'.jpeg',
                 planirovka:'.png',
-                planirovkaNum:7
-                },
+                planirovkaNum:7,
+                text:`Объект  расположен в центре города и находится в окружении всех необходимых объектов инфраструктуры – детских садов, школ, детских площадок, магазинов, ресторанов и др.
+                Мы предлагаем  2,3,4 комнатные квартиры , относящиеся к высокому плану жилья благодаря большому выбору площадей и планировок, и самое главное доступной цене.
+                ЖК Бриллиант планируема сдача  объекта сентябрь 2019год.
+                `
+            },
             'triumf':{
                 translate:'триумф',
-                map:'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6aaa9285e375d4b2cace82371b2b23df629fa9207d2629184747be3fdad6fcf4&amp;width=100%&amp;height=600&amp;lang=ru_RU&amp;scroll=true',
+                map:'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A701c54cb6a94004a53656fd210db0cfd5fa51d7ed5a57d6dd8b20b6fac1f343f&amp;width=100%&amp;height=453&amp;lang=ru_RU&amp;scroll=true',
                 showButton:false,
                 card:'.jpg',
                 planirovka:'.png',
-                planirovkaNum:6
-                },
+                planirovkaNum:6,
+                text:`ЖК Триумф расположен по адресу Ауельбекова 38,  сдан в эксплуатацию сентябрь 2017 год. Дом состоит из трех подьездов и девяти этажей, с подземным паркингом наверху детская площадка из тартанового покрытия, имеется отдельное футбольное поле для детей. Закрытый безопасный двор огорожден шлагбаумами, видеонаблюдение со всех сторон.`
+            },
         };
+        var roomsMap = {'2':[69,70,72],'3':[91],'4':[121]};
         var project = mainMap[selectedProject]
         console.log(project)
         if(!project) project = mainMap['bolashak'];
@@ -181,90 +285,110 @@
 
         $('.section-2 .title').text('о проекте жк '+project.translate)
 
+        $('.section-2 .descr').text(project.text)
+
+        $('.section-3 #mapScript').attr('src',project.map)
+
         $('.section-5 .side-block').text('Преимущество ЖК "'+(project.translate.toUpperCase())+'"')
 
-        for(var i=0;i<project.planirovkaNum;i++){
-            var $slide = $('<div class="slide"/>').css('background-image','url(./assets/img/'+selectedProject+'/planirovka-'+(i+1)+project.planirovka);
-            $('.section-4 .slider').append($slide);
-        }
+        if(!project.showButton) $('.section-1 .side-block,.section-5 button').hide()
 
-        $('.card').each(function(index){
-            $(this).css('background-image','url(./assets/img/'+selectedProject+'/card-'+(index+1)+project.card)
-        })
+            for(var i=0;i<project.planirovkaNum;i++){
+                var $slide = $('<div class="slide"/>').css('background-image','url(./assets/img/'+selectedProject+'/planirovka-'+(i+1)+project.planirovka);
+                $('.section-4 .slider').append($slide);
+            }
 
-        $('.my-card .bg-img').each(function(index){
-            $(this).css('background-image','url(./assets/img/advantage-'+(index+1)+'.jpg)')
-        })
+            $('.card').each(function(index){
+                $(this).css('background-image','url(./assets/img/'+selectedProject+'/card-'+(index+1)+project.card)
+            })
 
-        $(".close").click(function () {
-            closeModal();
-        });
+            $('.my-card .bg-img').each(function(index){
+                $(this).css('background-image','url(./assets/img/advantage-'+(index+1)+'.jpg)')
+            })
 
-        $('.showModal').click(openModal)
-
-        function closeModal() {
-            modal.style.display = "none";
-            $(".modal-body").show();
-            $(".congrats").hide();
-        }
-
-        function openModal() {
-            modal.style.display = "flex";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
+            $(".close").click(function () {
                 closeModal();
-            }
-        };
-
-        $("#sendToMail").click(function (e) {
-            e.preventDefault();
-            var data = {};
-            var name = $("#clientName").val();
-            var phone = $("#clientPhone").val();
-            if(name==""||phone=="") {
-                $(".error").show();
-                return;
-            }
-            data.setFrom = 'dzhakupov.company@gmail.com';
-            data.addAddress = 'dzhakupov.company@gmail.com';
-            data.subject = 'Письмо с сайта';
-            data.username = "dzhakupov.company@gmail.com";
-            data.password = "dzhakupovkz";
-            data.msg = "Пришла завяка с сайта от "+name+". Номер "+phone;
-
-            $.ajax({
-                type: 'POST',
-                url: './phpmailer/mailer.php',
-                data: data,
-                success: function(data) {
-                    console.log(data)
-                },
-                error: function(xhr, status, error) {
-                }
             });
 
-            $(".modal-body").hide();
-            $(".congrats").show();
-            return false;
-        });
+            $('.showModal').click(openModal)
 
-        $('.slider').slick({
-            autoplay:false,
-            arrows: true
-        });
+            $("#reset").click(function(){
+                $('#roomsCount').val('')
+                $('#areaCount').empty();
+                $('#clientName').val('')    
+                $('#clientPhone').val('')    
+            })
 
-        var wow = new WOW({
-            boxClass:     'wow',
-            animateClass: 'animated',
-            offset:       0,
-            mobile:       true,
-            live:         true,
-            scrollContainer: null
+            $('#roomsCount').change(function(){
+                $('#areaCount').empty();
+                roomsMap[$(this).val()].forEach(function(item){
+                    $('#areaCount').append('<option value="'+item+'" >'+item+'кв.м</option>')
+                })
+            })
+
+            function closeModal() {
+                modal.style.display = "none";
+                $(".modal-body").show();
+                $(".congrats").hide();
+            }
+
+            function openModal() {
+                modal.style.display = "flex";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            };
+
+            $("#sendToMail").click(function (e) {
+                e.preventDefault();
+                var data = {};
+                var name = $("#clientName").val();
+                var phone = $("#clientPhone").val();
+                if(name==""||phone=="") {
+                    $(".error").show();
+                    return;
+                }
+                data.setFrom = 'dzhakupov.company@gmail.com';
+                data.addAddress = 'dzhakupov.company@gmail.com';
+                data.subject = 'Письмо с сайта';
+                data.username = "dzhakupov.company@gmail.com";
+                data.password = "dzhakupovkz";
+                data.msg = "Пришла завяка с сайта от "+name+". Номер "+phone;
+
+                $.ajax({
+                    type: 'POST',
+                    url: './phpmailer/mailer.php',
+                    data: data,
+                    success: function(data) {
+                        console.log(data)
+                    },
+                    error: function(xhr, status, error) {
+                    }
+                });
+
+                $(".modal-body").hide();
+                $(".congrats").show();
+                return false;
+            });
+
+            $('.slider').slick({
+                autoplay:false,
+                arrows: true
+            });
+
+            var wow = new WOW({
+                boxClass:     'wow',
+                animateClass: 'animated',
+                offset:       0,
+                mobile:       true,
+                live:         true,
+                scrollContainer: null
+            });
+            wow.init();
         });
-        wow.init();
-    });
-</script>
+    </script>
 </body>
 </html>

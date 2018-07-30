@@ -62,43 +62,56 @@
     <div class="bg-img main-bg-img">
         <div class="bg-img-black"></div>
         <div class="content">
-            <header class="d-flex justify-content-between">
-                <img class="logo" src="assets/img/logo.png" alt="ИП Джакупов">
-                <ul class="nav-list d-flex align-items-center justify-content-around">
-                    <li><a href="">наши проекты</a></li>
-                    <li><a href="about.html">о нас</a></li>
-                    <li><a href="reviews.html">отзывы</a></li>
-                    <li><a href="">контакты</a></li>
-                </ul>
-            </header>
-            <section class="contacts container">
-                <div class="row">
-                    <div class="col-md-6 d-flex flex-column justify-content-between align-items-start wow fadeInLeft">
-                        <p class="address">Наш офис расположен по <br> ул.Акана серэ 70 <br>
-                         пересечение Куйбышева <br>
-                          <span class="email">almira9090@bk.ru</span>
-                          <br>
-                          Пн-сб 10:00 - 18:00
-                          </p>
-                        <div>
-                        <a class="phone-number" href="tel: 8(778) 517-04-39 ">8(778) 517-04-39</a>
-                            <button class="showModal">оставить заявку</button>
-                        </div>
 
+        <header class="d-flex justify-content-between">
+            <img class="logo" src="assets/img/logo.png" alt="ИП Джакупов">
+            <ul class="nav-list d-flex align-items-center justify-content-around">
+                <li>
+                    <a href="#" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">наши проекты</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="lending.html#brilliant">жк бриллиант</a>
+                        <a class="dropdown-item" href="lending.html#bolashak">жк болашак</a>
+                        <a class="dropdown-item" href="lending.html#sairan">жк сайран</a>
+                        <a class="dropdown-item" href="lending.html#triumf">жк триумф</a>
+                        <a class="dropdown-item" href="aisha.html">жк ресторан aisha</a>
                     </div>
-                    <div class="col-md-6  wow fadeInRight">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba65b29f5199da2b03c4b1ce758ebe043549816575fd9e2c6ab18b8500a69b41&amp;width=110%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-                    </div>
+                </li>
+                <li><a href="about.html">о нас</a></li>
+                <li><a href="reviews.html">отзывы</a></li>
+                <li><a href="contacts.html">контакты</a></li>
+            </ul>
+        </header>
+        <section class="contacts container">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-between align-items-start wow fadeInLeft">
+                    <p class="address">Наш офис расположен по <br> ул.Акана серэ 70 <br>
+                       пересечение Куйбышева <br>
+                       <span class="email">almira9090@bk.ru</span>
+                       <br>
+                       Пн-сб 10:00 - 18:00
+                   </p>
+                   <div>
+                    <a class="phone-number" href="tel: 8(778) 517-04-39 ">8(778) 517-04-39</a>
+                    <button class="showModal">оставить заявку</button>
                 </div>
-                <footer class="d-flex flex-column align-items-center justify-content-center">
-                    <p>ИП ДЖАКУПОВ &copy; Все права защищены.</p>
-                </footer>
 
-            </section>
+            </div>
+            <div class="col-md-6  wow fadeInRight">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba65b29f5199da2b03c4b1ce758ebe043549816575fd9e2c6ab18b8500a69b41&amp;width=110%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
         </div>
+        <footer class="d-flex flex-column align-items-center justify-content-center">
+            <p>ИП ДЖАКУПОВ &copy; Все права защищены.</p>
+        </footer>
 
-    </div>
+    </section>
+                
+        </div>
+</div>
 
-</script>
+</div>
+ <script src="./js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
