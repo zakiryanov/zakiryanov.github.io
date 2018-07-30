@@ -17,14 +17,3 @@
     border-left: 24px solid #e38800;
     border-top: 68px solid #e38800;
 }
-
-.dropdown-item{
-  font-weight: bold;
-  font-size: 20px;
-  color: #e38800;
-}
-
-.dropdown-item:hover{
-  background-color: #e38800;
-  color: #fff;
-}
