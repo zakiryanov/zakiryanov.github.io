@@ -166,3 +166,14 @@ header .nav-list{
 }
 
 }
+
+
+.congrats {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color:#e38800;
+  padding: 20px;
+  padding-bottom: 60px;
+}

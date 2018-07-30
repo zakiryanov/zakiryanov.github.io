@@ -23,6 +23,34 @@ section{
   font-size: 70px;
 }
 
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+      position: relative;
+
+}
+
+.styled-select select {
+   background: #eee;
+   font-weight: bold;
+   color:#e38800;
+   border: none;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select:after {
+  content:"▼";
+  color: #e38800;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+
 /*--------------- MODAL -------------------------*/
 
 .modal {
@@ -70,16 +98,6 @@ section{
   display: none;
   text-align: center;
   color: red;
-}
-
-.congrats {
-  display: none;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.7rem;
-  color:#e38800;
-  padding: 20px;
-  padding-bottom: 60px;
 }
 
 /* The Close Button */

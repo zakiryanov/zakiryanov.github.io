@@ -55,7 +55,29 @@
           margin-left: 50px;
       }
 
-  </style>
+      .modal-body input {
+          width: 100%;
+          margin-top: 20px;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #e38800;
+          padding: 7px;
+      }
+
+      .modal-body button{
+          display: block;
+          text-transform: none;
+          font-size: 16px;
+          padding: 15px 25px;
+          margin-top: 50px;
+      }
+
+      .modal-title{
+        color: #e38800
+    }
+
+
+</style>
 </head>
 <body>
 
@@ -63,55 +85,92 @@
         <div class="bg-img-black"></div>
         <div class="content">
 
-        <header class="d-flex justify-content-between">
-            <img class="logo" src="assets/img/logo.png" alt="ИП Джакупов">
-            <ul class="nav-list d-flex align-items-center justify-content-around">
-                <li>
-                    <a href="#" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">наши проекты</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="lending.html#brilliant">жк бриллиант</a>
-                        <a class="dropdown-item" href="lending.html#bolashak">жк болашак</a>
-                        <a class="dropdown-item" href="lending.html#sairan">жк сайран</a>
-                        <a class="dropdown-item" href="lending.html#triumf">жк триумф</a>
-                        <a class="dropdown-item" href="aisha.html">жк ресторан aisha</a>
+            <header class="d-flex justify-content-between">
+                <img class="logo" src="assets/img/logo.png" alt="ИП Джакупов">
+                <ul class="nav-list d-flex align-items-center justify-content-around">
+                    <li>
+                        <a href="#" data-toggle="dropdown" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">наши проекты</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="lending.html#brilliant">жк бриллиант</a>
+                            <a class="dropdown-item" href="lending.html#bolashak">жк болашак</a>
+                            <a class="dropdown-item" href="lending.html#sairan">жк сайран</a>
+                            <a class="dropdown-item" href="lending.html#triumf">жк триумф</a>
+                            <a class="dropdown-item" href="aisha.html">жк ресторан aisha</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">о нас</a></li>
+                    <li><a href="reviews.html">отзывы</a></li>
+                    <li><a href="contacts.html">контакты</a></li>
+                </ul>
+            </header>
+            <section class="contacts container">
+                <div class="row">
+                    <div class="col-md-6 d-flex flex-column justify-content-between align-items-start wow fadeInLeft">
+                        <p class="address">Наш офис расположен по <br> ул.Акана серэ 70 <br>
+                           пересечение Куйбышева <br>
+                           <span class="email">almira9090@bk.ru</span>
+                           <br>
+                           Пн-сб 10:00 - 18:00
+                       </p>
+                       <div>
+                        <a class="phone-number" href="tel: 8(778) 517-04-39 ">8(778) 517-04-39</a>
+                        <button  data-toggle="modal" data-target="#myModal">оставить заявку</button>
                     </div>
-                </li>
-                <li><a href="about.html">о нас</a></li>
-                <li><a href="reviews.html">отзывы</a></li>
-                <li><a href="contacts.html">контакты</a></li>
-            </ul>
-        </header>
-        <section class="contacts container">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-column justify-content-between align-items-start wow fadeInLeft">
-                    <p class="address">Наш офис расположен по <br> ул.Акана серэ 70 <br>
-                       пересечение Куйбышева <br>
-                       <span class="email">almira9090@bk.ru</span>
-                       <br>
-                       Пн-сб 10:00 - 18:00
-                   </p>
-                   <div>
-                    <a class="phone-number" href="tel: 8(778) 517-04-39 ">8(778) 517-04-39</a>
-                    <button class="showModal">оставить заявку</button>
+
                 </div>
-
+                <div class="col-md-6  wow fadeInRight">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba65b29f5199da2b03c4b1ce758ebe043549816575fd9e2c6ab18b8500a69b41&amp;width=110%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
             </div>
-            <div class="col-md-6  wow fadeInRight">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aba65b29f5199da2b03c4b1ce758ebe043549816575fd9e2c6ab18b8500a69b41&amp;width=110%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
-        </div>
-        <footer class="d-flex flex-column align-items-center justify-content-center">
-            <p>ИП ДЖАКУПОВ &copy; Все права защищены.</p>
-        </footer>
+            <footer class="d-flex flex-column align-items-center justify-content-center">
+                <p>ИП ДЖАКУПОВ &copy; Все права защищены.</p>
+            </footer>
 
-    </section>
-                
-        </div>
+        </section>
+
+    </div>
 </div>
 
 </div>
- <script src="./js/jquery.min.js"></script>
+
+<!-- The Modal -->
+<div class="modal mt-5" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+          <h4 class="modal-title">Обратная связь</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <input type="text" id="clientName" placeholder="Ваше имя">
+        <input type="text" id="clientPhone" placeholder="Ваш номер телефона">
+        <button id="sendToMail">оставить завку</button>
+    </div>
+    <div class="congrats">
+        Спасибо за заявку!
+        <br>
+        Мы обязательно свяжемся с вами в ближайшее время!
+    </div>
+
+</div>
+</div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#sendToMail').click(function(){
+            $('.congrats').show();
+            $('.modal-body').hide()
+        })
+        
+    })
+</script>
 </body>
 </html>
