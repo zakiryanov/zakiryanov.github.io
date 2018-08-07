@@ -4,7 +4,6 @@
     //preloader
     $("#status").fadeOut(); // will first fade out the loading animation
     $("#preloader").delay(450).fadeOut("slow"); // will fade out the white DIV that covers the website.
-
   });
 
 
@@ -16,8 +15,8 @@
     // }else{
     //   $('.hh-show').hide();
     // }
-     $('.hh-show').show();
-      $('.hh-hide').hide()
+    // $('.hh-show').show();
+    // $('.hh-hide').hide()
     //active menu
     $(document).on("scroll", onScroll);
 
@@ -96,13 +95,13 @@
 
 
     //typed js
-    $(".typed").typed({
-        strings: ["Меня зовут Закирьянов Ануарбек.", "Я Веб-разработчик.", "А еще немного дизайнер."],
-        typeSpeed: 50,
-        backDelay: 900,
+    $("#typed").typed({
+      strings: ["Мы создаем эффективные сайты.", "Продвигаем ваш бизнес в интернете.", "Привлекаем клиентов через интернет."],
+      typeSpeed: 50,
+      backDelay: 900,
         // loop
         loop: true
-    });
+      });
 
     //owl carousel
     $('.owl-carousel').owlCarousel({
@@ -162,18 +161,18 @@
   //header
   function inits() {
     window.addEventListener('scroll', function(e){
-        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 300,
-            header = document.querySelector(".for-sticky");
-        if (distanceY > shrinkOn) {
-            classie.add(header,"opacity-nav");
-        } else {
-            if (classie.has(header,"opacity-nav")) {
-                classie.remove(header,"opacity-nav");
-            }
-          }
-      });
-    }
+      var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      shrinkOn = 300,
+      header = document.querySelector(".for-sticky");
+      if (distanceY > shrinkOn) {
+        classie.add(header,"opacity-nav");
+      } else {
+        if (classie.has(header,"opacity-nav")) {
+          classie.remove(header,"opacity-nav");
+        }
+      }
+    });
+  }
 
   window.onload = inits();
 
@@ -194,35 +193,35 @@
   }
 
 // my own code
-    var currentProduct = '';
+var currentProduct = '';
 
-    $("#sendMessage").click(function (e) {
-      var error = $(".error");
-      error.text("");
-      e.preventDefault();
-      var name = $("#name").val();
-      var number = $("#number").val();
-      if(name=="" || number=="") {
-         error.text("Заполните пожалуйста все поля");
-         return;
-      }
-      error.text("Отправка ...");
-      var data = {name:name,number:number,currentProduct:currentProduct};
+$("#sendMessage").click(function (e) {
+  var error = $(".error");
+  error.text("");
+  e.preventDefault();
+  var name = $("#name").val();
+  var number = $("#number").val();
+  if(name=="" || number=="") {
+   error.text("Заполните пожалуйста все поля");
+   return;
+ }
+ error.text("Отправка ...");
+ var data = {name:name,number:number,currentProduct:currentProduct};
 
-      emailjs.send("gmail","template_1pVkLrKH",data)
-      .then(
-        function(response) {
-          error.text("Спасибо "+name.charAt(0).toUpperCase()+name.substr(1).toLocaleLowerCase()+", ожидайте звонка,я обязательно вам презвоню !").show();
-          return false;
-        }, 
-        function(error) {
-          console.log("FAILED", error);
-        }
-      );
-    });
+ emailjs.send("gmail","template_1pVkLrKH",data)
+ .then(
+  function(response) {
+    error.text("Спасибо "+name.charAt(0).toUpperCase()+name.substr(1).toLocaleLowerCase()+", ожидайте звонка,я обязательно вам презвоню !").show();
+    return false;
+  }, 
+  function(error) {
+    console.log("FAILED", error);
+  }
+  );
+});
 
-  $(".zakazat").click(function () {
-      currentProduct = $(this).siblings(".title").html();
-  });
+$(".zakazat").click(function () {
+  currentProduct = $(this).siblings(".title").html();
+});
 
 })(jQuery);
