@@ -40,9 +40,9 @@ gulp.task('files', function() {
 gulp.task('styles', function() {
     return gulp.src(['css/bootstrap.min.css','css/index.css','css/responsive.css','css/icomoon.css','css/owl.carousel.css','css/owl.theme.css','css/component.css'])
     .pipe(concat('styles.min.css'))
-    // .pipe(purgecss({
-    //     content: ["main.html"]
-    // }))
+    .pipe(purgecss({
+        content: ["main.html","js/*.js"]
+    }))
     .pipe(minifyCSS({
     }))
     .pipe(gulp.dest('./css'));
