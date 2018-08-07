@@ -38,7 +38,7 @@ gulp.task('files', function() {
 // подключаем наши скрипты (например первым будет всегда jquery, если он используется
 // в проекте, а уже следом все остальные скрипты)
 gulp.task('styles', function() {
-    return gulp.src(['css/bootstrap.min.css','css/*.css','css/index.css','css/responsive.css',])
+    return gulp.src(['css/bootstrap.min.css','css/index.css','css/responsive.css','css/icomoon.css','css/owl.carousel.css','css/owl.theme.css','css/component.css'])
     .pipe(concat('styles.min.css'))
     // .pipe(purgecss({
     //     content: ["main.html"]
