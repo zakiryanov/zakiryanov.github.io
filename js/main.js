@@ -9,15 +9,16 @@
 
 
   $(document).ready(function(){
-    // var urlArr = window.location.href.split('#')
-    // if(urlArr.length>0 && urlArr[1]=='hh'){
-    //   $('.hh-show').show();
-    //   $('.hh-hide').hide()
-    // }else{
-    //   $('.hh-show').hide();
-    // }
-     $('.hh-show').show();
+    var urlArr = window.location.href.split('#')
+
+    if(urlArr.length>0 && urlArr[1]=='hh'){
+      $('.hh-show').show();
       $('.hh-hide').hide()
+    }else{
+      $('.hh-show').hide();
+    }
+     // $('.hh-show').show();
+     //  $('.hh-hide').hide()
     //active menu
     $(document).on("scroll", onScroll);
 
