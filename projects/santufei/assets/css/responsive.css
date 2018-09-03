@@ -1,0 +1,153 @@
+@media (min-width: 1200px){
+	.container {
+		max-width: 1170px;
+	}
+
+}
+
+@media (max-width: 992px){
+	.container{
+		max-width: none;
+	}
+	
+	.search form input{
+		margin: 2px 0;
+	}
+	.search .city-from,
+	.search .city-to{
+		width: 50%;
+	}
+	.search .city-to{
+		border-radius: 0 3px 3px 0;
+	}
+	.search .datepicker{
+		width: 50%;	
+	}
+	.search .passengers{
+		width: 32%;
+	}
+	.search .submit{
+		width: 18%;
+	}
+	.airlines-logo{
+		margin-right: 5px;
+	}
+	.s11 .download .appstore{
+		margin-left: 0;
+	}
+	.s7 .other-days{
+		min-width: 840px;
+	}
+	.s7 .today{
+		min-width: 270px;
+	}
+	.s7 .month{
+		min-width: 95px
+	}
+	footer ul{
+		width: 100%;
+	}
+	footer li{
+		margin-left: 0px;
+	}
+	footer{
+		position: relative;
+		padding: 50px 0 80px;
+	}
+	footer p{
+		position: absolute;
+		bottom: 30px;
+	}
+	.top-scroll{
+		display: none;
+	}
+	.s10 form.s10-form input{
+		width: 30%;
+		margin-right: 3%;
+	}
+}
+
+@media (max-width: 576px){
+	html{
+		font-size: 14px;
+	}
+	.ticket-types,
+	.transfer,
+	.ticket .airlines-logo,
+	.search-history,
+	.s8 .price,
+	.s8 .progress,
+	.s10,
+	.s12,
+	.s2{
+		display: none;
+	}
+	.search .city-from,
+	.search .city-to,
+	.search .datepicker,
+	.search .passengers,
+	.search .submit{
+		width: 100%;
+		border-radius: 3px
+	}
+	.logo{
+		width: 140px;
+	}
+	.search .city-from-name{
+		border-radius: 3px 0 0 3px
+	}
+	.search .city-swap{
+		border-radius: 0 3px 3px 0;
+	}
+	.search .date-1{
+		border-radius: 3px 0 0 3px
+	}
+	.search .date-2{
+		border-radius: 0 3px 3px 0
+	}
+	.search .submit{
+		margin-top: 15px;
+		background-image: none;
+		height: 40px;
+	}
+	.search .tabs{
+		width: 100%;
+	}
+	.search .tabs li{
+		margin-right: 0;
+		text-align: center;
+	}
+	.ticket{
+		border-top: 0;
+		border-left: 0;
+		border-right: 0
+	}
+	.ticket:first-child{
+		border-top: 0;
+	}
+	.ticket .price{
+		text-align: right;
+	}
+	.tickets{
+		padding-right: 0;
+		font-size: 14px
+	}
+	.ticket .airlines-title{
+		color: #0077bf;
+	}
+	.direction-detail .table tr{
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.direction-detail .table td{
+		width: 100%;
+	}
+	footer li img{
+		transform: scale(0.8);
+		padding-top: 10px;
+	}
+
+}
