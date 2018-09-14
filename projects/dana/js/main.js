@@ -50,7 +50,7 @@ $('.nav-list li').click(function() {
       contentTop.push( $( $(this).attr('href') ).offset().top);
     })
 
-    if(htmlHeight==(winTop+$(window).height()).toFixed()){
+    if(Math.abs(htmlHeight-(winTop+$(window).height()).toFixed())<50){
       $('.nav-list li')
       .removeClass('active')
       .eq(contentTop.length-1).addClass('active');   
@@ -84,16 +84,10 @@ $('.nav-list li').click(function() {
       $(".error").show();
       return;
     }
-    data.setFrom = 'danastroy12@gmail.com';
-    data.addAddress = 'danastroy12@gmail.com';
-    data.subject = 'Письмо с сайта';
-    data.username = "danastroy12@gmail.com";
-    data.password = "20iborub";
-    data.msg = "Пришла завяка с сайта от "+name+" с номером "+phone;
+   
     $.ajax({
-      type: 'POST',
-      url: './phpmailer/mailer.php',
-      data: data,
+      type: 'get',
+      url: './send.php?name='+name+'&phone='+phone,
       success: function(data) {
        $('.afterSended').removeClass('d-none')
      },

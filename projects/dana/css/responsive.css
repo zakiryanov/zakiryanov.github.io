@@ -70,7 +70,7 @@
 }
 
 @media (max-width: 768px) {
-		body{
+	body{
 		font-size: 16px;
 	}
 	.s1{
@@ -117,9 +117,21 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.modal-content{
+		width: 550px;
+	}
 }
 
 @media (max-width: 576px) {
+	.modal-content{
+		width: 100%;
+	}
+	.modal-body{
+		padding-left: 0;
+	}
+	.modal-header .close{
+		border: none
+	}
 	.s1 h2{
 		margin: 30px 0;
 	}
@@ -141,5 +153,11 @@
 	}
 	.s2 .s-footer{
 		padding: 10px;
+	}
+}
+@media (min-width: 576px){
+	.modal-dialog {
+		max-width: none; 
+		margin: 0; 
 	}
 }

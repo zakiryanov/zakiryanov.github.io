@@ -800,12 +800,12 @@
                 </p>
               </div>
               <div class="col-md-9 content-right">
-                <form>
+                <form action="send.php" method="get">
                   <div class="group">
-                    <input required="" id="name" type="text"><span class="highlight"></span><span class="bar"></span><label>Ваше имя</label>
+                    <input required="" name="name" id="name" type="text"><span class="highlight"></span><span class="bar"></span><label>Ваше имя</label>
                   </div>
                   <div class="group">
-                    <input required="" id="number" type="text"><span class="highlight"></span><span class="bar"></span><label>Ваш номер</label>
+                    <input required="" name="phone" id="number" type="text"><span class="highlight"></span><span class="bar"></span><label>Ваш номер</label>
                   </div>
                   <p class="error"></p>
                   <input id="sendMessage" name="sendMessage" type="submit" value="Заказать звонок">

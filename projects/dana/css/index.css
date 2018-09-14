@@ -577,12 +577,12 @@ footer .number{
   font-size: 20px;
 }
 
+
 .modal-content{
   background-color: #0f52ba;
   border-radius: 0;
-  width: 800px;
+  width: 750px;
   margin: 0 auto;
-  margin-top: 150px;
 }
 
 .modal-header{
@@ -636,6 +636,7 @@ footer .number{
 .modal-body .right-side{
   height: 387px;
   position: relative;
+  padding: 0
 }
 .modal-body .bg-blue{
   background-color: rgba(1, 46, 173, 0.3);
