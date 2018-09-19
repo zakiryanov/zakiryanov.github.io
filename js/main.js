@@ -69,7 +69,6 @@
     }
 
     function initEvents() {
-      openbtn.addEventListener( 'click', toggleMenu );
       if( closebtn ) {
         closebtn.addEventListener( 'click', toggleMenu );
       }
@@ -97,18 +96,18 @@
 
 
     //typed js
-    $("span#typed").typed({
-      strings: ["Меня зовут Закирьянов Ануарбек.", "Я Веб-разработчик.", "А еще немного дизайнер."],
-      typeSpeed: 50,
+    $("#typed_main").typed({
+      strings: ["Здравствуйте, меня зовут Ануарбек.", "И я умею создавать эффективные сайты.", "Хотите доказательств? Тогда листайте ниже."],
+      typeSpeed: 35,
       backDelay: 900,
         // loop
         loop: true
       });
     //typed js
 
-    $("h1#typed").typed({
+    $("#typed").typed({
       strings: ["Мы создаем эффективные сайты.", "Продвигаем ваш бизнес в интернете.", "Привлекаем клиентов через интернет."],
-      typeSpeed: 50,
+      typeSpeed: 35,
       backDelay: 900,
         // loop
         loop: true

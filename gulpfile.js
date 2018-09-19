@@ -41,7 +41,7 @@ gulp.task('styles', function() {
     return gulp.src(['css/bootstrap.min.css','css/index.css','css/responsive.css','css/icomoon.css','css/owl.carousel.css','css/owl.theme.css','css/component.css'])
     .pipe(concat('styles.min.css'))
     .pipe(purgecss({
-        content: ["main.html","js/*.js"]
+        content: ["index.html","kokshetau.html",'js/jquery-1.9.1.min.js','js/jquery.appear.js','js/classie.js','js/smooth-scroll.min.js','js/typed.js','js/owl.carousel.min.js','js/main.js']
     }))
     .pipe(minifyCSS({
     }))
