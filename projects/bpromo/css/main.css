@@ -1943,11 +1943,12 @@ pre code {
     border: 1px solid rgba(0, 0, 0, .15);
     -webkit-border-radius: .25rem;
     border-radius: .25rem;
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+   /* -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s
+}*/
 }
 
 .form-control::-ms-expand {
@@ -10151,9 +10152,9 @@ span.bold_main_text {
     border-top: 5px solid #2196f3;
     position: relative;
     padding: 15px 25px;
-    -webkit-box-shadow: 10px 10px 0 #c9c9c9;
-    box-shadow: 10px 10px 0 #c9c9c9;
-    transition: .5s
+    /*-webkit-box-shadow: 10px 10px 0 #c9c9c9;*/
+    /*box-shadow: 10px 10px 0 #c9c9c9;*/
+    /*transition: .5s*/
 }
 /*------------- TEAM -------------*/
 .team .time_block{

@@ -39,4 +39,4 @@ $('#phone_btn').click(function(argument) {
 	$('#menu_phone').slideToggle('normal')
 })
 
-// $('#portfoliolist').mixItUp({selectors:{target:".portfolio",filter:".filter"},load:{filter:".app"}});
+$('#portfoliolist').mixItUp({selectors:{target:".portfolio",filter:".filter"},load:{filter:".app"}});
