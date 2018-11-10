@@ -7,7 +7,7 @@ $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP
 if ($_GET['name']  != '' && $_GET["phone"] != '' ) {
 	if (isset($_GET['name'])  && isset($_GET["phone"]) ) {
 
-		$to  = 'element.almaty@gmail.com';
+		$to  = 'element.pavlodar@gmail.com';
 
 		$subject = 'Заказ с сайта';
 

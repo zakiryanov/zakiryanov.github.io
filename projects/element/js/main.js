@@ -45,7 +45,6 @@ $(".sendToMail").click(function (e) {
   var data = {};
   var name = $(this).closest('.form-wrapper').find(".clientName").val();
   var phone = $(this).closest('.form-wrapper').find(".clientPhone").val();
-
   if(name==""||phone=="") {
     $(".error").show();
     return;
