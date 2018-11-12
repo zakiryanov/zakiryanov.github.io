@@ -1089,7 +1089,7 @@ p {
   pointer-events: none;
   opacity: 0.5;
 }
-#contact input[type=submit] {
+#contact [type=submit] {
   border: 1px solid limegreen !important;
   color:#fff;
   background: limegreen;
@@ -1102,7 +1102,7 @@ p {
   -webkit-transition: 0.2s ease all;
 }
 
-#contact input[type=submit]:hover{
+#contact [type=submit]:hover{
   background: transparent;
   color: limegreen;
 }

@@ -35,7 +35,7 @@
                   <div class="hero-content">
                     <h1 id="typed_main">Здравствуйте</h1>
                     <br>
-                    <span class="typed" class="typed-cursor"></span>
+                    <span class="typed" id="typedCursor" class="typed-cursor"></span>
                   </div>
                 </div>
                 <div class="mouse-icon margin-20">
@@ -59,8 +59,8 @@
                     <div class="wrap-about">
                       <div class="w-content">
                         <div class="img-me"></div>
-                        <h3 class="title-small">Немного о себе</h3>
-                        <p class="head-about">
+                        <h3 class="title-small" id="aboutTitle">Немного о себе</h3>
+                        <p class="head-about" id="aboutDescr">
                           Я занимаюсь веб-разработкой уже на протяжении двух лет.
                           Всё свободное время я развиваюсь в этом направлении,
                           не переставая изучать что-то новое.
@@ -79,26 +79,26 @@
                     <div class="row">
                       <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
                         <div class="wrap-about">
-                          <table class="w-content">
-                            <tr>
+                          <table id="aboutTable" class="w-content">
+                            <tr> 
                               <td class="title">Имя </td>
                               <td class="break">:</td>
-                              <td> Ануарбек</td>
+                              <td class="data"> Ануарбек</td>
                             </tr>
-                            <tr>
+                            <tr> 
                               <td class="title">Телефон </td>
                               <td class="break">:</td>
-                              <td> +7 775 198 62 02</td>
+                              <td class="data"> +7 775 198 62 02</td>
                             </tr>
-                            <tr>
+                            <tr> 
                               <td class="title">Email </td>
                               <td class="break">:</td>
-                              <td> anuarbek.zak@gmail.com</td>
+                              <td class="data"> anuarbek.zak@gmail.com</td>
                             </tr>
-                            <tr>
+                            <tr> 
                               <td class="title">Адрес </td>
                               <td class="break">:</td>
-                              <td> Алматы</td>
+                              <td class="data"> Алматы</td>
                             </tr>
                           </table>
                         </div>
@@ -117,15 +117,16 @@
             <div class="container">
               <div class="text-center">
                 <h3 class="title-small">
-                  <span>
+                  <span id="workTitle">
                     Мои последние работы
                   </span>
                 </h3>
-                <p class="hh-hide about-works">Каждая работа сделана быстро и качественно.
+                <p class="hh-hide about-works" id="workMiniTitle">
+                Каждая работа сделана быстро и качественно.
                   <br>
                   Абсолютно <span>все</span>  клиенты довольны результатом.
                 </p>
-                <div class="works-list">
+                <div class="works-list" id="workList">
                   
                   <div class="work col-md-4">
                     <div class="img-div">
@@ -391,11 +392,11 @@
           <!--/.SERVICES END-->
           <!--SERVICES-->
           <section style="background:  linear-gradient(to bottom,#fff,#f6f6f6)" class="grey-bg hh-show" id="services">
-            <div class="container">
+            <div class="container" id="able">
               <div class="row">
                 <div class="col-md-3">
                   <h3 class="title-small">
-                    <span>Что я умею</span>
+                    <span >Что я умею</span>
                   </h3>
                   <p class="content-detail">
                   </p>
@@ -663,7 +664,7 @@
          <!--/.SKILLS END-->
 
          <!--BLOG-->
-         <section class="grey-bg" id="blog">
+         <section class="grey-bg hh-hide" id="blog">
           <div class="container">
             <div class="row">
               <div class="col-md-12">
@@ -763,13 +764,13 @@
               <div class="col-md-9 content-right">
                 <form action="send.php" method="get">
                   <div class="group">
-                    <input required="" name="name" id="name" type="text"><span class="highlight"></span><span class="bar"></span><label>Ваше имя</label>
+                    <input required="" name="name" id="name" type="text"><span class="highlight"></span><span class="bar"></span><label id="labelName">Ваше имя</label>
                   </div>
                   <div class="group">
-                    <input required="" name="phone" id="number" type="text"><span class="highlight"></span><span class="bar"></span><label>Ваш номер</label>
+                    <input required="" name="phone" id="number" type="text"><span class="highlight"></span><span class="bar"></span><label id="labelNumber">Ваш номер</label>
                   </div>
                   <p class="error"></p>
-                  <input id="sendMessage" name="sendMessage" type="submit" value="Заказать звонок">
+                  <button class="col-xs-12" id="sendMessage" name="sendMessage" type="submit">Заказать</button>
                 </form>
               </div>
             </div>
@@ -796,7 +797,7 @@
           <div class="footer-bottom">
             <div class="container">
               <div class="row">
-                <p class="col-xs-12 col-sm-6">Сайт разработал zakiryanov.kz</p>
+                <p class="col-xs-12 col-sm-6" id="developedBy">Сайт разработал zakiryanov.kz</p>
                 <p class="col-xs-12 col-sm-6 number">+7 775 198 62 02</p>
               </div>
             </div>
