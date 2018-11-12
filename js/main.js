@@ -7,8 +7,6 @@
 
   });
 
-  var selectedLang = 'en';
-
   var langDict = {
     'en':{
       'typedCursor': ["Hello, my name is Anuarbek.", "And I can create powerful websites.", "Want proof? Sroll down."],
@@ -18,70 +16,97 @@
       'aboutTable .data':['Anuarbek','+7 775 198 62 02','anuarbek.zak@gmail.com','Almaty'],
       'workTitle': 'My recent works',
       'workMiniTitle': 'Each work is done quickly and efficiently. <br>Absolutely <span>all<span> customers are satisfied with the result.',
-    'workList .link-div p': ['Website of programming school ELEMENT  (HTML,CSS,WoW.js,JQuery,Gulp)',
-    'Modern CRM-system with great functionality. (Angular 4, Django)',
-    'Multi-page website dedicated to native Kazakhstan and short information about it. (HTML, CSS, AngularJs, Jquery)',
-    'Advertising service with big functionality. (HTML, CSS, AngularJs)',
-    'Page of the marketing agency. (HTML, CSS, jQuery, Bootstrap 4)',
-    'Fully responsive website for the sale of foam blocks. (HTML, CSS, Jquery, Gulp)',
-    'Selling landing page dedicated to the sale of false eyelashes. There is an admin panel for adding and modifying a product. (JQuery, PHP, MySQL)',
-    'Online store for selling furniture with categories and functional admin panel. (AngularJS, NodeJs, MongoDB)',
-    'Landing page for the metal rolling site (HTML, CSS3, JQuery, Gulp).',
-    "Landing Page for Summer Camp SDU Children's Campus (HTML, CSS, Jquery, Gulp)",
-    'Convenient analytics of legal statistics in its various sections, through a smart system for assessing crime in the regions and regions of the Republic of Kazakhstan (HTML, CSS, Jquery, Chart.js, D3.js)',
-    "Beautiful landing page created for selling children's watches on the Internet. (HTML, CSS, Jquery, Gulp)",
-    "Simple demo internet shop. (React, Redux, Lodash)",
-    ],
-    'able .title-small span': 'What can i do',
-    'able .head-sm': ['code','design','html and css','js','back-end'],
-    'able .text-grey': [
-    'Over 3 years of active learning web programming I have learned to write clean and optimized code and google anything to solve different tasks (stack overflow be healthy).'
-    ,'Have an understanding of common design concepts, as well as experience in working with a team designer and the ability to work with Photoshop, Figma, Zeplin.',
-    'With HTML and CSS I communicate on "you". I love and am able to make beautiful animations. The words "adaptive", "cross-browser" layout do not cause shaking at the knees. I can use in my work such assembly systems as Gulp. Sign with LESS, SCSS preprocessors and Pug template engine.',
-    'I know JS "like the back of my hand". I have a lot of experience in using JQuery and AngularJS. He also worked with modern frameworks and libraries, such as Angular 2 +, Vue 2, React.',
-    'I like front-end more, but I also know the back-end quite well. I worked with php 5.6, and I do all projects on my favorite Node.js using the Express framework and the Mongo database.'],
-     'skill .title-small span': 'Skills',
-     'skill .content-detail':'I have been studying the web for more than two years and during this time I learned a lot.',
-     'contact .title-small span':'Contacts',
-     'contact .content-detail':'If you want to contact me, you can call the number <br> <span class="number">+7 775 198 62 02</span> or fill out the form. I will call you back shortly.',
-     'labelName': 'Enter your name',
-     'labelNumber': 'Enter your phone',
-     'sendMessage': 'Request a call',
-     'developedBy': 'Site developed by zakiryanov.github.io'
+      'workList .link-div p': ['Website of programming school ELEMENT  (HTML,CSS,WoW.js,JQuery,Gulp)',
+      'Modern CRM-system with great functionality. (Angular 4, Django)',
+      'Multi-page website dedicated to native Kazakhstan and short information about it. (HTML, CSS, AngularJs, Jquery)',
+      'Advertising service with big functionality. (HTML, CSS, AngularJs)',
+      'Page of the marketing agency. (HTML, CSS, jQuery, Bootstrap 4)',
+      'Fully responsive website for the sale of foam blocks. (HTML, CSS, Jquery, Gulp)',
+      'Selling landing page dedicated to the sale of false eyelashes. There is an admin panel for adding and modifying a product. (JQuery, PHP, MySQL)',
+      'Online store for selling furniture with categories and functional admin panel. (AngularJS, NodeJs, MongoDB)',
+      'Landing page for the metal rolling site (HTML, CSS3, JQuery, Gulp).',
+      "Landing Page for Summer Camp SDU Children's Campus (HTML, CSS, Jquery, Gulp)",
+      'Convenient analytics of legal statistics in its various sections, through a smart system for assessing crime in the regions and regions of the Republic of Kazakhstan (HTML, CSS, Jquery, Chart.js, D3.js)',
+      "Beautiful landing page created for selling children's watches on the Internet. (HTML, CSS, Jquery, Gulp)",
+      "Simple demo internet shop. (React, Redux, Lodash)",
+      ],
+      'able .title-small span': 'What can i do',
+      'able .head-sm': ['code','design','html and css','js','back-end'],
+      'able .text-grey': [
+      'Over 3 years of active learning web programming I have learned to write clean and optimized code and google anything to solve different tasks (stack overflow be healthy).'
+      ,'Have an understanding of common design concepts, as well as experience in working with a team designer and the ability to work with Photoshop, Figma, Zeplin.',
+      'With HTML and CSS I communicate on "you". I love and am able to make beautiful animations. The words "adaptive", "cross-browser" layout do not cause shaking at the knees. I can use in my work such assembly systems as Gulp. Sign with LESS, SCSS preprocessors and Pug template engine.',
+      'I know JS "like the back of my hand". I have a lot of experience in using JQuery and AngularJS. He also worked with modern frameworks and libraries, such as Angular 2 +, Vue 2, React.',
+      'I like front-end more, but I also know the back-end quite well. I worked with php 5.6, and I do all projects on my favorite Node.js using the Express framework and the Mongo database.'],
+      'skill .title-small span': 'Skills',
+      'skill .content-detail':'I have been studying the web for more than two years and during this time I learned a lot.',
+      'contact .title-small span':'Contacts',
+      'contact .content-detail':'If you want to contact me, you can call the number <br> <span class="number">+7 775 198 62 02</span> or fill out the form. I will call you back shortly.',
+      'labelName': 'Enter your name',
+      'labelNumber': 'Enter your phone',
+      'sendMessage': 'Request a call',
+      'developedBy': 'Site developed by zakiryanov.github.io'
 
     },
     'ru':{
       'typedCursor':["Здравствуйте, меня зовут Ануарбек.", "И я умею создавать эффективные сайты.", "Хотите доказательств? Тогда листайте ниже."]
     }
   }
+  var selectedLang = ''
+
+  function translate() {
+    selectedLang = 'en';
+    var selectedLangObj = langDict[selectedLang];
+    Object.keys(selectedLangObj).forEach(function(key, index) {
+      if(index==0) return;
+      var value = selectedLangObj[key];
+      if(typeof value === 'string') $('#'+key).html(value);
+      else{
+        $('#'+key).each(function(i) {
+          $(this).html(value[i])
+        })
+      }
+
+    })
+  }
 
 
   $(document).ready(function(){
     var urlArr = window.location.href.split('#')
+    selectedLang = 'ru';
 
     if(urlArr.length>0 && urlArr[1]=='hh'){
       $('.hh-show').show();
-      $('.hh-hide').hide()
+      $('.hh-hide').hide();
+      translate()
     }else{
       $('.hh-show').hide();
     }
+
+        //typed js
+    $("#typed_main").typed({
+      strings: langDict[selectedLang]['typedCursor'],
+      typeSpeed: 35,
+      backDelay: 900,
+        // loop
+        loop: true
+      });
+    //typed js
+
+    $("#typed").typed({
+      strings: ["Мы создаем эффективные сайты.", "Продвигаем ваш бизнес в интернете.", "Привлекаем клиентов через интернет."],
+      typeSpeed: 35,
+      backDelay: 900,
+        // loop
+        loop: true
+      });
+
      // $('.hh-show').show();
      //  $('.hh-hide').hide()
     //active menu
     $(document).on("scroll", onScroll);
 
-      var selectedLangObj = langDict[selectedLang];
-      Object.keys(selectedLangObj).forEach(function(key, index) {
-        if(index==0) return;
-        var value = selectedLangObj[key];
-        if(typeof value === 'string') $('#'+key).html(value);
-        else{
-          $('#'+key).each(function(i) {
-            $(this).html(value[i])
-          })
-        }
-        
-      })
+
 
 
     $('.work').click(function(){
@@ -157,23 +182,7 @@
     inits();
 
 
-    //typed js
-    $("#typed_main").typed({
-      strings: langDict[selectedLang]['typedCursor'],
-      typeSpeed: 35,
-      backDelay: 900,
-        // loop
-        loop: true
-      });
-    //typed js
 
-    $("#typed").typed({
-      strings: ["Мы создаем эффективные сайты.", "Продвигаем ваш бизнес в интернете.", "Привлекаем клиентов через интернет."],
-      typeSpeed: 35,
-      backDelay: 900,
-        // loop
-        loop: true
-      });
 
     //owl carousel
     $('.owl-carousel').owlCarousel({
@@ -280,21 +289,21 @@ $("#sendMessage").click(function (e) {
  error.text("Отправка ...");
  var data = {name:name,number:number,currentProduct:currentProduct};
 
-      emailjs.send("gmail","template_1pVkLrKH",data)
-      .then(
-        function(response) {
-          error.text("Спасибо "+name.charAt(0).toUpperCase()+name.substr(1).toLocaleLowerCase()+", ожидайте звонка,я обязательно вам презвоню !").show();
-          return false;
-        }, 
-        function(error) {
-          console.log("FAILED", error);
-        }
-      );
+ emailjs.send("gmail","template_1pVkLrKH",data)
+ .then(
+  function(response) {
+    error.text("Спасибо "+name.charAt(0).toUpperCase()+name.substr(1).toLocaleLowerCase()+", ожидайте звонка,я обязательно вам презвоню !").show();
+    return false;
+  }, 
+  function(error) {
+    console.log("FAILED", error);
+  }
+  );
 
-    });
+});
 
-    $(".zakazat").click(function () {
-      currentProduct = $(this).siblings(".title").html();
-    });
+$(".zakazat").click(function () {
+  currentProduct = $(this).siblings(".title").html();
+});
 
-  })(jQuery);
+})(jQuery);
