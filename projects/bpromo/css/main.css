@@ -10438,16 +10438,14 @@ span.bold_main_text {
 }
 
 .serv {
-    border-bottom: 1px solid #e8e8e8
-}
-
-.price_serv p {
+    border-bottom: 1px solid #e8e8e8;
     margin: 0;
     font-weight: 600;
     font-size: 15px;
     letter-spacing: .3px;
     line-height: 2;
-    color: #888
+    color: #888;
+    text-align: center;
 }
 
 .testimonials {

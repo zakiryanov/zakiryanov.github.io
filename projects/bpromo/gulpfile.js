@@ -38,7 +38,7 @@ gulp.task('files', function() {
 // подключаем наши скрипты (например первым будет всегда jquery, если он используется
 // в проекте, а уже следом все остальные скрипты)
 gulp.task('styles', function() {
-    return gulp.src(['css/main.css'])
+    return gulp.src(['css/main.css','css/animate.css'])
     .pipe(concat('main.min.css'))
     .pipe(minifyCSS({
     }))
@@ -51,7 +51,7 @@ gulp.task('styles', function() {
 // Так как это просто пример, то лучшим вариантом было бы разделение на основные и 
 // вспомогательные скрипты (например основные - jquery/bootstrap и вспомогательные - lightbox/fotorama) 
 gulp.task('scripts', function() {
-    var js = gulp.src(['js/jquery.min.js','js/bootstrap.min.js','js/jquery.mixitup.min.js','js/main.js'])
+    var js = gulp.src(['js/jquery.min.js','js/bootstrap.min.js','js/jquery.mixitup.min.js','js/wow.min.js','js/main.js'])
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .pipe(size({

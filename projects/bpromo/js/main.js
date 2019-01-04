@@ -1,3 +1,5 @@
+new WOW().init();
+
 $("#sendToMail").click(function (e) {
 	e.preventDefault();
 	$(this).attr('disabled',true);
