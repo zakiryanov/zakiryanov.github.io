@@ -11,12 +11,13 @@
     'en':{
       'typedCursor': ["Hello, my name is Anuarbek.", "And I can create powerful websites.", "Want proof? Sroll down."],
       'aboutTitle': 'A little bit about myself',
-      'aboutDescr': 'I have been doing web development for two years now. All my free time I am developing in this direction, without stoping to learn something new. <br> And at one point, I realized that I was ready to create cool web applications that benefit people. <br> Everything is just beginning. <br>',
+      'aboutDescr': 'I have been doing web development for more then 3 years now. All my free time I am developing in this direction, without stoping to learn something new. <br> And at one point, I realized that I was ready to create cool web applications that benefit people. <br> It`s only the beginning. <br>',
       'aboutTable .title':['Name','Phone','Email','Address'],
-      'aboutTable .data':['Anuarbek','+7 775 198 62 02','anuarbek.zak@gmail.com','Almaty'],
+      'aboutTable .data':['Anuarbek','+7 777 415 81 57','anuarbek.zak@gmail.com','Almaty'],
       'workTitle': 'My recent works',
       'workMiniTitle': 'Each work is done quickly and efficiently. <br>Absolutely <span>all<span> customers are satisfied with the result.',
-      'workList .link-div p': ['Website of programming school ELEMENT  (HTML,CSS,WoW.js,JQuery,Gulp)',
+      'workList .link-div p': ['Platform for creating powerfull web plugins (RoR, React, Mobx, SCSS, JQuery)',
+      'Website of programming school ELEMENT  (HTML,CSS,WoW.js,JQuery,Gulp)',
       'Modern CRM-system with great functionality. (Angular 4, Django)',
       'Multi-page website dedicated to native Kazakhstan and short information about it. (HTML, CSS, AngularJs, Jquery)',
       'Advertising service with big functionality. (HTML, CSS, AngularJs)',
@@ -24,24 +25,22 @@
       'Fully responsive website for the sale of foam blocks. (HTML, CSS, Jquery, Gulp)',
       'Selling landing page dedicated to the sale of false eyelashes. There is an admin panel for adding and modifying a product. (JQuery, PHP, MySQL)',
       'Online store for selling furniture with categories and functional admin panel. (AngularJS, NodeJs, MongoDB)',
-      'Landing page for the metal rolling site (HTML, CSS3, JQuery, Gulp).',
       "Landing Page for Summer Camp SDU Children's Campus (HTML, CSS, Jquery, Gulp)",
-      'Convenient analytics of legal statistics in its various sections, through a smart system for assessing crime in the regions and regions of the Republic of Kazakhstan (HTML, CSS, Jquery, Chart.js, D3.js)',
       "Beautiful landing page created for selling children's watches on the Internet. (HTML, CSS, Jquery, Gulp)",
       "Simple demo internet shop. (React, Redux, Lodash)",
       ],
       'able .title-small span': 'What can i do',
       'able .head-sm': ['code','design','html and css','js','back-end'],
       'able .text-grey': [
-      'Over 3 years of active learning web programming I have learned to write clean and optimized code and google anything to solve different tasks (stack overflow be healthy).'
+      'Over 3 years of active learning web programming I have learned to write clean and optimized code and to google anything to solve different tasks (stack overflow is my best friend).'
       ,'Have an understanding of common design concepts, as well as experience in working with a team designer and the ability to work with Photoshop, Figma, Zeplin.',
-      'With HTML and CSS I communicate on "you". I love and am able to make beautiful animations. The words "adaptive", "cross-browser" layout do not cause shaking at the knees. I can use in my work such assembly systems as Gulp. Sign with LESS, SCSS preprocessors and Pug template engine.',
-      'I know JS "like the back of my hand". I have a lot of experience in using JQuery and AngularJS. He also worked with modern frameworks and libraries, such as Angular 2 +, Vue 2, React.',
-      'I like front-end more, but I also know the back-end quite well. I worked with php 5.6, and I do all projects on my favorite Node.js using the Express framework and the Mongo database.'],
+      'With HTML and CSS I communicate on "you". I love and am able to make beautiful animations. The words "adaptive", "cross-browser" layout do not cause shaking at the knees. I can use in my work such assembly systems as Webpack and Gulp. Sign with SCSS, LESS preprocessors for CSS.',
+      'I know JS "like the back of my hand". I have a lot of experience in using React, JQuery and AngularJS. He also worked with modern frameworks and libraries, such as Angular 2 +, Vue 2.',
+      'I like front-end more, but I also know the back-end quite well. I worked with Ruby on Rails, PHP , and I do all projects on my favorite Node.js using the Express framework and the Mongo database.'],
       'skill .title-small span': 'Skills',
       'skill .content-detail':'I have been studying the web for more than two years and during this time I learned a lot.',
       'contact .title-small span':'Contacts',
-      'contact .content-detail':'If you want to contact me, you can call the number <br> <span class="number">+7 775 198 62 02</span> or fill out the form. I will call you back shortly.',
+      'contact .content-detail':'If you want to contact me, you can call the number <br> <span class="number">+7 777 415 81 57</span> or fill out the form. I will call you back shortly.',
       'labelName': 'Enter your name',
       'labelNumber': 'Enter your phone',
       'sendMessage': 'Request a call',
@@ -73,15 +72,15 @@
 
   $(document).ready(function(){
     var urlArr = window.location.href.split('#')
-    selectedLang = 'ru';
+    selectedLang = 'en';
 
-    if(urlArr.length>0 && urlArr[1]=='hh'){
-      $('.hh-show').show();
-      $('.hh-hide').hide();
-      translate()
-    }else{
-      $('.hh-show').hide();
-    }
+    // if(urlArr.length>0 && urlArr[1]=='hh'){
+    $('.hh-show').show();
+    $('.hh-hide').hide();
+    translate()
+    // }else{
+    //   $('.hh-show').hide();
+    // }
 
         //typed js
     $("#typed_main").typed({

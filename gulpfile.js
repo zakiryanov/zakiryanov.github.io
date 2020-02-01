@@ -54,7 +54,7 @@ gulp.task('styles', function() {
 // Так как это просто пример, то лучшим вариантом было бы разделение на основные и 
 // вспомогательные скрипты (например основные - jquery/bootstrap и вспомогательные - lightbox/fotorama) 
 gulp.task('scripts', function() {
-    var js = gulp.src(['js/jquery-1.9.1.min.js','js/jquery.appear.js','js/classie.js','js/smooth-scroll.min.js','js/typed.js','js/owl.carousel.min.js','js/main.js'])
+    var js = gulp.src(['js/jquery-1.9.1.min.js','js/jquery.appear.js','js/classie.js','js/smooth-scroll.min.js','js/typed.js','js/owl.carousel.min.js'])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(size({
