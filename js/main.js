@@ -9,9 +9,9 @@
 
   var langDict = {
     'en':{
-      'typedCursor': ["Hello, my name is Anuarbek.", "And I can create powerful websites.", "Want proof? Sroll down."],
+      'typedCursor': ["Hello, my name is Anuarbek", "And I can create powerful websites.", "Want proof? Jus sroll down"],
       'aboutTitle': 'A little bit about myself',
-      'aboutDescr': 'I have been doing web development for more then 3 years now. All my free time I am developing in this direction, without stoping to learn something new. <br> And at one point, I realized that I was ready to create cool web applications that benefit people. <br> It`s only the beginning. <br>',
+      'aboutDescr': 'I have been doing web development for more then 3 years now. All my free time I am developing in this direction, without stoping to learn something new. <br> And at one point, I realized that I was ready to create cool web applications that can be benefit to people. <br> It`s only the beginning. <br>',
       'aboutTable .title':['Name','Phone','Email','Address'],
       'aboutTable .data':['Anuarbek','+7 777 415 81 57','anuarbek.zak@gmail.com','Almaty'],
       'workTitle': 'My recent works',
@@ -29,7 +29,7 @@
       "Beautiful landing page created for selling children's watches on the Internet. (HTML, CSS, Jquery, Gulp)",
       "Simple demo internet shop. (React, Redux, Lodash)",
       ],
-      'able .title-small span': 'What can i do',
+      'able .title-small span': 'What I can do',
       'able .head-sm': ['code','design','html and css','js','back-end'],
       'able .text-grey': [
       'Over 3 years of active learning web programming I have learned to write clean and optimized code and to google anything to solve different tasks (stack overflow is my best friend).'
@@ -38,7 +38,7 @@
       'I know JS "like the back of my hand". I have a lot of experience in using React, JQuery and AngularJS. He also worked with modern frameworks and libraries, such as Angular 2 +, Vue 2.',
       'I like front-end more, but I also know the back-end quite well. I worked with Ruby on Rails, PHP , and I do all projects on my favorite Node.js using the Express framework and the Mongo database.'],
       'skill .title-small span': 'Skills',
-      'skill .content-detail':'I have been studying the web for more than two years and during this time I learned a lot.',
+      'skill .content-detail':'I have been studying the web for more than 3 years and during this time I learned a lot.',
       'contact .title-small span':'Contacts',
       'contact .content-detail':'If you want to contact me, you can call the number <br> <span class="number">+7 777 415 81 57</span> or fill out the form. I will call you back shortly.',
       'labelName': 'Enter your name',
@@ -254,7 +254,7 @@
     });
   }
 
-  window.onload = inits();
+  // window.onload = inits();
 
   //nav-active
   function onScroll(event){
